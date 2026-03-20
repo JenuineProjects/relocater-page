@@ -98,6 +98,45 @@
       border-top: 1px solid #ddd;
     }
 
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.25rem 0 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: #fff;
+    }
+    thead tr {
+      background: #2e7d32;
+      color: #fff;
+    }
+    thead th {
+      padding: 0.65rem 0.9rem;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      border: none;
+    }
+    tbody tr:nth-child(even) {
+      background: #f9f9fb;
+    }
+    tbody tr:hover {
+      background: #2e7d3211;
+    }
+    tbody td {
+      padding: 0.6rem 0.9rem;
+      border-bottom: 1px solid #e8e8ec;
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
     .back-btn {
       display: inline-block;
       margin-top: 2.5rem;
@@ -134,16 +173,21 @@
 
 <h3>The Basics</h3>
 
-<p>| | Iceland | Netherlands |</p>
-<p>|---|---|---|</p>
-<p>| <strong>Your right to move</strong> | EEA Agreement — Irish citizens have full freedom of movement | EU Treaty — Irish citizens have full freedom of movement |</p>
-<p>| <strong>Right to work</strong> | Immediate, no permit needed | Immediate, no permit needed |</p>
-<p>| <strong>Registration required</strong> | Yes — register domicile at <strong>Þjóðskrá Íslands</strong> (Registers Iceland) and obtain <strong>kennitala</strong> | Yes — register at your <strong>gemeente</strong> (municipality) <em>Bevolkingsregister</em> and obtain <strong>BSN</strong> (Burgerservicenummer) |</p>
-<p>| <strong>Registration deadline</strong> | Within 1 week of establishing residence | Within 5 days of arrival (in practice, book appointment in advance — can take weeks in Amsterdam) |</p>
-<p>| <strong>Key ID number</strong> | <strong>Kennitala</strong> (format: DDMMYY-XXXX) | <strong>BSN</strong> (9-digit number) |</p>
-<p>| <strong>Permanent residency</strong> | After <strong>4 years</strong> of continuous legal residence + basic Icelandic (apply via Útlendingastofnun — Directorate of Immigration) | After <strong>5 years</strong> of continuous legal residence (apply via <strong>IND</strong> — Immigratie- en Naturalisatiedienst) |</p>
-<p>| <strong>Path to citizenship</strong> | 7 years residence + Icelandic language proficiency | 5 years residence + Dutch language (B1 level) + <em>inburgeringsexamen</em> (civic integration exam). Note: Ireland doesn't allow dual citizenship with naturalisation in most cases — you'd likely need to renounce Irish citizenship for Dutch, but <strong>not</strong> for permanent residency. |</p>
-<p>| <strong>Key websites</strong> | skra.is (Registers Iceland), utl.is (Directorate of Immigration) | ind.nl (IND), gemeente.nl (your local municipality) |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th></th><th>Iceland</th><th>Netherlands</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Your right to move</strong></td><td>EEA Agreement — Irish citizens have full freedom of movement</td><td>EU Treaty — Irish citizens have full freedom of movement</td></tr>
+<tr><td><strong>Right to work</strong></td><td>Immediate, no permit needed</td><td>Immediate, no permit needed</td></tr>
+<tr><td><strong>Registration required</strong></td><td>Yes — register domicile at <strong>Þjóðskrá Íslands</strong> (Registers Iceland) and obtain <strong>kennitala</strong></td><td>Yes — register at your <strong>gemeente</strong> (municipality) <em>Bevolkingsregister</em> and obtain <strong>BSN</strong> (Burgerservicenummer)</td></tr>
+<tr><td><strong>Registration deadline</strong></td><td>Within 1 week of establishing residence</td><td>Within 5 days of arrival (in practice, book appointment in advance — can take weeks in Amsterdam)</td></tr>
+<tr><td><strong>Key ID number</strong></td><td><strong>Kennitala</strong> (format: DDMMYY-XXXX)</td><td><strong>BSN</strong> (9-digit number)</td></tr>
+<tr><td><strong>Permanent residency</strong></td><td>After <strong>4 years</strong> of continuous legal residence + basic Icelandic (apply via Útlendingastofnun — Directorate of Immigration)</td><td>After <strong>5 years</strong> of continuous legal residence (apply via <strong>IND</strong> — Immigratie- en Naturalisatiedienst)</td></tr>
+<tr><td><strong>Path to citizenship</strong></td><td>7 years residence + Icelandic language proficiency</td><td>5 years residence + Dutch language (B1 level) + <em>inburgeringsexamen</em> (civic integration exam). Note: Ireland doesn't allow dual citizenship with naturalisation in most cases — you'd likely need to renounce Irish citizenship for Dutch, but <strong>not</strong> for permanent residency.</td></tr>
+<tr><td><strong>Key websites</strong></td><td>skra.is (Registers Iceland), utl.is (Directorate of Immigration)</td><td>ind.nl (IND), gemeente.nl (your local municipality)</td></tr>
+</tbody>
+</table></div>
 
 <h3>What This Means Practically</h3>
 
@@ -281,27 +325,37 @@
 
 <h3>Side-by-Side Startup Costs (Two People + Two Cats)</h3>
 
-<p>| Cost Item | Iceland (EUR) | Netherlands (EUR) |</p>
-<p>|---|---|---|</p>
-<p>| Flights (2 people) | €200–€500 | €100–€300 |</p>
-<p>| Shipping belongings | €2,000–€4,000 | €800–€2,000 (shorter distance, EU customs-free) |</p>
-<p>| Temporary accommodation (3–4 weeks) | €2,000–€3,500 | €1,500–€2,500 |</p>
-<p>| Rental deposit (2 months) | €3,700–€6,300 | €2,200–€3,800 |</p>
-<p>| First month's rent | €1,850–€3,150 | €1,100–€1,900 |</p>
-<p>| Cat relocation (both cats — flights, docs, quarantine/transport) | <strong>€2,500–€4,000</strong> | <strong>€300–€600</strong> |</p>
-<p>| Furniture / setup (if unfurnished) | €1,000–€3,000 | €1,500–€4,000 (NL "unfurnished" is <em>really</em> unfurnished — no floors, no light fixtures, sometimes no kitchen) |</p>
-<p>| Health insurance gap / first month | €300–€500 (private, 6-month gap) | €260–€340 (mandatory from month 1) |</p>
-<p>| Groceries & essentials (first month) | €600–€800 | €400–€600 |</p>
-<p>| Admin / registration costs | €100–€200 | €50–€100 |</p>
-<p>| <strong>Total upfront</strong> | <strong>€12,250–€21,950</strong> | <strong>€8,210–€16,140</strong> |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Cost Item</th><th>Iceland (EUR)</th><th>Netherlands (EUR)</th></tr>
+</thead>
+<tbody>
+<tr><td>Flights (2 people)</td><td>€200–€500</td><td>€100–€300</td></tr>
+<tr><td>Shipping belongings</td><td>€2,000–€4,000</td><td>€800–€2,000 (shorter distance, EU customs-free)</td></tr>
+<tr><td>Temporary accommodation (3–4 weeks)</td><td>€2,000–€3,500</td><td>€1,500–€2,500</td></tr>
+<tr><td>Rental deposit (2 months)</td><td>€3,700–€6,300</td><td>€2,200–€3,800</td></tr>
+<tr><td>First month's rent</td><td>€1,850–€3,150</td><td>€1,100–€1,900</td></tr>
+<tr><td>Cat relocation (both cats — flights, docs, quarantine/transport)</td><td><strong>€2,500–€4,000</strong></td><td><strong>€300–€600</strong></td></tr>
+<tr><td>Furniture / setup (if unfurnished)</td><td>€1,000–€3,000</td><td>€1,500–€4,000 (NL "unfurnished" is <em>really</em> unfurnished — no floors, no light fixtures, sometimes no kitchen)</td></tr>
+<tr><td>Health insurance gap / first month</td><td>€300–€500 (private, 6-month gap)</td><td>€260–€340 (mandatory from month 1)</td></tr>
+<tr><td>Groceries & essentials (first month)</td><td>€600–€800</td><td>€400–€600</td></tr>
+<tr><td>Admin / registration costs</td><td>€100–€200</td><td>€50–€100</td></tr>
+<tr><td><strong>Total upfront</strong></td><td><strong>€12,250–€21,950</strong></td><td><strong>€8,210–€16,140</strong></td></tr>
+</tbody>
+</table></div>
 
 <h3>Recommended Savings Buffer</h3>
 
-<p>| | Iceland | Netherlands |</p>
-<p>|---|---|---|</p>
-<p>| <strong>Upfront costs (above)</strong> | ~€15,000 | ~€12,000 |</p>
-<p>| <strong>Emergency fund (3 months expenses, no income)</strong> | ~€10,000–€15,000 | ~€7,500–€10,000 |</p>
-<p>| <strong>TOTAL recommended before moving</strong> | <strong>€25,000–€30,000</strong> | <strong>€20,000–€22,000</strong> |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th></th><th>Iceland</th><th>Netherlands</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Upfront costs (above)</strong></td><td>~€15,000</td><td>~€12,000</td></tr>
+<tr><td><strong>Emergency fund (3 months expenses, no income)</strong></td><td>~€10,000–€15,000</td><td>~€7,500–€10,000</td></tr>
+<tr><td><strong>TOTAL recommended before moving</strong></td><td><strong>€25,000–€30,000</strong></td><td><strong>€20,000–€22,000</strong></td></tr>
+</tbody>
+</table></div>
 
 <p><strong>Why so much?</strong> Because the most common reason relocations fail is running out of money before you're established. Job searches take longer than expected. Deposits tie up cash. Unexpected costs appear. In Iceland specifically, the language barrier may delay employment by months.</p>
 
@@ -334,12 +388,17 @@
 
 <p><strong>Net impact on budget:</strong></p>
 
-<p>| | Iceland | Netherlands |</p>
-<p>|---|---|---|</p>
-<p>| Monthly vegetarian groceries (two people) | €460–€720 | €400–€600 |</p>
-<p>| Eating out (modest, per month) | €265–€395 | €200–€350 |</p>
-<p>| Specialty vegetarian products accessibility | Limited, expensive | Excellent, affordable |</p>
-<p>| Overall vegetarian cost impact vs. meat-eaters | Roughly neutral | Slightly cheaper |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th></th><th>Iceland</th><th>Netherlands</th></tr>
+</thead>
+<tbody>
+<tr><td>Monthly vegetarian groceries (two people)</td><td>€460–€720</td><td>€400–€600</td></tr>
+<tr><td>Eating out (modest, per month)</td><td>€265–€395</td><td>€200–€350</td></tr>
+<tr><td>Specialty vegetarian products accessibility</td><td>Limited, expensive</td><td>Excellent, affordable</td></tr>
+<tr><td>Overall vegetarian cost impact vs. meat-eaters</td><td>Roughly neutral</td><td>Slightly cheaper</td></tr>
+</tbody>
+</table></div>
 
 <hr>
 
@@ -349,16 +408,21 @@
 
 <h3>Netherlands (Straightforward)</h3>
 
-<p>| Step | Timeline | Cost |</p>
-<p>|---|---|---|</p>
-<p>| Confirm microchips (ISO 11784/11785) | Already done if registered in Ireland | €0 (or ~€30–€50 each if not) |</p>
-<p>| Rabies vaccination (after microchip) | At least <strong>21 days</strong> before travel | ~€50–€80 per cat |</p>
-<p>| EU Pet Passport from Irish vet | Same visit as rabies or after | ~€30–€50 per cat |</p>
-<p>| Tapeworm treatment (check NVWA latest) | 24–120 hours before travel | ~€20–€30 per cat |</p>
-<p>| Airline carrier (if flying) | Buy approved in-cabin carrier | ~€30–€50 each |</p>
-<p>| Airline pet fee (KLM in-cabin) | Book with flight | ~€50–€100 per cat |</p>
-<p>| <strong>Total per cat</strong> | | <strong>~€180–€360</strong> |</p>
-<p>| <strong>Total for 2 cats</strong> | | <strong>~€360–€720</strong> |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Step</th><th>Timeline</th><th>Cost</th></tr>
+</thead>
+<tbody>
+<tr><td>Confirm microchips (ISO 11784/11785)</td><td>Already done if registered in Ireland</td><td>€0 (or ~€30–€50 each if not)</td></tr>
+<tr><td>Rabies vaccination (after microchip)</td><td>At least <strong>21 days</strong> before travel</td><td>~€50–€80 per cat</td></tr>
+<tr><td>EU Pet Passport from Irish vet</td><td>Same visit as rabies or after</td><td>~€30–€50 per cat</td></tr>
+<tr><td>Tapeworm treatment (check NVWA latest)</td><td>24–120 hours before travel</td><td>~€20–€30 per cat</td></tr>
+<tr><td>Airline carrier (if flying)</td><td>Buy approved in-cabin carrier</td><td>~€30–€50 each</td></tr>
+<tr><td>Airline pet fee (KLM in-cabin)</td><td>Book with flight</td><td>~€50–€100 per cat</td></tr>
+<tr><td><strong>Total per cat</strong></td><td></td><td><strong>~€180–€360</strong></td></tr>
+<tr><td><strong>Total for 2 cats</strong></td><td></td><td><strong>~€360–€720</strong></td></tr>
+</tbody>
+</table></div>
 
 <p><strong>Timeline needed:</strong> 4–6 weeks from first vet visit to travel.</p>
 
@@ -368,19 +432,24 @@
 
 <h3>Iceland (Complex and Emotional)</h3>
 
-<p>| Step | Timeline | Cost |</p>
-<p>|---|---|---|</p>
-<p>| Apply to <strong>MAST</strong> for import permit | <strong>4–6 months</strong> before travel (mast.is, mast@mast.is) | Permit fee ~€50–€100 |</p>
-<p>| Microchip confirmation | Before all vaccinations | €0 if already done |</p>
-<p>| Rabies vaccination | 60+ days before travel, max 12 months | ~€50–€80 per cat |</p>
-<p>| Feline distemper, rhinotracheitis, calicivirus, FeLV vaccinations | Per MAST schedule (specific timing required) | ~€100–€200 per cat |</p>
-<p>| Blood tests (antibody levels) | As required by MAST — allow 2–4 weeks for lab results | ~€100–€200 per cat |</p>
-<p>| Internal + external parasite treatments | Specific timing windows before travel | ~€50–€80 per cat |</p>
-<p>| Veterinary health certificate | Within <strong>10 days</strong> of travel | ~€50–€80 per cat |</p>
-<p>| Flight to Keflavík (only approved entry point) | Book pet cargo — in-cabin not typically available for Iceland routes due to quarantine logistics | ~€200–€400 per cat |</p>
-<p>| <strong>Mandatory quarantine at Keldur</strong> | <strong>4 weeks</strong> at quarantine facility | <strong>€660–€1,200 per cat</strong> |</p>
-<p>| <strong>Total per cat</strong> | | <strong>~€1,260–€2,140</strong> |</p>
-<p>| <strong>Total for 2 cats</strong> | | <strong>~€2,520–€4,280</strong> |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Step</th><th>Timeline</th><th>Cost</th></tr>
+</thead>
+<tbody>
+<tr><td>Apply to <strong>MAST</strong> for import permit</td><td><strong>4–6 months</strong> before travel (mast.is, mast@mast.is)</td><td>Permit fee ~€50–€100</td></tr>
+<tr><td>Microchip confirmation</td><td>Before all vaccinations</td><td>€0 if already done</td></tr>
+<tr><td>Rabies vaccination</td><td>60+ days before travel, max 12 months</td><td>~€50–€80 per cat</td></tr>
+<tr><td>Feline distemper, rhinotracheitis, calicivirus, FeLV vaccinations</td><td>Per MAST schedule (specific timing required)</td><td>~€100–€200 per cat</td></tr>
+<tr><td>Blood tests (antibody levels)</td><td>As required by MAST — allow 2–4 weeks for lab results</td><td>~€100–€200 per cat</td></tr>
+<tr><td>Internal + external parasite treatments</td><td>Specific timing windows before travel</td><td>~€50–€80 per cat</td></tr>
+<tr><td>Veterinary health certificate</td><td>Within <strong>10 days</strong> of travel</td><td>~€50–€80 per cat</td></tr>
+<tr><td>Flight to Keflavík (only approved entry point)</td><td>Book pet cargo — in-cabin not typically available for Iceland routes due to quarantine logistics</td><td>~€200–€400 per cat</td></tr>
+<tr><td><strong>Mandatory quarantine at Keldur</strong></td><td><strong>4 weeks</strong> at quarantine facility</td><td><strong>€660–€1,200 per cat</strong></td></tr>
+<tr><td><strong>Total per cat</strong></td><td></td><td><strong>~€1,260–€2,140</strong></td></tr>
+<tr><td><strong>Total for 2 cats</strong></td><td></td><td><strong>~€2,520–€4,280</strong></td></tr>
+</tbody>
+</table></div>
 
 <p><strong>Timeline needed:</strong> Start <strong>minimum 6 months</strong> before travel date. No shortcuts.</p>
 
@@ -406,29 +475,39 @@
 
 <h3>Iceland Tax System</h3>
 
-<p>| Item | Detail |</p>
-<p>|---|---|</p>
-<p>| <strong>Income tax</strong> | Municipal tax (~14.44%) + state tax (31.45% on income up to ~ISK 4.5M, 37.95% above). <strong>Effective rate: ~37–38%</strong> for average earners |</p>
-<p>| <strong>Tax authority</strong> | Ríkisskattstjóri (RSK) — rsk.is |</p>
-<p>| <strong>Tax year</strong> | Calendar year (Jan–Dec) |</p>
-<p>| <strong>Filing</strong> | Annual return, typically pre-filled. Due March following the tax year |</p>
-<p>| <strong>Double taxation treaty with Ireland</strong> | <strong>Yes</strong> — in force. Prevents being taxed twice on the same income. Treaty follows OECD model. |</p>
-<p>| <strong>Social security contributions</strong> | 4% employee pension contribution (mandatory) + employer contributions. You'll also pay into the Icelandic pension system |</p>
-<p>| <strong>VAT</strong> | 24% standard rate (11% reduced for food, books, etc.) — one of the highest in Europe |</p>
-<p>| <strong>Special reliefs</strong> | Limited. No equivalent of the Dutch 30% ruling. Standard personal tax credit (~ISK 69,000/month in 2026) |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Item</th><th>Detail</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Income tax</strong></td><td>Municipal tax (~14.44%) + state tax (31.45% on income up to ~ISK 4.5M, 37.95% above). <strong>Effective rate: ~37–38%</strong> for average earners</td></tr>
+<tr><td><strong>Tax authority</strong></td><td>Ríkisskattstjóri (RSK) — rsk.is</td></tr>
+<tr><td><strong>Tax year</strong></td><td>Calendar year (Jan–Dec)</td></tr>
+<tr><td><strong>Filing</strong></td><td>Annual return, typically pre-filled. Due March following the tax year</td></tr>
+<tr><td><strong>Double taxation treaty with Ireland</strong></td><td><strong>Yes</strong> — in force. Prevents being taxed twice on the same income. Treaty follows OECD model.</td></tr>
+<tr><td><strong>Social security contributions</strong></td><td>4% employee pension contribution (mandatory) + employer contributions. You'll also pay into the Icelandic pension system</td></tr>
+<tr><td><strong>VAT</strong></td><td>24% standard rate (11% reduced for food, books, etc.) — one of the highest in Europe</td></tr>
+<tr><td><strong>Special reliefs</strong></td><td>Limited. No equivalent of the Dutch 30% ruling. Standard personal tax credit (~ISK 69,000/month in 2026)</td></tr>
+</tbody>
+</table></div>
 
 <h3>Netherlands Tax System</h3>
 
-<p>| Item | Detail |</p>
-<p>|---|---|</p>
-<p>| <strong>Income tax</strong> | Box 1 (employment income): 36.97% up to ~€75,518, 49.5% above. But see 30% ruling below |</p>
-<p>| <strong>Tax authority</strong> | Belastingdienst — belastingdienst.nl |</p>
-<p>| <strong>Tax year</strong> | Calendar year (Jan–Dec) |</p>
-<p>| <strong>Filing</strong> | Annual return (<em>aangifte</em>), usually opens 1 March for previous year. File via DigiD at belastingdienst.nl |</p>
-<p>| <strong>Double taxation treaty with Ireland</strong> | <strong>Yes</strong> — comprehensive treaty in force |</p>
-<p>| <strong>Social security</strong> | Included in Box 1 rates (AOW, ANW, WLZ premiums built in) |</p>
-<p>| <strong>VAT</strong> | 21% standard, 9% reduced |</p>
-<p>| <strong>30% Ruling</strong> | <strong>This is the big one</strong> — see below |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Item</th><th>Detail</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Income tax</strong></td><td>Box 1 (employment income): 36.97% up to ~€75,518, 49.5% above. But see 30% ruling below</td></tr>
+<tr><td><strong>Tax authority</strong></td><td>Belastingdienst — belastingdienst.nl</td></tr>
+<tr><td><strong>Tax year</strong></td><td>Calendar year (Jan–Dec)</td></tr>
+<tr><td><strong>Filing</strong></td><td>Annual return (<em>aangifte</em>), usually opens 1 March for previous year. File via DigiD at belastingdienst.nl</td></tr>
+<tr><td><strong>Double taxation treaty with Ireland</strong></td><td><strong>Yes</strong> — comprehensive treaty in force</td></tr>
+<tr><td><strong>Social security</strong></td><td>Included in Box 1 rates (AOW, ANW, WLZ premiums built in)</td></tr>
+<tr><td><strong>VAT</strong></td><td>21% standard, 9% reduced</td></tr>
+<tr><td><strong>30% Ruling</strong></td><td><strong>This is the big one</strong> — see below</td></tr>
+</tbody>
+</table></div>
 
 <h3>The Dutch 30% Ruling — Critical Detail</h3>
 
@@ -436,12 +515,17 @@
 
 <p><strong>Eligibility for Pin1 & Pin2:</strong></p>
 
-<p>| Criterion | Pin1 | Pin2 |</p>
-<p>|---|---|---|</p>
-<p>| Recruited from abroad (150+ km from NL border) | ✅ Ireland qualifies | ✅ Ireland qualifies |</p>
-<p>| Specific expertise/skills scarce in NL | ✅ Strong case — MSc AI for Business + HR/DEI is a niche, in-demand combination | ⚠️ Possible — digital marketing/content at international companies sometimes meets the bar, but less "scarce" |</p>
-<p>| Minimum salary threshold (2026, under-30 with MSc) | ~€35,000 — likely met in DEI/People Analytics roles at multinationals | ~€35,000 — possible but NGO salaries may be tight; corporate/agency/tech salaries more likely to qualify |</p>
-<p>| Minimum salary threshold (2026, standard) | ~€46,000 — achievable in corporate DEI roles | Harder to meet in NGO sector; more achievable in tech or agency marketing roles |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Criterion</th><th>Pin1</th><th>Pin2</th></tr>
+</thead>
+<tbody>
+<tr><td>Recruited from abroad (150+ km from NL border)</td><td>✅ Ireland qualifies</td><td>✅ Ireland qualifies</td></tr>
+<tr><td>Specific expertise/skills scarce in NL</td><td>✅ Strong case — MSc AI for Business + HR/DEI is a niche, in-demand combination</td><td>⚠️ Possible — digital marketing/content at international companies sometimes meets the bar, but less "scarce"</td></tr>
+<tr><td>Minimum salary threshold (2026, under-30 with MSc)</td><td>~€35,000 — likely met in DEI/People Analytics roles at multinationals</td><td>~€35,000 — possible but NGO salaries may be tight; corporate/agency/tech salaries more likely to qualify</td></tr>
+<tr><td>Minimum salary threshold (2026, standard)</td><td>~€46,000 — achievable in corporate DEI roles</td><td>Harder to meet in NGO sector; more achievable in tech or agency marketing roles</td></tr>
+</tbody>
+</table></div>
 
 <p><strong>Pin1 has a strong case.</strong> The combination of AI for Business MSc + DEI expertise is exactly the kind of niche, scarce profile the ruling was designed for. Pin2's eligibility depends on salary level and employer — it's worth applying for both. The worst they can say is no.</p>
 
@@ -453,11 +537,16 @@
 
 <p><em>Rough illustration, single earner at €50,000 gross:</em></p>
 
-<p>| | Iceland | Netherlands (without 30%) | Netherlands (with 30%) |</p>
-<p>|---|---|---|---|</p>
-<p>| Gross annual | €50,000 | €50,000 | €50,000 |</p>
-<p>| Effective tax + social contributions | ~40–42% | ~38–40% | ~28–30% |</p>
-<p>| Approximate net annual | ~€29,000–€30,000 | ~€30,000–€31,000 | ~€35,000–€36,000 |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th></th><th>Iceland</th><th>Netherlands (without 30%)</th><th>Netherlands (with 30%)</th></tr>
+</thead>
+<tbody>
+<tr><td>Gross annual</td><td>€50,000</td><td>€50,000</td><td>€50,000</td></tr>
+<tr><td>Effective tax + social contributions</td><td>~40–42%</td><td>~38–40%</td><td>~28–30%</td></tr>
+<tr><td>Approximate net annual</td><td>~€29,000–€30,000</td><td>~€30,000–€31,000</td><td>~€35,000–€36,000</td></tr>
+</tbody>
+</table></div>
 
 <p>The 30% ruling is a <strong>significant</strong> financial advantage. If Pin1 qualifies, it could mean an extra €400–500/month net. Over 5 years, that's potentially €25,000–€30,000 in tax savings.</p>
 
@@ -467,27 +556,37 @@
 
 <h3>Iceland</h3>
 
-<p>| Item | Detail |</p>
-<p>|---|---|</p>
-<p>| <strong>Major banks</strong> | Landsbankinn, Íslandsbanki, Arion Banki |</p>
-<p>| <strong>Requirements to open</strong> | Kennitala + proof of address + passport |</p>
-<p>| <strong>Can you open before arrival?</strong> | No. Must be done in person with kennitala. |</p>
-<p>| <strong>The catch-22</strong> | Need kennitala to open bank → need address to get kennitala → need bank to pay rent for address. <strong>Solution:</strong> Use temporary accommodation address to register, get kennitala, then open bank account. Pay first rent via international transfer (Wise). |</p>
-<p>| <strong>Cards</strong> | Debit cards standard. Credit cards available. Contactless payment widespread. |</p>
-<p>| <strong>Currency</strong> | ISK (Icelandic króna). Volatile currency — can fluctuate 5–10% against EUR in a year. |</p>
-<p>| <strong>International transfers</strong> | Use <strong>Wise</strong> (formerly TransferWise) for EUR→ISK transfers. Bank-to-bank international transfers are expensive (€15–€40 per transfer + poor exchange rates). |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Item</th><th>Detail</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Major banks</strong></td><td>Landsbankinn, Íslandsbanki, Arion Banki</td></tr>
+<tr><td><strong>Requirements to open</strong></td><td>Kennitala + proof of address + passport</td></tr>
+<tr><td><strong>Can you open before arrival?</strong></td><td>No. Must be done in person with kennitala.</td></tr>
+<tr><td><strong>The catch-22</strong></td><td>Need kennitala to open bank → need address to get kennitala → need bank to pay rent for address. <strong>Solution:</strong> Use temporary accommodation address to register, get kennitala, then open bank account. Pay first rent via international transfer (Wise).</td></tr>
+<tr><td><strong>Cards</strong></td><td>Debit cards standard. Credit cards available. Contactless payment widespread.</td></tr>
+<tr><td><strong>Currency</strong></td><td>ISK (Icelandic króna). Volatile currency — can fluctuate 5–10% against EUR in a year.</td></tr>
+<tr><td><strong>International transfers</strong></td><td>Use <strong>Wise</strong> (formerly TransferWise) for EUR→ISK transfers. Bank-to-bank international transfers are expensive (€15–€40 per transfer + poor exchange rates).</td></tr>
+</tbody>
+</table></div>
 
 <h3>Netherlands</h3>
 
-<p>| Item | Detail |</p>
-<p>|---|---|</p>
-<p>| <strong>Major banks</strong> | ING, ABN AMRO, Rabobank, Bunq, N26 |</p>
-<p>| <strong>Requirements to open</strong> | BSN + passport + proof of address |</p>
-<p>| <strong>Can you open before arrival?</strong> | <strong>Bunq</strong> can be opened with just a passport (before BSN), though full functionality requires BSN. This is the fastest option. N26 also works pre-BSN but is a German bank. |</p>
-<p>| <strong>Timeline</strong> | ING/ABN AMRO: 1–2 weeks after application with BSN. Bunq: same day via app. |</p>
-<p>| <strong>Cards</strong> | <strong>Debit card (Maestro/V Pay or Debit Mastercard) is king.</strong> The Netherlands runs on <strong>iDEAL</strong> for online payments — linked to your Dutch bank account. Credit cards are rarely used for daily purchases and many shops don't accept them. |</p>
-<p>| <strong>Currency</strong> | EUR — no currency risk coming from Ireland. Same currency. |</p>
-<p>| <strong>International transfers</strong> | Easy — EUR to EUR, SEPA transfers are free/cheap between Irish and Dutch banks. |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Item</th><th>Detail</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Major banks</strong></td><td>ING, ABN AMRO, Rabobank, Bunq, N26</td></tr>
+<tr><td><strong>Requirements to open</strong></td><td>BSN + passport + proof of address</td></tr>
+<tr><td><strong>Can you open before arrival?</strong></td><td><strong>Bunq</strong> can be opened with just a passport (before BSN), though full functionality requires BSN. This is the fastest option. N26 also works pre-BSN but is a German bank.</td></tr>
+<tr><td><strong>Timeline</strong></td><td>ING/ABN AMRO: 1–2 weeks after application with BSN. Bunq: same day via app.</td></tr>
+<tr><td><strong>Cards</strong></td><td><strong>Debit card (Maestro/V Pay or Debit Mastercard) is king.</strong> The Netherlands runs on <strong>iDEAL</strong> for online payments — linked to your Dutch bank account. Credit cards are rarely used for daily purchases and many shops don't accept them.</td></tr>
+<tr><td><strong>Currency</strong></td><td>EUR — no currency risk coming from Ireland. Same currency.</td></tr>
+<tr><td><strong>International transfers</strong></td><td>Easy — EUR to EUR, SEPA transfers are free/cheap between Irish and Dutch banks.</td></tr>
+</tbody>
+</table></div>
 
 <h3>Recommended Setup (Both Countries)</h3>
 
@@ -504,34 +603,44 @@
 
 <h3>Iceland — Decision to Settled</h3>
 
-<p>| Phase | Duration | Status |</p>
-<p>|---|---|---|</p>
-<p>| Decision + begin cat paperwork + savings check | Month 0 | Planning |</p>
-<p>| MAST permit application + cat vaccination schedule begins | Month 1 | Active prep |</p>
-<p>| Job searching + Icelandic study begins | Months 1–4 | Active prep |</p>
-<p>| Housing search + temporary accommodation booked | Months 3–5 | Active prep |</p>
-<p>| Move | Month 5–6 | Transition |</p>
-<p>| Arrive, register, kennitala, bank, temporary housing | Month 6 (weeks 1–2) | Arrived |</p>
-<p>| Cats in quarantine | Month 6–7 (4 weeks) | Settling |</p>
-<p>| Cats released, permanent housing secured (hopefully) | Month 7–8 | Settling |</p>
-<p>| First Icelandic winter begins | Month 8–12 (if moving in spring/summer) | Reality check |</p>
-<p>| Functional in job + basic social life + basic Icelandic | Month 12–18 | Established |</p>
-<p>| <strong>Truly settled</strong> | <strong>18–24 months</strong> | Home |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Phase</th><th>Duration</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td>Decision + begin cat paperwork + savings check</td><td>Month 0</td><td>Planning</td></tr>
+<tr><td>MAST permit application + cat vaccination schedule begins</td><td>Month 1</td><td>Active prep</td></tr>
+<tr><td>Job searching + Icelandic study begins</td><td>Months 1–4</td><td>Active prep</td></tr>
+<tr><td>Housing search + temporary accommodation booked</td><td>Months 3–5</td><td>Active prep</td></tr>
+<tr><td>Move</td><td>Month 5–6</td><td>Transition</td></tr>
+<tr><td>Arrive, register, kennitala, bank, temporary housing</td><td>Month 6 (weeks 1–2)</td><td>Arrived</td></tr>
+<tr><td>Cats in quarantine</td><td>Month 6–7 (4 weeks)</td><td>Settling</td></tr>
+<tr><td>Cats released, permanent housing secured (hopefully)</td><td>Month 7–8</td><td>Settling</td></tr>
+<tr><td>First Icelandic winter begins</td><td>Month 8–12 (if moving in spring/summer)</td><td>Reality check</td></tr>
+<tr><td>Functional in job + basic social life + basic Icelandic</td><td>Month 12–18</td><td>Established</td></tr>
+<tr><td><strong>Truly settled</strong></td><td><strong>18–24 months</strong></td><td>Home</td></tr>
+</tbody>
+</table></div>
 
 <h3>Netherlands — Decision to Settled</h3>
 
-<p>| Phase | Duration | Status |</p>
-<p>|---|---|---|</p>
-<p>| Decision + begin job search + cat prep | Month 0 | Planning |</p>
-<p>| Cats: vet visit, rabies vaccine, EU Pet Passport | Month 1 | Active prep |</p>
-<p>| Job applications, housing research, Dutch study | Months 1–3 | Active prep |</p>
-<p>| Secure job offer (ideally) + book gemeente appointment | Month 2–3 | Active prep |</p>
-<p>| Move | Month 3 | Transition |</p>
-<p>| Arrive, register BSN, bank, insurance, DigiD | Month 3 (weeks 1–3) | Arrived |</p>
-<p>| Find permanent housing (this may take 1–3 months from arrival) | Months 3–5 | Settling |</p>
-<p>| 30% ruling applied for, GP registered, routines established | Month 4–5 | Settling |</p>
-<p>| Feeling functional: commuting, shopping, social life forming | Month 6–9 | Established |</p>
-<p>| <strong>Truly settled</strong> | <strong>9–15 months</strong> | Home |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Phase</th><th>Duration</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td>Decision + begin job search + cat prep</td><td>Month 0</td><td>Planning</td></tr>
+<tr><td>Cats: vet visit, rabies vaccine, EU Pet Passport</td><td>Month 1</td><td>Active prep</td></tr>
+<tr><td>Job applications, housing research, Dutch study</td><td>Months 1–3</td><td>Active prep</td></tr>
+<tr><td>Secure job offer (ideally) + book gemeente appointment</td><td>Month 2–3</td><td>Active prep</td></tr>
+<tr><td>Move</td><td>Month 3</td><td>Transition</td></tr>
+<tr><td>Arrive, register BSN, bank, insurance, DigiD</td><td>Month 3 (weeks 1–3)</td><td>Arrived</td></tr>
+<tr><td>Find permanent housing (this may take 1–3 months from arrival)</td><td>Months 3–5</td><td>Settling</td></tr>
+<tr><td>30% ruling applied for, GP registered, routines established</td><td>Month 4–5</td><td>Settling</td></tr>
+<tr><td>Feeling functional: commuting, shopping, social life forming</td><td>Month 6–9</td><td>Established</td></tr>
+<tr><td><strong>Truly settled</strong></td><td><strong>9–15 months</strong></td><td>Home</td></tr>
+</tbody>
+</table></div>
 
 <p><strong>Bottom line:</strong> The Netherlands is roughly <strong>6–12 months faster</strong> to feel settled, primarily because of simpler pet import, no quarantine, EU systems alignment, more English-friendly work environment, and a larger/more accessible job market.</p>
 
@@ -647,19 +756,24 @@
 
 <h3>Side-by-Side Overview</h3>
 
-<p>| Factor | Iceland | Netherlands |</p>
-<p>|---|---|---|</p>
-<p>| <strong>Overall ease</strong> | Manageable in Reykjavík, planning required outside it | One of Europe's best — genuinely easy |</p>
-<p>| <strong>Supermarket range</strong> | Limited specialty items; Hagkaup best, Bónus/Krónan cheaper but basic | Extensive; Albert Heijn, Jumbo, plus toko's for Asian/Indonesian staples |</p>
-<p>| <strong>Plant-based products</strong> | Available but 30–50% more expensive than Ireland; limited brands | Widely available, competitively priced; The Vegetarian Butcher is Dutch and everywhere |</p>
-<p>| <strong>Tofu & tempeh</strong> | Available at Hagkaup, more limited elsewhere | Tempeh is practically a staple (Indonesian heritage); tofu everywhere |</p>
-<p>| <strong>Fresh produce variety</strong> | Narrower range; much is imported; greenhouse produce is a bright spot | Comparable to Ireland; toko's supplement with excellent cheap vegetables |</p>
-<p>| <strong>Eating out — dedicated veggie restaurants</strong> | A handful in Reykjavík (Kaffi Vínyl, etc.) | Many in every major city; Amsterdam, Rotterdam especially strong |</p>
-<p>| <strong>Eating out — mainstream restaurants</strong> | Most in Reykjavík offer 1–2 veggie mains; good New Nordic vegetable dishes | 2–3 veggie mains standard; Surinamese, Indonesian, Middle Eastern cuisine is a huge bonus |</p>
-<p>| <strong>Outside the main city</strong> | Limited — pack food for road trips | Good in all major cities; smaller towns are more limited but still manageable |</p>
-<p>| <strong>Cultural attitudes</strong> | Friendly but newer; occasional "but you eat fish, right?" | Normalised; "flexitarian" is mainstream; nobody bats an eye |</p>
-<p>| <strong>Monthly grocery cost (2 people)</strong> | €460–€720 | €400–€600 |</p>
-<p>| <strong>Best budget tip</strong> | Bónus for basics, Hagkaup for specialty; embrace greenhouse produce and skyr | Lidl/Aldi for basics, toko's for vegetables and spices, Albert Heijn for plant-based range |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Factor</th><th>Iceland</th><th>Netherlands</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Overall ease</strong></td><td>Manageable in Reykjavík, planning required outside it</td><td>One of Europe's best — genuinely easy</td></tr>
+<tr><td><strong>Supermarket range</strong></td><td>Limited specialty items; Hagkaup best, Bónus/Krónan cheaper but basic</td><td>Extensive; Albert Heijn, Jumbo, plus toko's for Asian/Indonesian staples</td></tr>
+<tr><td><strong>Plant-based products</strong></td><td>Available but 30–50% more expensive than Ireland; limited brands</td><td>Widely available, competitively priced; The Vegetarian Butcher is Dutch and everywhere</td></tr>
+<tr><td><strong>Tofu & tempeh</strong></td><td>Available at Hagkaup, more limited elsewhere</td><td>Tempeh is practically a staple (Indonesian heritage); tofu everywhere</td></tr>
+<tr><td><strong>Fresh produce variety</strong></td><td>Narrower range; much is imported; greenhouse produce is a bright spot</td><td>Comparable to Ireland; toko's supplement with excellent cheap vegetables</td></tr>
+<tr><td><strong>Eating out — dedicated veggie restaurants</strong></td><td>A handful in Reykjavík (Kaffi Vínyl, etc.)</td><td>Many in every major city; Amsterdam, Rotterdam especially strong</td></tr>
+<tr><td><strong>Eating out — mainstream restaurants</strong></td><td>Most in Reykjavík offer 1–2 veggie mains; good New Nordic vegetable dishes</td><td>2–3 veggie mains standard; Surinamese, Indonesian, Middle Eastern cuisine is a huge bonus</td></tr>
+<tr><td><strong>Outside the main city</strong></td><td>Limited — pack food for road trips</td><td>Good in all major cities; smaller towns are more limited but still manageable</td></tr>
+<tr><td><strong>Cultural attitudes</strong></td><td>Friendly but newer; occasional "but you eat fish, right?"</td><td>Normalised; "flexitarian" is mainstream; nobody bats an eye</td></tr>
+<tr><td><strong>Monthly grocery cost (2 people)</strong></td><td>€460–€720</td><td>€400–€600</td></tr>
+<tr><td><strong>Best budget tip</strong></td><td>Bónus for basics, Hagkaup for specialty; embrace greenhouse produce and skyr</td><td>Lidl/Aldi for basics, toko's for vegetables and spices, Albert Heijn for plant-based range</td></tr>
+</tbody>
+</table></div>
 
 <h3>The Bottom Line on Food</h3>
 
@@ -675,19 +789,24 @@
 
 <p><strong>For your specific situation — LGBTQ+ couple, two cats, vegetarian, these career profiles and ambitions, likely savings level — the Netherlands is the stronger choice.</strong> Here's the full picture:</p>
 
-<p>| Factor | Winner | Why |</p>
-<p>|---|---|---|</p>
-<p>| Cat relocation | 🇳🇱 Netherlands, decisively | No quarantine. EU Pet Passport. Simpler, cheaper, less stressful for your animals. |</p>
-<p>| Job market fit — Pin1 (DEI) | 🇳🇱 Netherlands, decisively | Developed DEI landscape at multinationals and consultancies. Iceland has almost no standalone DEI roles. |</p>
-<p>| Job market fit — Pin2 (Marketing/Comms/Content) | 🇳🇱 Netherlands | Much larger market across corporate, agency, NGO, and tech sectors. Iceland is workable but very narrow. |</p>
-<p>| Human Geography study path | 🇳🇱 Netherlands (slightly) | Stronger academic tradition, more programmes in English, part-time study culture. Iceland is fascinating for the subject but fewer programmes and roles require Icelandic. |</p>
-<p>| Financial upfront cost | 🇳🇱 Netherlands | Lower total startup costs + 30% ruling can save €5,000+/year |</p>
-<p>| Vegetarian life | 🇳🇱 Netherlands, clearly | One of Europe's best. Iceland is manageable but adds daily friction and cost. |</p>
-<p>| Speed to settled | 🇳🇱 Netherlands | 9–15 months vs 18–24 months |</p>
-<p>| LGBTQ+ life | Draw | Both are world-class. Netherlands has a larger, more established scene due to population size |</p>
-<p>| Quality of life (nature, safety) | 🇮🇸 Iceland | If nature and absolute safety are your top priorities, Iceland is unmatched |</p>
-<p>| Long-term career growth | 🇳🇱 Netherlands | Larger economy, more opportunities, easier to pivot between roles/companies |</p>
-<p>| Weather / mental health | 🇳🇱 Netherlands (slightly) | Both are grey. But NL doesn't have 4-hour winter days. The difference in winter darkness is significant for mental health. |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Factor</th><th>Winner</th><th>Why</th></tr>
+</thead>
+<tbody>
+<tr><td>Cat relocation</td><td>🇳🇱 Netherlands, decisively</td><td>No quarantine. EU Pet Passport. Simpler, cheaper, less stressful for your animals.</td></tr>
+<tr><td>Job market fit — Pin1 (DEI)</td><td>🇳🇱 Netherlands, decisively</td><td>Developed DEI landscape at multinationals and consultancies. Iceland has almost no standalone DEI roles.</td></tr>
+<tr><td>Job market fit — Pin2 (Marketing/Comms/Content)</td><td>🇳🇱 Netherlands</td><td>Much larger market across corporate, agency, NGO, and tech sectors. Iceland is workable but very narrow.</td></tr>
+<tr><td>Human Geography study path</td><td>🇳🇱 Netherlands (slightly)</td><td>Stronger academic tradition, more programmes in English, part-time study culture. Iceland is fascinating for the subject but fewer programmes and roles require Icelandic.</td></tr>
+<tr><td>Financial upfront cost</td><td>🇳🇱 Netherlands</td><td>Lower total startup costs + 30% ruling can save €5,000+/year</td></tr>
+<tr><td>Vegetarian life</td><td>🇳🇱 Netherlands, clearly</td><td>One of Europe's best. Iceland is manageable but adds daily friction and cost.</td></tr>
+<tr><td>Speed to settled</td><td>🇳🇱 Netherlands</td><td>9–15 months vs 18–24 months</td></tr>
+<tr><td>LGBTQ+ life</td><td>Draw</td><td>Both are world-class. Netherlands has a larger, more established scene due to population size</td></tr>
+<tr><td>Quality of life (nature, safety)</td><td>🇮🇸 Iceland</td><td>If nature and absolute safety are your top priorities, Iceland is unmatched</td></tr>
+<tr><td>Long-term career growth</td><td>🇳🇱 Netherlands</td><td>Larger economy, more opportunities, easier to pivot between roles/companies</td></tr>
+<tr><td>Weather / mental health</td><td>🇳🇱 Netherlands (slightly)</td><td>Both are grey. But NL doesn't have 4-hour winter days. The difference in winter darkness is significant for mental health.</td></tr>
+</tbody>
+</table></div>
 
 <p><strong>Iceland is not the wrong choice</strong> — it's a remarkable country and your quality of life could be excellent there. But it demands more: more savings, more patience, more resilience in winter, more willingness to learn a difficult language, and it imposes genuine hardship on your cats. For Pin1's DEI ambitions specifically, Iceland would mean reframing those ambitions substantially — you'd be embedding inclusion within broader HR work, not leading a DEI function. For Pin2, the creative market is real but tiny, and the Human Geography path is fascinating but limited. And as vegetarians, you'd face small daily frictions that don't exist in the Netherlands.</p>
 

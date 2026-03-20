@@ -98,6 +98,45 @@
       border-top: 1px solid #ddd;
     }
 
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.25rem 0 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: #fff;
+    }
+    thead tr {
+      background: #0073a8;
+      color: #fff;
+    }
+    thead th {
+      padding: 0.65rem 0.9rem;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      border: none;
+    }
+    tbody tr:nth-child(even) {
+      background: #f9f9fb;
+    }
+    tbody tr:hover {
+      background: #0073a811;
+    }
+    tbody td {
+      padding: 0.6rem 0.9rem;
+      border-bottom: 1px solid #e8e8ec;
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
     .back-btn {
       display: inline-block;
       margin-top: 2.5rem;
@@ -221,19 +260,24 @@
 
 <h3>Monthly Budget Estimate (couple, Reykjavík, renting)</h3>
 
-<p>| Category | ISK | EUR (approx.) |</p>
-<p>|---|---|---|</p>
-<p>| Rent (1-bed apartment, central Reykjavík) | 280,000–380,000 | €1,850–€2,500 |</p>
-<p>| Rent (2-bed, 101/105 postcodes) | 350,000–480,000 | €2,300–€3,150 |</p>
-<p>| Groceries — vegetarian (two people) | 70,000–110,000 | €460–€720 |</p>
-<p>| Utilities (electricity, heating, water) | 15,000–25,000 | €100–€165 |</p>
-<p>| Internet + mobile (two lines) | 12,000–18,000 | €80–€120 |</p>
-<p>| Transport (no car, bus passes x2) | 14,000 | €92 |</p>
-<p>| Transport (car — loan, insurance, fuel) | 80,000–130,000 | €530–€860 |</p>
-<p>| Dining out (modest) | 40,000–60,000 | €265–€395 |</p>
-<p>| Cat costs (food, litter, vet) | 15,000–25,000 | €100–€165 |</p>
-<p>| <strong>Total (no car)</strong> | <strong>~450,000–630,000</strong> | <strong>~€2,950–€4,150</strong> |</p>
-<p>| <strong>Total (with car)</strong> | <strong>~530,000–760,000</strong> | <strong>~€3,500–€5,000</strong> |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Category</th><th>ISK</th><th>EUR (approx.)</th></tr>
+</thead>
+<tbody>
+<tr><td>Rent (1-bed apartment, central Reykjavík)</td><td>280,000–380,000</td><td>€1,850–€2,500</td></tr>
+<tr><td>Rent (2-bed, 101/105 postcodes)</td><td>350,000–480,000</td><td>€2,300–€3,150</td></tr>
+<tr><td>Groceries — vegetarian (two people)</td><td>70,000–110,000</td><td>€460–€720</td></tr>
+<tr><td>Utilities (electricity, heating, water)</td><td>15,000–25,000</td><td>€100–€165</td></tr>
+<tr><td>Internet + mobile (two lines)</td><td>12,000–18,000</td><td>€80–€120</td></tr>
+<tr><td>Transport (no car, bus passes x2)</td><td>14,000</td><td>€92</td></tr>
+<tr><td>Transport (car — loan, insurance, fuel)</td><td>80,000–130,000</td><td>€530–€860</td></tr>
+<tr><td>Dining out (modest)</td><td>40,000–60,000</td><td>€265–€395</td></tr>
+<tr><td>Cat costs (food, litter, vet)</td><td>15,000–25,000</td><td>€100–€165</td></tr>
+<tr><td><strong>Total (no car)</strong></td><td><strong>~450,000–630,000</strong></td><td><strong>~€2,950–€4,150</strong></td></tr>
+<tr><td><strong>Total (with car)</strong></td><td><strong>~530,000–760,000</strong></td><td><strong>~€3,500–€5,000</strong></td></tr>
+</tbody>
+</table></div>
 
 <p><em>Note: Vegetarian groceries can run slightly lower than a meat-inclusive diet — Icelandic meat and fish are expensive, so skipping them saves a bit. But imported vegetables and specialty plant-based products offset some of that saving. See Section 3 for details.</em></p>
 
@@ -282,17 +326,22 @@
 
 <p><strong>Cost comparison (vegetarian-relevant items, approximate):</strong></p>
 
-<p>| Item | ISK | EUR (approx.) |</p>
-<p>|---|---|---|</p>
-<p>| 1 kg tomatoes (Icelandic greenhouse) | 600–900 | €4–6 |</p>
-<p>| 1 kg imported tomatoes | 400–600 | €2.60–4 |</p>
-<p>| Tofu (firm, ~400g) | 600–900 | €4–6 |</p>
-<p>| Oat milk (1L) | 450–650 | €3–4.30 |</p>
-<p>| Block of cheese (~500g) | 1,000–1,500 | €6.50–10 |</p>
-<p>| Bag of dried red lentils (500g) | 400–600 | €2.60–4 |</p>
-<p>| Fresh broccoli (head) | 350–550 | €2.30–3.60 |</p>
-<p>| Avocado (single) | 250–450 | €1.60–3 |</p>
-<p>| Plant-based burger patties (2-pack) | 800–1,200 | €5.30–8 |</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>Item</th><th>ISK</th><th>EUR (approx.)</th></tr>
+</thead>
+<tbody>
+<tr><td>1 kg tomatoes (Icelandic greenhouse)</td><td>600–900</td><td>€4–6</td></tr>
+<tr><td>1 kg imported tomatoes</td><td>400–600</td><td>€2.60–4</td></tr>
+<tr><td>Tofu (firm, ~400g)</td><td>600–900</td><td>€4–6</td></tr>
+<tr><td>Oat milk (1L)</td><td>450–650</td><td>€3–4.30</td></tr>
+<tr><td>Block of cheese (~500g)</td><td>1,000–1,500</td><td>€6.50–10</td></tr>
+<tr><td>Bag of dried red lentils (500g)</td><td>400–600</td><td>€2.60–4</td></tr>
+<tr><td>Fresh broccoli (head)</td><td>350–550</td><td>€2.30–3.60</td></tr>
+<tr><td>Avocado (single)</td><td>250–450</td><td>€1.60–3</td></tr>
+<tr><td>Plant-based burger patties (2-pack)</td><td>800–1,200</td><td>€5.30–8</td></tr>
+</tbody>
+</table></div>
 
 <h3>Eating Out</h3>
 

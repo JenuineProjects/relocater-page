@@ -270,6 +270,44 @@
   .mb { margin-bottom: 18px; }
   .text-sm { font-size: 13px; color: var(--text-muted); }
   .text-center { text-align: center; }
+
+  /* ── SECTION NAV ─────────────────────────────── */
+  .section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    padding: 16px 20px;
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .snav-label {
+    font-size: 12px; font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    white-space: nowrap;
+    margin-right: 4px;
+  }
+  .snav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 13px;
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .15s, color .15s;
+    white-space: nowrap;
+  }
+  .snav-btn:hover { background: var(--accent); color: #fff; }
+  .section-title { scroll-margin-top: 72px; }
 </style>
 </head>
 <body>
@@ -388,9 +426,22 @@
     </div>
   </div>
 
+  <div class="section-nav">
+    <span class="snav-label">Jump to</span>
+    <a href="#p1-career" class="snav-btn">💼 Career in HR</a>
+    <a href="#p1-dei" class="snav-btn">🌈 DEI Opportunities</a>
+    <a href="#p1-ai" class="snav-btn">🤖 AI &amp; HR Tech</a>
+    <a href="#p1-market" class="snav-btn">📊 Job Market</a>
+    <a href="#p1-salary" class="snav-btn">💰 Salary &amp; Cost</a>
+    <a href="#p1-dev" class="snav-btn">📚 Professional Dev</a>
+    <a href="#p1-visa" class="snav-btn">🛂 Visa &amp; Work Rights</a>
+    <a href="#p1-platforms" class="snav-btn">🔍 Job Platforms</a>
+    <a href="#p1-verdict" class="snav-btn">🏆 Verdict</a>
+  </div>
+
   <!-- CAREER PROSPECTS IN HR -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">💼</span> Career Prospects in HR</h2>
+    <h2 id="p1-career" class="section-title"><span class="emoji">💼</span> Career Prospects in HR</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -423,7 +474,7 @@
 
   <!-- DEI SECTOR -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🌈</span> DEI Sector Opportunities</h2>
+    <h2 id="p1-dei" class="section-title"><span class="emoji">🌈</span> DEI Sector Opportunities</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -465,7 +516,7 @@
 
   <!-- AI FOR BUSINESS / HR TECH -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🤖</span> AI for Business &amp; HR Tech</h2>
+    <h2 id="p1-ai" class="section-title"><span class="emoji">🤖</span> AI for Business &amp; HR Tech</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -482,7 +533,7 @@
 
   <!-- JOB MARKET CONDITIONS -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">📊</span> Job Market Conditions for Your Level</h2>
+    <h2 id="p1-market" class="section-title"><span class="emoji">📊</span> Job Market Conditions for Your Level</h2>
     <div class="card">
       <p>With a BAH Hons + MSc and professional HR experience, you're a <strong>mid-level to senior-ready professional</strong>. Here's how each market treats that:</p>
       <div class="compare-grid mt">
@@ -500,7 +551,7 @@
 
   <!-- SALARY & COST OF LIVING -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">💰</span> Salary &amp; Cost of Living Impact</h2>
+    <h2 id="p1-salary" class="section-title"><span class="emoji">💰</span> Salary &amp; Cost of Living Impact</h2>
     <div class="card">
       <div class="table-wrap">
         <table>
@@ -523,7 +574,7 @@
 
   <!-- PROFESSIONAL DEVELOPMENT -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">📚</span> Professional Development &amp; Communities</h2>
+    <h2 id="p1-dev" class="section-title"><span class="emoji">📚</span> Professional Development &amp; Communities</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -551,7 +602,7 @@
 
   <!-- VISA & QUALIFICATIONS -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🛂</span> Visa, Work Rights &amp; Qualifications</h2>
+    <h2 id="p1-visa" class="section-title"><span class="emoji">🛂</span> Visa, Work Rights &amp; Qualifications</h2>
     <div class="card">
       <p>As an Irish citizen, you have <strong>full freedom of movement and work rights</strong> in both countries — no visa or work permit needed.</p>
       <ul class="mt">
@@ -563,7 +614,7 @@
 
   <!-- JOB PLATFORMS -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🔍</span> Job Platforms &amp; Tips</h2>
+    <h2 id="p1-platforms" class="section-title"><span class="emoji">🔍</span> Job Platforms &amp; Tips</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -592,7 +643,7 @@
 
   <!-- VERDICT -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🏆</span> Honest Verdict for Pin1</h2>
+    <h2 id="p1-verdict" class="section-title"><span class="emoji">🏆</span> Honest Verdict for Pin1</h2>
     <div class="verdict">
       <h3>The Netherlands is the significantly stronger career move for Pin1.</h3>
       <p>The combination of AI for Business + HR + DEI expertise is <strong>genuinely in demand</strong> in the Dutch market, particularly at multinationals. Iceland's equality framework is world-leading, but the career infrastructure for DEI as a standalone profession isn't there yet. In the Netherlands, you'd be joining a growing ecosystem with real career progression. In Iceland, you'd be a pioneer — which is either exciting or exhausting.</p>
@@ -616,9 +667,23 @@
     </div>
   </div>
 
+  <div class="section-nav">
+    <span class="snav-label">Jump to</span>
+    <a href="#p2-marketing" class="snav-btn">📢 Marketing &amp; Digital</a>
+    <a href="#p2-ngo" class="snav-btn">🌍 NGO / Non-Profit</a>
+    <a href="#p2-geo" class="snav-btn">🗺️ Human Geography</a>
+    <a href="#p2-digital" class="snav-btn">📱 Digital &amp; Media</a>
+    <a href="#p2-freelance" class="snav-btn">💻 Freelance</a>
+    <a href="#p2-creative" class="snav-btn">🎨 Creative Industries</a>
+    <a href="#p2-salary" class="snav-btn">💰 Salary &amp; Cost</a>
+    <a href="#p2-communities" class="snav-btn">🤝 Communities</a>
+    <a href="#p2-visa" class="snav-btn">🛂 Visa &amp; Work Rights</a>
+    <a href="#p2-verdict" class="snav-btn">🏆 Verdict</a>
+  </div>
+
   <!-- MARKETING / COMMS / DIGITAL -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">📢</span> Marketing, Comms &amp; Digital Content Roles</h2>
+    <h2 id="p2-marketing" class="section-title"><span class="emoji">📢</span> Marketing, Comms &amp; Digital Content Roles</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -656,7 +721,7 @@
 
   <!-- NGO SECTOR -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🌍</span> NGO / Non-Profit Sector</h2>
+    <h2 id="p2-ngo" class="section-title"><span class="emoji">🌍</span> NGO / Non-Profit Sector</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -671,7 +736,7 @@
 
   <!-- HUMAN GEOGRAPHY -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🗺️</span> Human Geography — Study &amp; Career Paths</h2>
+    <h2 id="p2-geo" class="section-title"><span class="emoji">🗺️</span> Human Geography — Study &amp; Career Paths</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -700,7 +765,7 @@
 
   <!-- DIGITAL MARKETING & MEDIA -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">📱</span> Digital Marketing &amp; Media Production</h2>
+    <h2 id="p2-digital" class="section-title"><span class="emoji">📱</span> Digital Marketing &amp; Media Production</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -715,7 +780,7 @@
 
   <!-- FREELANCE & REMOTE -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">💻</span> Freelance &amp; Remote Work</h2>
+    <h2 id="p2-freelance" class="section-title"><span class="emoji">💻</span> Freelance &amp; Remote Work</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -730,7 +795,7 @@
 
   <!-- CREATIVE SCENE -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🎨</span> Creative Industries Scene</h2>
+    <h2 id="p2-creative" class="section-title"><span class="emoji">🎨</span> Creative Industries Scene</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -745,7 +810,7 @@
 
   <!-- SALARY & COST -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">💰</span> Salary &amp; Cost of Living Impact</h2>
+    <h2 id="p2-salary" class="section-title"><span class="emoji">💰</span> Salary &amp; Cost of Living Impact</h2>
     <div class="card">
       <div class="table-wrap">
         <table>
@@ -764,7 +829,7 @@
 
   <!-- NETWORKING COMMUNITIES -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🤝</span> Communities &amp; Networking</h2>
+    <h2 id="p2-communities" class="section-title"><span class="emoji">🤝</span> Communities &amp; Networking</h2>
     <div class="compare-grid">
       <div class="compare-card">
         <h4>🇮🇸 Iceland</h4>
@@ -793,7 +858,7 @@
 
   <!-- VISA -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🛂</span> Visa &amp; Work Rights</h2>
+    <h2 id="p2-visa" class="section-title"><span class="emoji">🛂</span> Visa &amp; Work Rights</h2>
     <div class="card">
       <p>As an Irish citizen, you have <strong>full freedom of movement and work rights</strong> in both countries. No visa, no work permit, no sponsor required.</p>
       <ul class="mt">
@@ -805,7 +870,7 @@
 
   <!-- VERDICT -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🏆</span> Honest Verdict for Pin2</h2>
+    <h2 id="p2-verdict" class="section-title"><span class="emoji">🏆</span> Honest Verdict for Pin2</h2>
     <div class="verdict">
       <h3>The Netherlands offers dramatically more breadth and opportunity for Pin2.</h3>
       <p>The combination of a large marketing/comms sector across corporate, agency, NGO, and tech — plus the ability to study Human Geography part-time at a world-class university while working — is a particularly strong play. The Dutch system actively supports this "work and study" approach.</p>
@@ -824,9 +889,19 @@
   <h2 style="font-size:26px;font-weight:800;margin-bottom:8px;">🤝 Joint Considerations</h2>
   <p class="mb" style="color:var(--text-muted);">Everything you decide together — cats, rights, housing, money, lifestyle, and the final call.</p>
 
+  <div class="section-nav">
+    <span class="snav-label">Jump to</span>
+    <a href="#j-cats" class="snav-btn">🐱 Your Cats</a>
+    <a href="#j-lgbtq" class="snav-btn">🏳️‍🌈 LGBTQ+ Life</a>
+    <a href="#j-housing" class="snav-btn">🏠 Housing</a>
+    <a href="#j-finances" class="snav-btn">💶 Finances &amp; Cost of Living</a>
+    <a href="#j-lifestyle" class="snav-btn">🌿 Lifestyle &amp; Culture</a>
+    <a href="#j-rec" class="snav-btn">🎯 Our Recommendation</a>
+  </div>
+
   <!-- ═══ 1. CATS ═══ -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🐱</span> 1. Your Cats</h2>
+    <h2 id="j-cats" class="section-title"><span class="emoji">🐱</span> 1. Your Cats</h2>
     <div class="card">
       <p>This is where the two destinations diverge most dramatically. Let's be blunt about it.</p>
     </div>
@@ -902,7 +977,7 @@
 
   <!-- ═══ 2. LGBTQ+ LIFE ═══ -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🏳️‍🌈</span> 2. LGBTQ+ Life</h2>
+    <h2 id="j-lgbtq" class="section-title"><span class="emoji">🏳️‍🌈</span> 2. LGBTQ+ Life</h2>
 
     <div class="card">
       <h3>Legal Rights</h3>
@@ -986,7 +1061,7 @@
 
   <!-- ═══ 3. HOUSING ═══ -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🏠</span> 3. Housing</h2>
+    <h2 id="j-housing" class="section-title"><span class="emoji">🏠</span> 3. Housing</h2>
 
     <div class="card">
       <p><strong>Both countries have housing crises.</strong> This will be your biggest practical challenge regardless of which you choose.</p>
@@ -1045,7 +1120,7 @@
 
   <!-- ═══ 4. FINANCES & COST OF LIVING ═══ -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">💶</span> 4. Finances &amp; Cost of Living</h2>
+    <h2 id="j-finances" class="section-title"><span class="emoji">💶</span> 4. Finances &amp; Cost of Living</h2>
 
     <div class="card">
       <h3>Monthly Budget Estimate (Couple + 2 Cats, No Car)</h3>
@@ -1125,7 +1200,7 @@
 
   <!-- ═══ 5. LIFESTYLE & CULTURE ═══ -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🌿</span> 5. Lifestyle &amp; Culture</h2>
+    <h2 id="j-lifestyle" class="section-title"><span class="emoji">🌿</span> 5. Lifestyle &amp; Culture</h2>
 
     <!-- Social Life & Making Friends -->
     <div class="sub-header">🫂 Social Life &amp; Making Friends</div>
@@ -1315,7 +1390,7 @@
 
   <!-- ═══ 6. OUR RECOMMENDATION ═══ -->
   <div class="section">
-    <h2 class="section-title"><span class="emoji">🎯</span> 6. Our Recommendation</h2>
+    <h2 id="j-rec" class="section-title"><span class="emoji">🎯</span> 6. Our Recommendation</h2>
     <div class="verdict">
       <h3>For Pin1 &amp; Pin2, we recommend the Netherlands — specifically The Hague.</h3>
       <p>This is not a close call on paper, though we want to acknowledge that life decisions aren't made on paper alone.</p>

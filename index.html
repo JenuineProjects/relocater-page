@@ -6,891 +6,1398 @@
 <title>Iceland or Netherlands? Your Relocation Guide</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
---bg:#f8f9fa;--white:#ffffff;--text:#1a1a2e;--text-light:#555;--text-muted:#888;
---accent:#6c63ff;--accent-light:#a29bfe;--accent-bg:rgba(108,99,255,0.06);
---teal:#0d9488;--teal-light:#ccfbf1;
---green:#16a34a;--green-bg:#f0fdf4;--green-border:#86efac;
---red:#dc2626;--red-bg:#fef2f2;--red-border:#fca5a5;
---amber:#d97706;--amber-bg:#fffbeb;--amber-border:#fcd34d;
---card-shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
---card-shadow-hover:0 10px 25px rgba(0,0,0,0.08);
---radius:12px;--radius-sm:8px;
---rainbow:linear-gradient(135deg,#ff6b6b,#feca57,#48dbfb,#ff9ff3,#54a0ff,#5f27cd);
---rainbow-subtle:linear-gradient(135deg,rgba(255,107,107,0.15),rgba(254,202,87,0.15),rgba(72,219,251,0.15),rgba(255,159,243,0.15),rgba(84,160,255,0.15),rgba(95,39,205,0.15));
-}
-body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
-.container{max-width:1100px;margin:0 auto;padding:0 24px}
+  :root {
+    --bg: #f8f9fb;
+    --white: #ffffff;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --accent: #6d28d9;
+    --accent-light: #ede9fe;
+    --accent-dark: #4c1d95;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --red: #dc2626;
+    --red-bg: #fef2f2;
+    --amber: #d97706;
+    --amber-bg: #fffbeb;
+    --border: #e2e8f0;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --rainbow: linear-gradient(90deg, #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #8b5cf6, #ec4899);
+  }
 
-/* NAV BAR */
-nav{background:var(--white);border-bottom:3px solid transparent;border-image:var(--rainbow) 1;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
-.nav-inner{display:flex;align-items:center;gap:8px;padding:12px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.nav-btn{
-background:none;border:2px solid transparent;padding:10px 20px;border-radius:50px;
-font-family:inherit;font-size:14px;font-weight:600;color:var(--text-light);cursor:pointer;
-white-space:nowrap;transition:all 0.25s ease;position:relative
-}
-.nav-btn:hover{color:var(--accent);background:var(--accent-bg)}
-.nav-btn.active{color:var(--white);background:var(--accent);border-color:var(--accent)}
-.nav-logo{font-weight:800;font-size:18px;margin-right:auto;background:var(--rainbow);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-0.5px}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* HERO */
-.hero{
-background:linear-gradient(135deg,#6c63ff 0%,#a29bfe 50%,#0d9488 100%);
-color:white;padding:80px 24px 60px;text-align:center;position:relative;overflow:hidden
-}
-.hero::before{
-content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
-background:var(--rainbow-subtle);animation:shimmer 15s ease infinite;opacity:0.3
-}
-@keyframes shimmer{0%,100%{transform:translateX(-10%) translateY(-10%)}50%{transform:translateX(10%) translateY(10%)}}
-.hero h1{font-size:clamp(28px,5vw,48px);font-weight:800;margin-bottom:12px;position:relative;letter-spacing:-1px}
-.hero .subtitle{font-size:clamp(16px,2.5vw,20px);opacity:0.9;font-weight:400;position:relative}
-.hero .welcome{max-width:650px;margin:24px auto 0;font-size:15px;opacity:0.85;position:relative;line-height:1.8}
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
-/* TAB CONTENT */
-.tab-content{display:none;padding:48px 0 80px;animation:fadeIn 0.35s ease}
-.tab-content.active{display:block}
-@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+  /* ── Navigation ── */
+  .nav-rainbow {
+    height: 4px;
+    background: var(--rainbow);
+  }
 
-/* SECTION STYLES */
-.section{margin-bottom:48px}
-.section-title{font-size:24px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px;letter-spacing:-0.5px}
-.section-title .emoji{font-size:28px}
-.section-subtitle{font-size:18px;font-weight:600;margin:28px 0 12px;color:var(--accent)}
+  nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
 
-/* CARDS */
-.card{background:var(--white);border-radius:var(--radius);padding:28px;margin-bottom:20px;box-shadow:var(--card-shadow);transition:box-shadow 0.25s ease}
-.card:hover{box-shadow:var(--card-shadow-hover)}
-.card h3{font-size:17px;font-weight:700;margin-bottom:10px}
-.card p,.card li{font-size:15px;color:var(--text-light);line-height:1.7}
-.card ul{padding-left:20px;margin-top:8px}
-.card li{margin-bottom:6px}
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0 1.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
-/* COMPARISON GRID */
-.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
-.compare-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--card-shadow)}
-.compare-card.iceland .compare-header{background:linear-gradient(135deg,#1a1a2e,#3d3d6b)}
-.compare-card.netherlands .compare-header{background:linear-gradient(135deg,#ff6b00,#ff8c38)}
-.compare-header{color:white;padding:20px 24px;font-size:20px;font-weight:700;display:flex;align-items:center;gap:10px}
-.compare-body{padding:24px}
+  .nav-brand {
+    font-weight: 700;
+    font-size: .95rem;
+    color: var(--accent);
+    white-space: nowrap;
+    padding: 1rem 1rem 1rem 0;
+    border-right: 1px solid var(--border);
+    margin-right: .5rem;
+    letter-spacing: -0.01em;
+  }
 
-/* AT A GLANCE TABLE */
-.glance-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--card-shadow)}
-.glance-table th{background:var(--accent);color:white;padding:14px 18px;font-weight:600;font-size:14px;text-align:left}
-.glance-table th:first-child{border-radius:var(--radius) 0 0 0}
-.glance-table th:last-child{border-radius:0 var(--radius) 0 0}
-.glance-table td{padding:12px 18px;border-bottom:1px solid #f0f0f0;font-size:14px}
-.glance-table tr:last-child td{border-bottom:none}
-.glance-table tr:hover td{background:var(--accent-bg)}
-.glance-table .category{font-weight:600;color:var(--text)}
-.stars{letter-spacing:2px}
+  .tab-btn {
+    background: none;
+    border: none;
+    padding: .9rem 1.1rem;
+    font-family: inherit;
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--text-light);
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    transition: color .2s;
+  }
 
-/* PRO CON */
-.pro{border-left:4px solid var(--green);background:var(--green-bg);padding:16px 20px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin-bottom:12px}
-.pro::before{content:'✅ '}
-.con{border-left:4px solid var(--red);background:var(--red-bg);padding:16px 20px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin-bottom:12px}
-.con::before{content:'⚠️ '}
-.pro p,.con p{font-size:14px;color:var(--text);margin:0;display:inline}
-.neutral{border-left:4px solid var(--amber);background:var(--amber-bg);padding:16px 20px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin-bottom:12px}
-.neutral::before{content:'💡 '}
-.neutral p{font-size:14px;color:var(--text);margin:0;display:inline}
+  .tab-btn:hover { color: var(--text); }
 
-/* TABLES */
-.data-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
-.data-table th{background:#f1f5f9;padding:10px 14px;text-align:left;font-weight:600;border-bottom:2px solid #e2e8f0}
-.data-table td{padding:10px 14px;border-bottom:1px solid #f0f0f0}
-.data-table tr:hover td{background:#f8fafc}
+  .tab-btn.active {
+    color: var(--accent);
+    font-weight: 600;
+  }
 
-/* VERDICT BOX */
-.verdict{background:linear-gradient(135deg,var(--accent),var(--teal));color:white;border-radius:var(--radius);padding:32px;margin:32px 0}
-.verdict h3{font-size:20px;margin-bottom:12px;font-weight:700}
-.verdict p{opacity:0.95;font-size:15px;line-height:1.8}
+  .tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: .8rem;
+    right: .8rem;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px 3px 0 0;
+  }
 
-/* HOW TO USE */
-.how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
-.how-card{background:var(--white);border-radius:var(--radius);padding:24px;text-align:center;box-shadow:var(--card-shadow);border-top:3px solid var(--accent)}
-.how-card .icon{font-size:32px;margin-bottom:10px}
-.how-card h4{font-size:15px;font-weight:700;margin-bottom:6px}
-.how-card p{font-size:13px;color:var(--text-light)}
+  /* ── Main ── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
 
-/* AGENT BADGES */
-.agent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
-.agent-badge{display:flex;align-items:center;gap:10px;background:var(--white);border-radius:var(--radius-sm);padding:14px 16px;box-shadow:var(--card-shadow)}
-.agent-badge .icon{font-size:24px}
-.agent-badge .info{font-size:13px;font-weight:600;color:var(--text)}
-.agent-badge .role{font-size:11px;color:var(--text-muted);font-weight:400}
+  .tab-content { display: none; animation: fadeIn .35s ease; }
+  .tab-content.active { display: block; }
 
-/* CHECKLIST */
-.checklist{list-style:none;padding:0}
-.checklist li{padding:8px 0 8px 28px;position:relative;font-size:14px;color:var(--text-light);border-bottom:1px solid #f5f5f5}
-.checklist li::before{content:'☐';position:absolute;left:0;color:var(--accent);font-weight:700}
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-/* FOOTER */
-footer{background:var(--white);border-top:3px solid transparent;border-image:var(--rainbow) 1;padding:28px 24px;text-align:center;color:var(--text-muted);font-size:13px}
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 40%, #0d9488 100%);
+    border-radius: 1rem;
+    padding: 3rem 2.5rem;
+    color: #fff;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
 
-/* RESPONSIVE */
-@media(max-width:600px){
-  .nav-inner{padding:8px 0}
-  .nav-btn{padding:8px 14px;font-size:13px}
-  .hero{padding:48px 16px 36px}
-  .card{padding:20px}
-  .section-title{font-size:20px}
-  .container{padding:0 16px}
-}
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
 
-/* SCROLL TO TOP */
-.scroll-top{
-  position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;
-  background:var(--accent);color:white;border:none;font-size:20px;cursor:pointer;
-  box-shadow:0 4px 12px rgba(108,99,255,0.4);display:none;z-index:99;transition:transform 0.2s
-}
-.scroll-top:hover{transform:scale(1.1)}
-.scroll-top.show{display:flex;align-items:center;justify-content:center}
+  .hero-flag { font-size: 2.2rem; margin-bottom: .75rem; }
+  .hero h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: .5rem; }
+  .hero .subtitle { font-size: 1.1rem; opacity: .9; font-weight: 400; margin-bottom: 1.25rem; }
+  .hero p { font-size: .95rem; opacity: .85; max-width: 640px; line-height: 1.7; }
 
-/* CATEGORY TAGS */
-.tag{display:inline-block;padding:3px 10px;border-radius:50px;font-size:11px;font-weight:600;margin-right:6px}
-.tag-ice{background:#e0f2fe;color:#0369a1}
-.tag-nl{background:#fff7ed;color:#c2410c}
-.tag-win{background:#f0fdf4;color:#16a34a}
+  /* ── Section Headings ── */
+  .section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .section-title .emoji { font-size: 1.3rem; }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.5rem 0 .75rem;
+    color: var(--text);
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1.25rem 0 .5rem;
+  }
+
+  /* ── Cards ── */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--card-shadow);
+    transition: box-shadow .2s;
+  }
+
+  .card:hover { box-shadow: var(--card-shadow-hover); }
+
+  .card-header {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: .75rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  /* ── Pros / Cons ── */
+  .pro, .con, .neutral {
+    padding: .7rem 1rem;
+    margin: .4rem 0;
+    border-radius: .5rem;
+    font-size: .9rem;
+    line-height: 1.55;
+  }
+
+  .pro {
+    background: var(--green-bg);
+    border-left: 4px solid var(--green);
+  }
+
+  .con {
+    background: var(--red-bg);
+    border-left: 4px solid var(--red);
+  }
+
+  .neutral {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber);
+  }
+
+  /* ── Comparison Grid ── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .compare-col {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+  }
+
+  .compare-col-header {
+    padding: 1rem 1.25rem;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .compare-col-header.iceland { background: #eef2ff; color: #3730a3; }
+  .compare-col-header.netherlands { background: #fff7ed; color: #9a3412; }
+
+  .compare-col-body { padding: 1.25rem; font-size: .9rem; }
+  .compare-col-body p { margin-bottom: .6rem; }
+  .compare-col-body ul { padding-left: 1.2rem; }
+  .compare-col-body li { margin-bottom: .4rem; font-size: .88rem; }
+
+  /* ── At-a-Glance Table ── */
+  .glance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: .9rem;
+  }
+
+  .glance-table th, .glance-table td {
+    padding: .7rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .glance-table th {
+    background: var(--bg);
+    font-weight: 600;
+    font-size: .82rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--text-light);
+  }
+
+  .glance-table td:first-child { font-weight: 500; }
+
+  .glance-table tr:last-child td { border-bottom: none; }
+
+  .stars { letter-spacing: 1px; }
+
+  /* ── Data Tables ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: .88rem;
+  }
+
+  .data-table th, .data-table td {
+    padding: .6rem .8rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .data-table th {
+    background: var(--bg);
+    font-weight: 600;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: var(--text-light);
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+
+  /* ── Badges ── */
+  .badge {
+    display: inline-block;
+    padding: .15rem .55rem;
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: 600;
+    vertical-align: middle;
+  }
+
+  .badge-green { background: var(--green-bg); color: var(--green); }
+  .badge-red { background: var(--red-bg); color: var(--red); }
+  .badge-accent { background: var(--accent-light); color: var(--accent); }
+  .badge-teal { background: var(--teal-light); color: var(--teal); }
+
+  /* ── Verdict Box ── */
+  .verdict {
+    background: linear-gradient(135deg, #ede9fe 0%, #ccfbf1 100%);
+    border: 1px solid #c4b5fd;
+    border-radius: .75rem;
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .verdict h3 { margin-top: 0; color: var(--accent-dark); }
+  .verdict p { font-size: .92rem; }
+
+  /* ── Info Callout ── */
+  .callout {
+    background: var(--accent-light);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 .5rem .5rem 0;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    font-size: .9rem;
+  }
+
+  .callout-teal {
+    background: var(--teal-light);
+    border-left-color: var(--teal);
+  }
+
+  /* ── Winner Badge ── */
+  .winner-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    font-weight: 600;
+    font-size: .85rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: .82rem;
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+    background: var(--white);
+    margin-top: 2rem;
+  }
+
+  footer .rainbow-line {
+    width: 100px;
+    height: 3px;
+    background: var(--rainbow);
+    margin: 0 auto 1rem;
+    border-radius: 2px;
+  }
+
+  /* ── Paragraph & list spacing ── */
+  .content p { margin-bottom: .7rem; font-size: .92rem; }
+  .content ul, .content ol { padding-left: 1.4rem; margin-bottom: .7rem; }
+  .content li { margin-bottom: .35rem; font-size: .9rem; }
+  .content strong { font-weight: 600; }
+
+  /* ── Two-column info ── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .info-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: .6rem;
+    padding: 1.1rem;
+    box-shadow: var(--card-shadow);
+  }
+
+  .info-box h4 { margin-top: 0; font-size: .95rem; }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .compare-grid, .info-grid { grid-template-columns: 1fr; }
+    .hero { padding: 2rem 1.5rem; }
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+    .nav-brand { display: none; }
+    .tab-btn { padding: .75rem .7rem; font-size: .82rem; }
+    .glance-table th, .glance-table td { padding: .5rem .6rem; font-size: .82rem; }
+  }
+
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 1.3rem; }
+    .section-title { font-size: 1.2rem; }
+  }
 </style>
 </head>
 <body>
 
+<!-- Rainbow bar -->
+<div class="nav-rainbow"></div>
+
+<!-- Navigation -->
 <nav>
-<div class="container">
-<div class="nav-inner">
-<span class="nav-logo">🌍 ReloGuide</span>
-<button class="nav-btn active" onclick="switchTab('home')">🏠 Home</button>
-<button class="nav-btn" onclick="switchTab('pin1')">💼 Pin1</button>
-<button class="nav-btn" onclick="switchTab('pin2')">🎨 Pin2</button>
-<button class="nav-btn" onclick="switchTab('joint')">🤝 Joint</button>
-</div>
-</div>
+  <div class="nav-inner">
+    <div class="nav-brand">🌍 Relocation Guide</div>
+    <button class="tab-btn active" onclick="showTab('home')">🏠 Home</button>
+    <button class="tab-btn" onclick="showTab('pin1')">👤 Pin1 — HR &amp; DEI</button>
+    <button class="tab-btn" onclick="showTab('pin2')">👤 Pin2 — Marketing &amp; Geo</button>
+    <button class="tab-btn" onclick="showTab('joint')">👫 Joint Considerations</button>
+  </div>
 </nav>
 
-<!-- ======================= HOME TAB ======================= -->
-<div id="tab-home" class="tab-content active">
-
-<div class="hero">
-<h1>Iceland or Netherlands?</h1>
-<p class="subtitle">A personalised relocation guide for Pin1 &amp; Pin2</p>
-<p class="welcome">Welcome! You're holding a comprehensive, research-backed guide built specifically for the two of you — covering careers, finances, LGBTQ+ life, housing, your cats, and everything else you need to make this decision with confidence.</p>
-</div>
-
 <div class="container">
 
-<div class="section" style="margin-top:48px">
-<h2 class="section-title"><span class="emoji">🤖</span> What Is This Guide?</h2>
-<p style="color:var(--text-light);margin-bottom:20px">This guide was researched and written by a team of <strong>four specialist AI agents</strong>, each with deep expertise in their domain. A fifth agent — the Manager — compiled their findings into the document you're reading now.</p>
-<div class="agent-grid">
-<div class="agent-badge"><span class="icon">🇮🇸</span><div><div class="info">Bj&ouml;rn</div><div class="role">Iceland Expert</div></div></div>
-<div class="agent-badge"><span class="icon">🇳🇱</span><div><div class="info">Annelies</div><div class="role">Netherlands Expert</div></div></div>
-<div class="agent-badge"><span class="icon">✈️</span><div><div class="info">Relocation Consultant</div><div class="role">Travel &amp; Logistics Expert</div></div></div>
-<div class="agent-badge"><span class="icon">🏳️‍🌈</span><div><div class="info">LGBTQ+ Specialist</div><div class="role">Rights &amp; Community Expert</div></div></div>
-</div>
-</div>
+<!-- ═══════════════════════════════════════════ -->
+<!--              TAB 1: HOME                   -->
+<!-- ═══════════════════════════════════════════ -->
+<div id="tab-home" class="tab-content active content">
 
-<div class="section">
-<h2 class="section-title"><span class="emoji">📖</span> How to Use This Guide</h2>
-<div class="how-grid">
-<div class="how-card"><div class="icon">🏠</div><h4>Home</h4><p>Overview, at-a-glance comparison, and the overall recommendation.</p></div>
-<div class="how-card"><div class="icon">💼</div><h4>Pin1</h4><p>Career prospects, salary, professional development — tailored to your HR + AI for Business background.</p></div>
-<div class="how-card"><div class="icon">🎨</div><h4>Pin2</h4><p>NGO marketing, creative industries, freelancing — tailored to your Media Production + Digital Arts skills.</p></div>
-<div class="how-card"><div class="icon">🤝</div><h4>Joint</h4><p>Everything you decide together: cats, LGBTQ+ life, housing, finances, lifestyle &amp; the final recommendation.</p></div>
-</div>
-</div>
+  <div class="hero">
+    <div class="hero-flag">🇮🇸 ✈️ 🇳🇱</div>
+    <h1>Iceland or Netherlands?</h1>
+    <p class="subtitle">A personalised relocation guide for Pin1 &amp; Pin2</p>
+    <p>Welcome! This guide was built specifically for you — an LGBTQ+ couple living in Ireland with two beloved cats, weighing up a move to either Iceland or the Netherlands. Every section is tailored to your careers, your lifestyle, and your priorities. Grab a cup of tea and dive in.</p>
+  </div>
 
-<div class="section">
-<h2 class="section-title"><span class="emoji">⚡</span> At a Glance</h2>
-<table class="glance-table">
-<thead><tr><th>Category</th><th>🇮🇸 Iceland</th><th>🇳🇱 Netherlands</th></tr></thead>
-<tbody>
-<tr><td class="category">💼 Job Market</td><td><span class="stars">⭐⭐</span></td><td><span class="stars">⭐⭐⭐⭐</span></td></tr>
-<tr><td class="category">💰 Cost of Living</td><td><span class="stars">⭐⭐</span></td><td><span class="stars">⭐⭐⭐</span></td></tr>
-<tr><td class="category">🏠 Housing Availability</td><td><span class="stars">⭐⭐</span></td><td><span class="stars">⭐⭐</span></td></tr>
-<tr><td class="category">🏳️‍🌈 LGBTQ+ Rights</td><td><span class="stars">⭐⭐⭐⭐⭐</span></td><td><span class="stars">⭐⭐⭐⭐</span></td></tr>
-<tr><td class="category">🗣️ English Friendliness</td><td><span class="stars">⭐⭐⭐</span></td><td><span class="stars">⭐⭐⭐⭐</span></td></tr>
-<tr><td class="category">👥 Community &amp; Social Life</td><td><span class="stars">⭐⭐⭐</span></td><td><span class="stars">⭐⭐⭐⭐</span></td></tr>
-<tr><td class="category">🌤️ Weather</td><td><span class="stars">⭐⭐</span></td><td><span class="stars">⭐⭐⭐</span></td></tr>
-<tr><td class="category">🐱 Cat Import Ease</td><td><span class="stars">⭐</span></td><td><span class="stars">⭐⭐⭐⭐⭐</span></td></tr>
-</tbody>
-</table>
-</div>
+  <!-- What is this guide? -->
+  <div class="section-title"><span class="emoji">📖</span> What Is This Guide?</div>
+  <div class="card">
+    <p>This guide was researched and written by a team of <strong>four specialist AI agents</strong>, each bringing deep expertise on a specific dimension of your decision:</p>
+    <div class="info-grid" style="margin-top:1rem">
+      <div class="info-box">
+        <h4>🇮🇸 Björn — Iceland Expert</h4>
+        <p style="font-size:.88rem;margin:0">On-the-ground perspective on Icelandic jobs, cost of living, culture, housing, food, and practical realities.</p>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Annelies — Netherlands Expert</h4>
+        <p style="font-size:.88rem;margin:0">Insider knowledge of the Dutch job market, housing crisis, vegetarian scene, bureaucracy, and daily life.</p>
+      </div>
+      <div class="info-box">
+        <h4>🧳 Relocation Consultant</h4>
+        <p style="font-size:.88rem;margin:0">20 years of international move experience — timelines, checklists, finances, tax, and side-by-side comparison.</p>
+      </div>
+      <div class="info-box">
+        <h4>🏳️‍🌈 LGBTQ+ Expert</h4>
+        <p style="font-size:.88rem;margin:0">Deep research on queer rights, safety, community, healthcare, and the lived day-to-day experience in both countries.</p>
+      </div>
+    </div>
+    <p style="margin-top:.5rem">A <strong>Manager agent</strong> then compiled all four reports into this single, navigable document — the page you're reading now.</p>
+  </div>
 
-<div class="section">
-<div class="verdict">
-<h3>📌 Quick Summary</h3>
-<p>Based on the combined analysis of all four experts, <strong>the Netherlands emerges as the stronger overall choice</strong> for your specific situation — primarily due to the much simpler cat import process, a larger and more English-friendly job market (especially for Pin2's NGO focus), lower startup costs, and the 30% tax ruling that could save thousands annually. However, <strong>Iceland is not the wrong choice</strong>. It offers unmatched safety, deeper LGBTQ+ acceptance, extraordinary nature, and a work-life balance that's hard to beat. The right answer depends on your priorities: if career momentum and practical ease matter most, choose the Netherlands. If safety, nature, and a quieter life call to you, Iceland is remarkable — but demands more patience, savings, and resilience.</p>
-</div>
-</div>
+  <!-- How to use -->
+  <div class="section-title"><span class="emoji">🧭</span> How to Use This Guide</div>
+  <div class="card">
+    <p>Use the <strong>tabs at the top</strong> to navigate between sections:</p>
+    <ul style="margin-top:.5rem">
+      <li><strong>Pin1</strong> — Career and professional information relevant to Pin1 (HR, DEI, AI for Business).</li>
+      <li><strong>Pin2</strong> — Career and professional information relevant to Pin2 (Marketing, Communications, Digital Content, Human Geography).</li>
+      <li><strong>Joint Considerations</strong> — Everything you decide together: your cats, LGBTQ+ life, housing, finances, lifestyle, vegetarian living, and the final recommendation.</li>
+    </ul>
+    <p style="margin-top:.5rem">Each section gives an <strong>honest, balanced view</strong> of both countries — strengths highlighted in <span style="color:var(--green);font-weight:600">green</span>, challenges in <span style="color:var(--red);font-weight:600">red</span>, and nuances in <span style="color:var(--amber);font-weight:600">amber</span>.</p>
+  </div>
 
-</div>
-</div>
+  <!-- At a Glance -->
+  <div class="section-title"><span class="emoji">⚖️</span> At a Glance — Iceland vs Netherlands</div>
+  <div class="card" style="overflow-x:auto">
+    <table class="glance-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>🇮🇸 Iceland</th>
+          <th>🇳🇱 Netherlands</th>
+          <th>Edge</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>💼 Job Market</td>
+          <td class="stars">⭐⭐</td>
+          <td class="stars">⭐⭐⭐⭐</td>
+          <td><span class="winner-tag">🇳🇱</span></td>
+        </tr>
+        <tr>
+          <td>🤝 DEI Opportunities</td>
+          <td class="stars">⭐</td>
+          <td class="stars">⭐⭐⭐⭐</td>
+          <td><span class="winner-tag">🇳🇱</span></td>
+        </tr>
+        <tr>
+          <td>💰 Cost of Living</td>
+          <td class="stars">⭐⭐</td>
+          <td class="stars">⭐⭐⭐</td>
+          <td><span class="winner-tag">🇳🇱</span></td>
+        </tr>
+        <tr>
+          <td>🏠 Housing Availability</td>
+          <td class="stars">⭐⭐</td>
+          <td class="stars">⭐⭐</td>
+          <td>Draw</td>
+        </tr>
+        <tr>
+          <td>🏳️‍🌈 LGBTQ+ Rights</td>
+          <td class="stars">⭐⭐⭐⭐⭐</td>
+          <td class="stars">⭐⭐⭐⭐⭐</td>
+          <td>🇮🇸 (marginally)</td>
+        </tr>
+        <tr>
+          <td>🗣️ English Friendliness</td>
+          <td class="stars">⭐⭐⭐</td>
+          <td class="stars">⭐⭐⭐⭐</td>
+          <td><span class="winner-tag">🇳🇱</span></td>
+        </tr>
+        <tr>
+          <td>🥦 Vegetarian-Friendly</td>
+          <td class="stars">⭐⭐⭐</td>
+          <td class="stars">⭐⭐⭐⭐⭐</td>
+          <td><span class="winner-tag">🇳🇱</span></td>
+        </tr>
+        <tr>
+          <td>🌤️ Weather</td>
+          <td class="stars">⭐⭐</td>
+          <td class="stars">⭐⭐⭐</td>
+          <td><span class="winner-tag">🇳🇱</span></td>
+        </tr>
+        <tr>
+          <td>🐱 Cat Import Ease</td>
+          <td class="stars">⭐</td>
+          <td class="stars">⭐⭐⭐⭐⭐</td>
+          <td><span class="winner-tag">🇳🇱</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<!-- ======================= PIN1 TAB ======================= -->
-<div id="tab-pin1" class="tab-content">
-<div class="container">
-
-<div class="section" style="margin-top:48px">
-<h2 class="section-title"><span class="emoji">💼</span> Pin1 — Career &amp; Professional Life</h2>
-<p style="color:var(--text-light);margin-bottom:8px"><strong>Your profile:</strong> BAH Hons in HRM &bull; MSc in AI for Business &bull; HR Professional</p>
-<p style="color:var(--text-muted);font-size:14px;margin-bottom:24px">This section covers everything relevant to your career — job market conditions, salary expectations, professional development, and which country is the better career move for you.</p>
-</div>
-
-<!-- HR Career Prospects -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">📊</span> HR Career Prospects</h2>
-<div class="compare-grid">
-<div class="compare-card iceland">
-<div class="compare-header">🇮🇸 Iceland</div>
-<div class="compare-body">
-<div class="pro"><p><strong>Tight labour market</strong> (~3–5% unemployment). HR professionals needed in banks (Landsbankinn, Íslandsbanki), tech (Marel, Controlant, Aha), and airlines (Icelandair, PLAY).</p></div>
-<div class="pro"><p>Your <strong>MSc in AI for Business is a genuine differentiator</strong> — Icelandic companies are actively digitising, and HR tech/people analytics demand outstrips local supply.</p></div>
-<div class="con"><p><strong>Almost all HR roles require fluent Icelandic.</strong> Contracts, union negotiations (~90% membership), and labour law all operate in Icelandic.</p></div>
-<div class="con"><p>Without Icelandic, you're limited to international companies or English-speaking tech startups. AI-for-business roles: expect <strong>2–5 relevant openings</strong> in the entire country at any time.</p></div>
-<p style="margin-top:12px;font-size:13px;color:var(--text-muted)"><strong>Key job boards:</strong> Alfred.is, Tvinna.is, LinkedIn</p>
-</div>
-</div>
-<div class="compare-card netherlands">
-<div class="compare-header">🇳🇱 Netherlands</div>
-<div class="compare-body">
-<div class="pro"><p><strong>Strong combination right now.</strong> Companies actively seeking people who bridge HR and AI/data — workforce analytics, AI-driven recruitment, HR tech platforms.</p></div>
-<div class="pro"><p><strong>English-only HR roles exist</strong> in international companies, scale-ups, and multinationals: Booking.com, Adyen, Philips, ASML, TomTom, etc.</p></div>
-<div class="pro"><p>"People Analytics" and "HR Analytics" roles are growing and more likely to be English-friendly.</p></div>
-<div class="con"><p>Pure HR generalist roles at Dutch companies require Dutch — employment law, works councils (<em>ondernemingsraad</em>) all operate in Dutch.</p></div>
-<p style="margin-top:12px;font-size:13px;color:var(--text-muted)"><strong>Best markets:</strong> Amsterdam, Eindhoven (Brainport), Utrecht</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Salary & Take-Home -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">💰</span> Salary &amp; Take-Home Pay</h2>
-<div class="card">
-<table class="data-table">
-<thead><tr><th>Level</th><th>🇮🇸 Iceland (EUR/yr)</th><th>🇳🇱 Netherlands (EUR/yr)</th></tr></thead>
-<tbody>
-<tr><td>Mid-level HR / People Analytics</td><td>€43,000–€67,000</td><td>€45,000–€65,000</td></tr>
-<tr><td>Senior HRBP / HR Director</td><td>€67,000–€80,000+</td><td>€70,000–€90,000+</td></tr>
-<tr><td>Effective tax rate</td><td>~37–42%</td><td>~38–40% (without 30% ruling)</td></tr>
-<tr><td><strong>With 30% ruling (NL only)</strong></td><td>N/A</td><td><strong>~28–30%</strong></td></tr>
-</tbody>
-</table>
-<div class="neutral" style="margin-top:16px"><p>The <strong>Dutch 30% ruling</strong> is a game-changer for you. Up to 30% of your gross salary is tax-free for up to 5 years. With your MSc and being recruited from abroad, you have a <strong>strong eligibility case</strong>. This could mean an extra €400–500/month net — potentially <strong>€25,000–€30,000</strong> in tax savings over the ruling's duration. Your employer must apply within 4 months of your start date.</p></div>
-</div>
-</div>
-
-<!-- AI for Business Angle -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">🤖</span> AI for Business — Your Edge</h2>
-<div class="compare-grid">
-<div class="compare-card iceland">
-<div class="compare-header">🇮🇸 Iceland</div>
-<div class="compare-body">
-<p>The AI-for-business angle could open doors in consulting or tech, but these roles are <strong>few and far between</strong>. Iceland's tech sector is growing but tiny by European standards. You'd be a big fish in a very small pond — which could be an advantage if you find the right fit, but also means fewer fallback options if a role doesn't work out.</p>
-</div>
-</div>
-<div class="compare-card netherlands">
-<div class="compare-header">🇳🇱 Netherlands</div>
-<div class="compare-body">
-<p>The Netherlands has a <strong>robust tech sector</strong>. Eindhoven's Brainport region (ASML, Philips), Amsterdam's startup ecosystem, and multiple AI-focused companies create a much larger playing field. "HR Tech" and "People Analytics" are established, growing niches. You can realistically <strong>build a career trajectory</strong> here with multiple employers and roles to choose from over time.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Professional Development -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">📚</span> Professional Development</h2>
-<div class="card">
-<h3>🇮🇸 Iceland</h3>
-<ul>
-<li>Smaller HR community — networking is personal and direct</li>
-<li>Icelandic union culture means deep exposure to collective bargaining and labour relations</li>
-<li>Limited conferences and events compared to mainland Europe</li>
-<li>University of Iceland offers some continuing education, but options are constrained</li>
-</ul>
-<h3 style="margin-top:20px">🇳🇱 Netherlands</h3>
-<ul>
-<li>Active HR professional community with regular meetups, conferences (HR Tech World, Unleash)</li>
-<li><strong>Workplace Pride</strong> organisation — specifically LGBTQ+ workplace inclusion (relevant to your background!)</li>
-<li>Proximity to major European cities for international conferences</li>
-<li>Multiple universities offering continuing education and certifications in HR analytics, AI</li>
-<li>Thriving LinkedIn culture — the Netherlands is one of the most LinkedIn-active countries per capita</li>
-</ul>
-</div>
-</div>
-
-<!-- Qualifications Recognition -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">🎓</span> Qualifications &amp; Visa</h2>
-<div class="card">
-<div class="pro"><p>As an Irish citizen, you have <strong>full work rights in both countries</strong> — no visa or work permit needed. Iceland via the EEA Agreement, Netherlands via EU free movement.</p></div>
-<div class="neutral"><p>Irish HRM qualifications are well-regarded in both countries. No formal "recognition" process is typically needed for HR roles — employers evaluate your CV and interview performance. Your <strong>MSc from an Irish university</strong> is recognised under the Bologna Process in both countries.</p></div>
-</div>
-</div>
-
-<!-- Job Platform Tips -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">🔍</span> Job Search Tips</h2>
-<div class="compare-grid">
-<div class="compare-card iceland">
-<div class="compare-header">🇮🇸 Iceland</div>
-<div class="compare-body">
-<ul class="checklist">
-<li><strong>Alfred.is</strong> — main Icelandic job board</li>
-<li><strong>Tvinna.is</strong> — another popular board</li>
-<li><strong>LinkedIn</strong> — limited but growing for Iceland</li>
-<li>Network through expat communities before arriving</li>
-<li>Direct applications to international companies (Marel, CCP Games, Controlant)</li>
-</ul>
-</div>
-</div>
-<div class="compare-card netherlands">
-<div class="compare-header">🇳🇱 Netherlands</div>
-<div class="compare-body">
-<ul class="checklist">
-<li><strong>LinkedIn</strong> — primary platform, very active</li>
-<li><strong>Indeed.nl</strong> — broad listings</li>
-<li><strong>iamsterdam.com/work</strong> — international talent portal</li>
-<li><strong>Glassdoor NL</strong> — salary research + listings</li>
-<li>Apply <strong>before</strong> you move — a job offer changes everything (housing proof, 30% ruling)</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Pin1 Verdict -->
-<div class="section">
-<div class="verdict">
-<h3>🏆 Verdict for Pin1</h3>
-<p><strong>The Netherlands is the stronger career move.</strong> Your HR + AI for Business combination is well-suited to the Dutch market, where People Analytics and HR Tech roles are growing in an English-friendly environment. The 30% ruling provides a major financial boost. Iceland's tiny market limits your options severely, especially without Icelandic fluency. If career growth is a priority, the Netherlands gives you a larger playing field, more employers to choose from, better professional development, and a realistic path to building an HR Tech career. Iceland would require more patience, language investment, and acceptance of a narrower market.</p>
-</div>
-</div>
-
-</div>
-</div>
-
-<!-- ======================= PIN2 TAB ======================= -->
-<div id="tab-pin2" class="tab-content">
-<div class="container">
-
-<div class="section" style="margin-top:48px">
-<h2 class="section-title"><span class="emoji">🎨</span> Pin2 — Career &amp; Professional Life</h2>
-<p style="color:var(--text-light);margin-bottom:8px"><strong>Your profile:</strong> BAH in Media Production &amp; Digital Arts &bull; Marketing Professional for NGOs</p>
-<p style="color:var(--text-muted);font-size:14px;margin-bottom:24px">This section covers everything relevant to your career — NGO sectors, creative industries, freelancing, and which country is the better career move for you.</p>
-</div>
-
-<!-- NGO Sector -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">🌍</span> NGO &amp; Non-Profit Sector</h2>
-<div class="compare-grid">
-<div class="compare-card iceland">
-<div class="compare-header">🇮🇸 Iceland</div>
-<div class="compare-body">
-<div class="pro"><p>Active NGO sector for its size: Icelandic Red Cross, Amnesty International Iceland, Icelandic Human Rights Centre, Samt&ouml;kin '78, environmental groups.</p></div>
-<div class="con"><p>The sector is <strong>tiny</strong>. Country of ~385,000 people. Most NGOs have 5–15 staff. Marketing roles come up <strong>once or twice a year</strong> across the entire sector.</p></div>
-<div class="con"><p>NGO communications are <strong>almost entirely in Icelandic</strong>, targeting Icelandic audiences. Language barrier is even more critical here than for HR roles.</p></div>
-</div>
-</div>
-<div class="compare-card netherlands">
-<div class="compare-header">🇳🇱 Netherlands</div>
-<div class="compare-body">
-<div class="pro"><p><strong>Significant NGO sector:</strong> Oxfam Novib, Hivos, Cordaid, ICC ecosystem in The Hague, many UN-adjacent organisations.</p></div>
-<div class="pro"><p><strong>The Hague is your city</strong> — the international law and NGO capital. Real cluster of organisations needing English-language marketing and communications.</p></div>
-<div class="con"><p>Competitive and lower-paid than private sector. Many Dutch NGOs communicate in Dutch to their donor base.</p></div>
-<div class="neutral"><p><strong>werkenbijngos.nl</strong> — dedicated Dutch NGO job board. Check regularly.</p></div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Digital Marketing & Media -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">📱</span> Digital Marketing &amp; Media Production</h2>
-<div class="compare-grid">
-<div class="compare-card iceland">
-<div class="compare-header">🇮🇸 Iceland</div>
-<div class="compare-body">
-<p>Your digital arts and media production skills are <strong>more broadly marketable</strong> than the NGO-specific path. Freelance video production, content creation, and digital marketing are in demand across sectors in Reykjav&iacute;k.</p>
-<p style="margin-top:12px">The creative industry is <strong>small but tight-knit</strong>. Iceland's legendary music scene and thriving arts culture create opportunities, but the total market is constrained by population.</p>
-</div>
-</div>
-<div class="compare-card netherlands">
-<div class="compare-header">🇳🇱 Netherlands</div>
-<div class="compare-body">
-<p>Strong creative and digital sector. Amsterdam, Rotterdam, and The Hague all have active creative industries. <strong>Video content, social media campaigns, and digital marketing skills</strong> are in demand.</p>
-<p style="margin-top:12px">Rotterdam's cultural scene is <strong>underrated and arguably more interesting than Amsterdam's</strong> for creatives. Growing alternative arts and media community.</p>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Freelancing -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">🧑‍💻</span> Freelance &amp; Remote Work</h2>
-<div class="card">
-<h3>🇮🇸 Iceland</h3>
-<ul>
-<li>Freelancing is possible but the market is small — fewer potential clients</li>
-<li>Remote work for international clients is viable (good internet infrastructure)</li>
-<li>You'd need to register as self-employed and navigate Icelandic tax obligations</li>
-<li>Limited coworking spaces outside Reykjav&iacute;k</li>
-</ul>
-<h3 style="margin-top:20px">🇳🇱 Netherlands</h3>
-<ul>
-<li><strong>Freelancing (ZZP) is very common</strong> — the Netherlands has one of Europe's highest rates of self-employment. Well-established legal and tax frameworks.</li>
-<li>Register at the KvK (Kamer van Koophandel — Chamber of Commerce) to become a ZZP'er</li>
-<li>Thriving coworking scene in all major cities</li>
-<li>Larger client base — more NGOs, agencies, and companies needing digital content</li>
-<li>Can combine part-time employment with freelance work</li>
-</ul>
-</div>
-</div>
-
-<!-- Salary -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">💰</span> Salary Expectations</h2>
-<div class="card">
-<table class="data-table">
-<thead><tr><th>Role Type</th><th>🇮🇸 Iceland (EUR/yr)</th><th>🇳🇱 Netherlands (EUR/yr)</th></tr></thead>
-<tbody>
-<tr><td>NGO Marketing / Communications</td><td>€36,000–€52,000</td><td>€35,000–€50,000</td></tr>
-<tr><td>Digital Marketing (private sector)</td><td>€40,000–€58,000</td><td>€38,000–€55,000</td></tr>
-<tr><td>Freelance day rate (media production)</td><td>€200–€400</td><td>€250–€500</td></tr>
-</tbody>
-</table>
-<div class="neutral" style="margin-top:16px"><p><strong>30% ruling eligibility for Pin2:</strong> Weaker case than Pin1. Media production/marketing is considered less "scarce" than AI expertise. However, if your salary exceeds ~€35,000 (under-30 with master's threshold) or ~€46,000 (standard), it's <strong>worth applying</strong> — the worst they can say is no. Applies to employed roles only, not freelance.</p></div>
-</div>
-</div>
-
-<!-- Creative Communities -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">🎭</span> Creative Communities &amp; Networking</h2>
-<div class="compare-grid">
-<div class="compare-card iceland">
-<div class="compare-header">🇮🇸 Iceland</div>
-<div class="compare-body">
-<ul>
-<li>Reykjav&iacute;k punches above its weight culturally — legendary music scene, thriving literary culture</li>
-<li>Harpa concert hall, numerous galleries</li>
-<li>Small creative community means you'll quickly know everyone — easier to build a reputation</li>
-<li>Iceland Airwaves music festival attracts international attention</li>
-<li>The trade-off: fewer opportunities, less variety, less anonymity</li>
-</ul>
-</div>
-</div>
-<div class="compare-card netherlands">
-<div class="compare-header">🇳🇱 Netherlands</div>
-<div class="compare-body">
-<ul>
-<li>World-class cultural scene: Rijksmuseum, Stedelijk, EYE Film Museum</li>
-<li>Rotterdam — thriving creative hub with architecture, design, and media communities</li>
-<li>Active meetup culture for creatives, regular networking events</li>
-<li>International documentary and film festivals (IDFA Amsterdam)</li>
-<li>Larger pool of collaborators, agencies, and creative professionals</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Pin2 Verdict -->
-<div class="section">
-<div class="verdict">
-<h3>🏆 Verdict for Pin2</h3>
-<p><strong>The Netherlands is the clearly stronger career move.</strong> The Hague's concentration of international NGOs gives you a realistic job market that simply doesn't exist in Iceland. The Dutch freelancing (ZZP) infrastructure makes it easy to build a mixed portfolio of employed and freelance work. The creative scene is larger and more diverse. In Iceland, your skills are marketable, but the market is tiny — you'd be waiting for one of perhaps 1–2 relevant roles per year, and nearly all require Icelandic. If NGO work is your passion, The Hague is the answer.</p>
-</div>
-</div>
-
-</div>
-</div>
-
-<!-- ======================= JOINT TAB ======================= -->
-<div id="tab-joint" class="tab-content">
-<div class="container">
-
-<div class="section" style="margin-top:48px">
-<h2 class="section-title"><span class="emoji">🤝</span> Joint Considerations</h2>
-<p style="color:var(--text-light)">Everything you need to decide together — your cats, LGBTQ+ life, housing, finances, lifestyle, and the final recommendation.</p>
-</div>
-
-<!-- ===== CATS ===== -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">🐱</span> 1. Your Cats</h2>
-<p style="color:var(--text-light);margin-bottom:20px">This is where the two destinations diverge most dramatically. With 2 domestic cats, the import process is a major factor in your decision.</p>
-
-<div class="compare-grid">
-<div class="compare-card netherlands">
-<div class="compare-header">🇳🇱 Netherlands — Straightforward</div>
-<div class="compare-body">
-<div class="pro"><p><strong>EU Pet Passport system.</strong> Ireland → Netherlands is an intra-EU move. No quarantine. No special permits.</p></div>
-<table class="data-table">
-<thead><tr><th>Step</th><th>Timeline</th><th>Cost (per cat)</th></tr></thead>
-<tbody>
-<tr><td>Confirm microchip (ISO 11784/11785)</td><td>Already done</td><td>€0</td></tr>
-<tr><td>Rabies vaccination</td><td>21+ days before travel</td><td>€50–€80</td></tr>
-<tr><td>EU Pet Passport from Irish vet</td><td>Same visit</td><td>€30–€50</td></tr>
-<tr><td>Tapeworm treatment (if required)</td><td>24–120hrs before travel</td><td>€20–€30</td></tr>
-<tr><td>Airline carrier + pet fee</td><td>Book with flight</td><td>€80–€150</td></tr>
-</tbody>
-</table>
-<p style="margin-top:12px;font-weight:600;color:var(--green)">Total for 2 cats: ~€360–€720</p>
-<p style="font-size:13px;color:var(--text-muted);margin-top:8px"><strong>Timeline needed:</strong> 4–6 weeks. <strong>Ferry option:</strong> Irish Ferries/Stena Line with pet-friendly cabin avoids airline stress entirely.</p>
-</div>
-</div>
-<div class="compare-card iceland">
-<div class="compare-header">🇮🇸 Iceland — Complex &amp; Emotional</div>
-<div class="compare-body">
-<div class="con"><p><strong>Strictest pet import regulations in Europe.</strong> Iceland is outside the EU Pet Passport system.</p></div>
-<table class="data-table">
-<thead><tr><th>Step</th><th>Timeline</th><th>Cost (per cat)</th></tr></thead>
-<tbody>
-<tr><td>MAST import permit application</td><td>4–6 months before</td><td>€50–€100</td></tr>
-<tr><td>Rabies vaccination</td><td>60+ days before, max 12 months</td><td>€50–€80</td></tr>
-<tr><td>Feline vaccines (distemper, FeLV, etc.)</td><td>Per MAST schedule</td><td>€100–€200</td></tr>
-<tr><td>Blood tests (antibody levels)</td><td>Allow 2–4 weeks for results</td><td>€100–€200</td></tr>
-<tr><td>Parasite treatments + vet certificate</td><td>Specific windows</td><td>€100–€160</td></tr>
-<tr><td>Flight to Keflavík (only entry point)</td><td>Book cargo</td><td>€200–€400</td></tr>
-<tr><td><strong>Mandatory quarantine (Keldur)</strong></td><td><strong>4 weeks</strong></td><td><strong>€660–€1,200</strong></td></tr>
-</tbody>
-</table>
-<p style="margin-top:12px;font-weight:600;color:var(--red)">Total for 2 cats: ~€2,520–€4,280</p>
-<p style="font-size:13px;color:var(--text-muted);margin-top:8px"><strong>Timeline needed:</strong> Start 6 months before. <strong>Emotional reality:</strong> Your cats spend 4 weeks in quarantine without you. Visits are restricted. Some cats cope fine; others are stressed. There are no exemptions.</p>
-</div>
-</div>
-</div>
-
-<div class="card" style="margin-top:20px">
-<h3>🩺 Vet Preparation Checklist (Both Countries)</h3>
-<ul class="checklist">
-<li>Confirm both cats are microchipped (ISO 11784/11785 standard)</li>
-<li>Get up-to-date vaccination records from your current vet</li>
-<li>Schedule rabies vaccination (if not current) — must be after microchipping</li>
-<li>For Iceland: contact MAST immediately (mast@mast.is) for current requirements</li>
-<li>For Netherlands: request EU Pet Passports from your Irish vet</li>
-<li>Arrange transport carriers that meet airline/ferry specifications</li>
-<li>Register with a local vet (dierenarts/dýralæknir) upon arrival</li>
-</ul>
-</div>
-</div>
-
-<!-- ===== LGBTQ+ LIFE ===== -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">🏳️‍🌈</span> 2. LGBTQ+ Life</h2>
-
-<div class="card">
-<h3>⚖️ Legal Rights</h3>
-<table class="data-table">
-<thead><tr><th>Right</th><th>🇮🇸 Iceland</th><th>🇳🇱 Netherlands</th></tr></thead>
-<tbody>
-<tr><td>Marriage Equality</td><td>Since 2010 (unanimous vote, 49-0!)</td><td>Since 2001 (first in the world)</td></tr>
-<tr><td>Joint Adoption</td><td>✅ Since 2006</td><td>✅ Since 2001</td></tr>
-<tr><td>Anti-Discrimination</td><td>✅ Comprehensive since 1996/2018</td><td>✅ Equal Treatment Act since 1994</td></tr>
-<tr><td>Trans Self-ID</td><td>✅ Since 2019, incl. X gender marker</td><td>✅ Since 2014, no X marker yet</td></tr>
-<tr><td>Your Irish marriage</td><td>Fully &amp; automatically recognised</td><td>Fully &amp; automatically recognised</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="card">
-<h3>🌈 Social Attitudes &amp; Daily Life</h3>
-<div class="compare-grid">
-<div style="padding:0">
-<h4 style="color:var(--accent);margin-bottom:8px">🇮🇸 Iceland</h4>
-<div class="pro"><p><strong>Overwhelmingly accepting.</strong> Reykjavík is a city where LGBTQ+ people are visible, normalised, and unremarkable. Holding hands, a quick kiss — nobody cares. Anywhere.</p></div>
-<div class="pro"><p>Near-zero hate crime incidents. Uniform acceptance across generations and geographies. You'll likely never have to think about your safety as a queer couple.</p></div>
-<div class="con"><p>The most common microaggression is the assumption of heterosexuality — people assuming you're friends/flatmates. Not hostile, but occasionally tiring.</p></div>
-</div>
-<div style="padding:0">
-<h4 style="color:var(--accent);margin-bottom:8px">🇳🇱 Netherlands</h4>
-<div class="pro"><p><strong>Broadly excellent in the Randstad</strong> (Amsterdam, The Hague, Rotterdam, Utrecht). Long, proud queer history. Amsterdam is one of Europe's historic LGBTQ+ capitals.</p></div>
-<div class="con"><p><strong>Acceptance is not entirely uniform.</strong> Some urban neighbourhoods and the Bible Belt region can be less comfortable. Verbal harassment incidents have been <em>increasing</em> in recent years (170+ reported in Amsterdam alone in 2023).</p></div>
-<div class="neutral"><p>The Netherlands has a "tolerance paradox" — pride in being progressive can mask ongoing issues. Day-to-day in the Randstad: you'll be fine. But slightly more situational awareness is needed than in Iceland.</p></div>
-</div>
-</div>
-</div>
-
-<div class="card">
-<h3>🎉 Community &amp; Scene</h3>
-<div class="compare-grid">
-<div style="padding:0">
-<h4 style="color:var(--accent);margin-bottom:8px">🇮🇸 Iceland</h4>
-<ul>
-<li><strong>Kiki Queer Bar</strong> — the main (essentially only) dedicated LGBTQ+ venue. Small, cosy, welcoming.</li>
-<li><strong>Samt&ouml;kin '78</strong> — national LGBTQ+ org with community centre, events, support groups. Your anchor.</li>
-<li><strong>Reykjavík Pride</strong> (August) — up to 100,000 attendees in a country of 385,000. Intimate, joyful, community-centred.</li>
-<li>Small enough that you'll know most people within a year. Comforting but occasionally claustrophobic.</li>
-</ul>
-</div>
-<div style="padding:0">
-<h4 style="color:var(--accent);margin-bottom:8px">🇳🇱 Netherlands</h4>
-<ul>
-<li><strong>Amsterdam:</strong> Multiple venues — Caf&eacute; 't Mandje (1927!), Club NYX, De Trut, Rapido. Rich nightlife &amp; culture.</li>
-<li><strong>COC Nederland</strong> — world's oldest LGBTQ+ org (1946). Local chapters everywhere.</li>
-<li><strong>Amsterdam Canal Pride</strong> (August) — iconic boat parade, one of Europe's largest. Two-week programme.</li>
-<li><strong>Variety:</strong> Queer film festivals, art events, subcultural spaces across multiple cities.</li>
-<li>Much larger pool of LGBTQ+ people, including other expats.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-<!-- ===== HOUSING ===== -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">🏠</span> 3. Housing</h2>
-<p style="color:var(--text-light);margin-bottom:20px"><strong>Both countries have severe housing shortages.</strong> This will be your biggest practical challenge regardless of destination.</p>
-
-<div class="card">
-<h3>Monthly Rent Estimates (2-bedroom apartment, 2026)</h3>
-<table class="data-table">
-<thead><tr><th>Location</th><th>Rent (EUR/month)</th></tr></thead>
-<tbody>
-<tr><td>🇮🇸 Reykjavík (central, 101/105)</td><td>€2,300–€3,150</td></tr>
-<tr><td>🇳🇱 Amsterdam</td><td>€1,800–€2,500</td></tr>
-<tr><td>🇳🇱 The Hague</td><td>€1,400–€1,900</td></tr>
-<tr><td>🇳🇱 Utrecht</td><td>€1,500–€2,100</td></tr>
-<tr><td>🇳🇱 Rotterdam</td><td>€1,300–€1,800</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="compare-grid">
-<div class="compare-card iceland">
-<div class="compare-header">🇮🇸 Iceland — Housing</div>
-<div class="compare-body">
-<div class="con"><p><strong>Severe housing shortage in Reykjavík.</strong> No regulated private rental market. Most rentals found informally via Facebook groups (Leiga á Íslandi) or Mbl.is classifieds.</p></div>
-<div class="con"><p>Expect to compete with dozens of applicants. Landlords prefer Icelanders with local references. Deposit: 1–3 months' rent.</p></div>
-<div class="neutral"><p><strong>Pet-friendly rentals:</strong> Most Icelandic landlords are relatively relaxed about cats, but confirm in writing.</p></div>
-<div class="neutral"><p><strong>Buying:</strong> EEA citizens can buy. 60–80m² in Reykjavík: €300,000–€500,000. Need 20–25% down payment. Mortgage rates: 7–9% (indexed loans).</p></div>
-</div>
-</div>
-<div class="compare-card netherlands">
-<div class="compare-header">🇳🇱 Netherlands — Housing</div>
-<div class="compare-body">
-<div class="con"><p><strong>Housing crisis is real.</strong> Social housing waiting lists: 8–15 years (Amsterdam). You'll use the private market.</p></div>
-<div class="con"><p><strong>Scams are rampant.</strong> Never pay before viewing. Never wire to foreign accounts. Use Pararius, Funda only.</p></div>
-<div class="con"><p><strong>"Unfurnished" often means literally unfurnished</strong> — no flooring, no lights, sometimes no kitchen. Budget €2,000–€4,000 to fit out.</p></div>
-<div class="neutral"><p><strong>Pet-friendly:</strong> Not all landlords accept pets. With 2 cats, options narrow. Some charge extra.</p></div>
-<div class="neutral"><p>Landlords require income proof: typically 3–3.5× monthly rent as gross salary. Two incomes help.</p></div>
-</div>
-</div>
-</div>
-
-<div class="card" style="margin-top:20px">
-<h3>💡 Tips for Finding Housing from Abroad</h3>
-<ul>
-<li><strong>Start looking early</strong> — 2–3 months before your move at minimum</li>
-<li><strong>Book temporary accommodation</strong> (Airbnb, 2–4 weeks) so you have a base for viewings</li>
-<li><strong>Iceland:</strong> Join Facebook groups "Leiga á Íslandi" and "Leiguskjól"; check Mbl.is classifieds</li>
-<li><strong>Netherlands:</strong> Use Pararius.nl (expat-friendly), Funda.nl. Avoid Facebook marketplace (scam-heavy)</li>
-<li><strong>Mention your cats upfront</strong> to avoid wasting time on non-pet-friendly rentals</li>
-<li>Having a <strong>local contact</strong> who can vouch for you or attend viewings is enormously valuable</li>
-</ul>
-</div>
-</div>
-
-<!-- ===== FINANCES ===== -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">💰</span> 4. Finances &amp; Cost of Living</h2>
-
-<div class="card">
-<h3>📋 Combined Monthly Budget (Couple + 2 Cats)</h3>
-<table class="data-table">
-<thead><tr><th>Category</th><th>🇮🇸 Iceland (EUR)</th><th>🇳🇱 Netherlands (EUR)</th></tr></thead>
-<tbody>
-<tr><td>Rent (2-bed apartment)</td><td>€2,300–€3,150</td><td>€1,400–€1,900</td></tr>
-<tr><td>Groceries</td><td>€530–€790</td><td>€400–€600</td></tr>
-<tr><td>Utilities</td><td>€100–€165</td><td>€150–€250</td></tr>
-<tr><td>Internet + mobile (x2)</td><td>€80–€120</td><td>€60–€100</td></tr>
-<tr><td>Transport</td><td>€92–€860</td><td>€100–€200</td></tr>
-<tr><td>Health insurance</td><td>€0 (public, after 6mo)</td><td>€260–€340</td></tr>
-<tr><td>Dining out (modest)</td><td>€265–€395</td><td>€200–€320</td></tr>
-<tr><td>Cat costs (food, litter, vet)</td><td>€100–€165</td><td>€80–€140</td></tr>
-<tr style="background:#f8fafc;font-weight:600"><td><strong>TOTAL</strong></td><td><strong>€3,470–€5,645</strong></td><td><strong>€2,650–€3,850</strong></td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="card">
-<h3>🚀 Upfront Moving Costs (Two People + Two Cats)</h3>
-<table class="data-table">
-<thead><tr><th>Item</th><th>🇮🇸 Iceland</th><th>🇳🇱 Netherlands</th></tr></thead>
-<tbody>
-<tr><td>Flights (2 people)</td><td>€200–€500</td><td>€100–€300</td></tr>
-<tr><td>Shipping belongings</td><td>€2,000–€4,000</td><td>€800–€2,000</td></tr>
-<tr><td>Temporary accommodation (3–4 weeks)</td><td>€2,000–€3,500</td><td>€1,500–€2,500</td></tr>
-<tr><td>Rental deposit (2 months)</td><td>€3,700–€6,300</td><td>€2,200–€3,800</td></tr>
-<tr><td>First month's rent</td><td>€1,850–€3,150</td><td>€1,100–€1,900</td></tr>
-<tr><td>Cat relocation (both)</td><td>€2,500–€4,000</td><td>€300–€600</td></tr>
-<tr><td>Furniture / setup</td><td>€1,000–€3,000</td><td>€1,500–€4,000</td></tr>
-<tr><td>Health insurance / admin</td><td>€400–€700</td><td>€310–€440</td></tr>
-<tr style="background:#f8fafc;font-weight:700"><td><strong>TOTAL UPFRONT</strong></td><td><strong>€12,250–€21,950</strong></td><td><strong>€8,210–€16,140</strong></td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="card">
-<h3>🏦 Recommended Savings Before Moving</h3>
-<div class="compare-grid">
-<div style="text-align:center;padding:20px;background:var(--accent-bg);border-radius:var(--radius-sm)">
-<div style="font-size:14px;color:var(--text-muted)">🇮🇸 Iceland</div>
-<div style="font-size:32px;font-weight:800;color:var(--accent);margin:8px 0">€25,000–€30,000</div>
-<div style="font-size:13px;color:var(--text-light)">Upfront costs + 3-month emergency fund</div>
-</div>
-<div style="text-align:center;padding:20px;background:var(--accent-bg);border-radius:var(--radius-sm)">
-<div style="font-size:14px;color:var(--text-muted)">🇳🇱 Netherlands</div>
-<div style="font-size:32px;font-weight:800;color:var(--teal);margin:8px 0">€20,000–€22,000</div>
-<div style="font-size:13px;color:var(--text-light)">Upfront costs + 3-month emergency fund</div>
-</div>
-</div>
-<div class="con" style="margin-top:16px"><p><strong>If you don't have these savings, wait and save.</strong> The most common reason relocations fail is running out of money before you're established. A failed move is more expensive than a delayed one.</p></div>
-</div>
-
-<div class="card">
-<h3>🧾 Tax Implications of Leaving Ireland</h3>
-<ul>
-<li><strong>Notify Revenue:</strong> File Form P85 via revenue.ie when you leave</li>
-<li><strong>Split-year residency:</strong> You'll be Irish tax resident for the portion of the year you were in Ireland</li>
-<li><strong>Ordinarily resident:</strong> You remain ordinarily resident for 3 full tax years after departure</li>
-<li><strong>Double taxation treaties:</strong> Ireland has treaties with both Iceland and the Netherlands — you won't be taxed twice</li>
-<li><strong>Get a U1 form</strong> from the Dept of Social Protection to certify your social insurance record</li>
-<li><strong>Keep your Irish bank account open</strong> for 6–12 months — trailing payments, tax refunds, etc.</li>
-</ul>
-</div>
-</div>
-
-<!-- ===== LIFESTYLE ===== -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">🌍</span> 5. Lifestyle &amp; Culture</h2>
-
-<div class="compare-grid">
-<div class="compare-card iceland">
-<div class="compare-header">🇮🇸 Iceland — Lifestyle</div>
-<div class="compare-body">
-<h4 style="margin-bottom:8px">The Good</h4>
-<div class="pro"><p><strong>Absurdly safe.</strong> Virtually no violent crime. Walk anywhere, any hour.</p></div>
-<div class="pro"><p><strong>Extraordinary nature.</strong> Glaciers, volcanoes, hot springs, waterfalls. Geothermal swimming pools (sundlaugar) are a cornerstone of social life.</p></div>
-<div class="pro"><p><strong>Clean air, geothermal everything.</strong> Pristine environment. Almost no air pollution.</p></div>
-<div class="pro"><p><strong>Good work-life balance.</strong> 36–40 hour work week. Generous leave policies.</p></div>
-
-<h4 style="margin:16px 0 8px">The Hard</h4>
-<div class="con"><p><strong>Winter darkness:</strong> 4–5 hours of usable daylight Dec–Jan. SAD is real and widespread. This has broken many newcomers.</p></div>
-<div class="con"><p><strong>Isolation:</strong> Flights to Europe take 3+ hours, cost €200–600 return. You will feel far from family.</p></div>
-<div class="con"><p><strong>Icelandic is hard.</strong> 4 cases, 3 genders, complex conjugations. 1–2 years for conversational level, 3–5 for professional fluency.</p></div>
-<div class="con"><p><strong>Making friends:</strong> Icelanders form social groups in childhood. Expect 2–3 years to build genuine friendships. First social circle will likely be expats.</p></div>
-<div class="con"><p><strong>Cost shock:</strong> €14 pint, €20 pizza, €80 weekly shop for two. Relentless.</p></div>
-</div>
-</div>
-<div class="compare-card netherlands">
-<div class="compare-header">🇳🇱 Netherlands — Lifestyle</div>
-<div class="compare-body">
-<h4 style="margin-bottom:8px">The Good</h4>
-<div class="pro"><p><strong>World-class cycling infrastructure.</strong> Dedicated bike lanes everywhere. You'll cycle to work, shops, pubs. It's genuinely wonderful.</p></div>
-<div class="pro"><p><strong>Excellent public transport.</strong> Trains, trams, buses connecting all cities. OV-chipkaart system.</p></div>
-<div class="pro"><p><strong>Good work-life balance.</strong> Part-time work normalised. 25 days vacation common. Fridays off is a thing.</p></div>
-<div class="pro"><p><strong>Rich cultural life.</strong> World-class museums, thriving music scene, excellent nightlife.</p></div>
-<div class="pro"><p><strong>Same currency (EUR).</strong> No exchange rate risk coming from Ireland.</p></div>
-
-<h4 style="margin:16px 0 8px">The Hard</h4>
-<div class="con"><p><strong>Weather is grey.</strong> 200+ overcast days/year. Similar to Ireland but with colder winters. SAD is common.</p></div>
-<div class="con"><p><strong>Dutch directness.</strong> Your manager will tell you bluntly your work isn't good. Coming from Irish indirectness, this can feel shocking.</p></div>
-<div class="con"><p><strong>Making Dutch friends is hard.</strong> "Agenda culture" — coffee is scheduled 3 weeks in advance. Social circles form in childhood. 2–3 years to build real friendships.</p></div>
-<div class="con"><p><strong>Everything closes early.</strong> Shops close at 18:00. Birthday parties involve sitting in a circle eating one piece of cake.</p></div>
-</div>
-</div>
-</div>
-
-<div class="card" style="margin-top:20px">
-<h3>⏱️ Time to Feel Settled</h3>
-<div class="compare-grid">
-<div style="text-align:center;padding:20px;background:#e0f2fe;border-radius:var(--radius-sm)">
-<div style="font-size:14px;font-weight:600">🇮🇸 Iceland</div>
-<div style="font-size:28px;font-weight:800;margin:8px 0">18–24 months</div>
-<div style="font-size:13px;color:var(--text-light)">Longer due to language, cat quarantine, smaller market</div>
-</div>
-<div style="text-align:center;padding:20px;background:#fff7ed;border-radius:var(--radius-sm)">
-<div style="font-size:14px;font-weight:600">🇳🇱 Netherlands</div>
-<div style="font-size:28px;font-weight:800;margin:8px 0">9–15 months</div>
-<div style="font-size:13px;color:var(--text-light)">Faster due to EU alignment, English-friendlier, larger market</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- ===== RECOMMENDATION ===== -->
-<div class="section">
-<h2 class="section-title"><span class="emoji">🎯</span> 6. Our Recommendation</h2>
-
-<div class="card" style="border:2px solid var(--accent)">
-<h3 style="font-size:20px;margin-bottom:16px">The Verdict: Factor by Factor</h3>
-<table class="data-table">
-<thead><tr><th>Factor</th><th>Winner</th><th>Why</th></tr></thead>
-<tbody>
-<tr><td>Cat relocation</td><td><span class="tag tag-nl">🇳🇱</span><strong>NL, decisively</strong></td><td>No quarantine, EU Pet Passport, €2,000+ cheaper, far less stressful</td></tr>
-<tr><td>Pin1's career</td><td><span class="tag tag-nl">🇳🇱</span><strong>Netherlands</strong></td><td>Larger market, English-friendly HR tech roles, 30% tax ruling</td></tr>
-<tr><td>Pin2's career</td><td><span class="tag tag-nl">🇳🇱</span><strong>Netherlands</strong></td><td>The Hague's NGO cluster, stronger freelance infrastructure</td></tr>
-<tr><td>LGBTQ+ safety</td><td><span class="tag tag-ice">🇮🇸</span><strong>Iceland</strong></td><td>Near-perfect safety, uniform acceptance, zero situational awareness needed</td></tr>
-<tr><td>LGBTQ+ community</td><td><span class="tag tag-nl">🇳🇱</span><strong>Netherlands</strong></td><td>Far more venues, events, organisations, and subcultural variety</td></tr>
-<tr><td>Cost of living</td><td><span class="tag tag-nl">🇳🇱</span><strong>Netherlands</strong></td><td>Lower rents (especially outside Amsterdam), cheaper groceries, EUR stability</td></tr>
-<tr><td>Startup costs</td><td><span class="tag tag-nl">🇳🇱</span><strong>Netherlands</strong></td><td>~€8K–16K vs ~€12K–22K. The cat quarantine alone is €2,500–€4,000</td></tr>
-<tr><td>Nature &amp; safety</td><td><span class="tag tag-ice">🇮🇸</span><strong>Iceland</strong></td><td>Unmatched natural beauty and personal safety</td></tr>
-<tr><td>Weather / mental health</td><td><span class="tag tag-nl">🇳🇱</span><strong>NL (slightly)</strong></td><td>Both grey, but NL doesn't have 4-hour winter days. Significant for SAD risk.</td></tr>
-<tr><td>Speed to settled</td><td><span class="tag tag-nl">🇳🇱</span><strong>Netherlands</strong></td><td>9–15 months vs 18–24 months</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="verdict" style="background:linear-gradient(135deg,#6c63ff 0%,#0d9488 100%)">
-<h3>🏡 Our Recommendation</h3>
-<p style="font-size:16px;margin-bottom:16px"><strong>For your specific situation, the Netherlands is the stronger choice.</strong></p>
-<p>Here's the honest reasoning: You're an LGBTQ+ couple with two cats, specific career profiles, and a desire to build a new life abroad. The Netherlands wins on most practical factors — simpler cat import, better job markets for both of you, lower costs, the 30% tax ruling, faster settling time, and a rich LGBTQ+ community. The Hague specifically gives Pin2 the best NGO market, puts Pin1 within commuting distance of the entire Randstad (Amsterdam, Rotterdam, Utrecht — all 30–60 min by train), and offers housing that's more achievable than Amsterdam.</p>
-<p style="margin-top:12px"><strong>But we want to be fair to Iceland.</strong> If safety, nature, and the deepest possible social acceptance matter most to you — if you dream of hot springs and volcanoes and a tiny community where everyone knows your name — Iceland is extraordinary. It demands more (more savings, more patience, more resilience in winter, and it imposes genuine hardship on your cats), but it gives back something the Netherlands can't quite match: a feeling of utter peace and belonging once you're in.</p>
-<p style="margin-top:12px"><strong>The pragmatic path:</strong> Move to The Hague. Build your careers. Enjoy the cycling, the culture, Canal Pride, and the convenience of EU life. Visit Iceland for holidays — the Northern Lights, the hot springs, the summer midnight sun. And if after a few years you find yourselves yearning for something smaller, wilder, and more remote? Iceland will still be there.</p>
-<p style="margin-top:16px;opacity:0.85;font-size:14px"><em>Whatever you choose — start the cat paperwork, save aggressively, and apply for jobs before you leave. Preparation is the difference between a successful relocation and an expensive mistake. You're doing the hard part — the research — which means you're already ahead.</em></p>
-<p style="margin-top:16px;font-size:18px">Go n-éirí libh! 🌈🐱🐱</p>
-</div>
+  <!-- Quick Summary -->
+  <div class="section-title"><span class="emoji">💡</span> Overall Recommendation</div>
+  <div class="verdict">
+    <h3>The Netherlands is the stronger overall fit — but Iceland has unique strengths</h3>
+    <p>For your specific situation — an LGBTQ+ couple, two cats, vegetarian diet, Pin1's DEI career ambitions, and Pin2's broad marketing/communications skill set — <strong>the Netherlands offers more opportunity and fewer frictions</strong>. The job market is larger and better matched to both your profiles, cat import is simple within the EU, vegetarian life is one of Europe's best, and the DEI sector is genuinely developed.</p>
+    <p style="margin-top:.5rem"><strong>Iceland is not the wrong choice.</strong> It offers unmatched safety, world-leading LGBTQ+ acceptance, extraordinary nature, and near-free university tuition. But it demands more: more savings, more patience, harder language learning, mandatory cat quarantine, and a much smaller job market — especially for DEI. It depends on your priorities.</p>
+    <p style="margin-top:.5rem">Read the detailed tabs to see the full picture for each of you, and reach your own conclusion. The Joint Considerations tab ends with a comprehensive final recommendation.</p>
+  </div>
 
 </div>
 
-</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--              TAB 2: PIN1                   -->
+<!-- ═══════════════════════════════════════════ -->
+<div id="tab-pin1" class="tab-content content">
+
+  <div class="hero" style="background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%);">
+    <div class="hero-flag">👤</div>
+    <h1>Pin1 — Career &amp; Professional Life</h1>
+    <p class="subtitle">HR Professional · BAH Hons HRM + MSc AI for Business · DEI ambitions</p>
+  </div>
+
+  <!-- DEI Opportunities -->
+  <div class="section-title"><span class="emoji">🤝</span> DEI Sector Opportunities</div>
+  <p>This is arguably <strong>the most important career comparison</strong> for you. The difference between the two countries is stark.</p>
+
+  <div class="compare-grid">
+    <div class="compare-col">
+      <div class="compare-col-header iceland">🇮🇸 Iceland — DEI Landscape</div>
+      <div class="compare-col-body">
+        <div class="con">DEI as a standalone career path <strong>essentially doesn't exist</strong>. Perhaps 1–3 specialist positions open in the entire country at any time.</div>
+        <div class="pro">World-leading <strong>gender equality</strong> framework — topped the WEF Gender Gap Index for 14+ years. Equal pay certification (Jafnlaunavottun) is a genuine innovation.</div>
+        <div class="neutral">"DEI" is folded into broader HR roles. Dedicated "Head of DEI" positions don't appear on Icelandic job boards.</div>
+        <ul>
+          <li>Possible employers: Jafnréttisstofa (Directorate of Equality), City of Reykjavík, University of Iceland — roles are rare and require Icelandic</li>
+          <li>Growing need around multicultural integration as immigration increases, but framed as "integration" not "DEI"</li>
+          <li>You'd be a <strong>pioneer</strong>, which is either exciting or exhausting</li>
+        </ul>
+      </div>
+    </div>
+    <div class="compare-col">
+      <div class="compare-col-header netherlands">🇳🇱 Netherlands — DEI Landscape</div>
+      <div class="compare-col-body">
+        <div class="pro"><strong>One of the most developed DEI markets in continental Europe</strong>, and growing thanks to EU CSRD/ESG requirements.</div>
+        <div class="pro">Multinationals with dedicated DEI teams: Shell, Unilever, Philips, ASML, Booking.com, Adyen, ING, ABN AMRO, Heineken — nearly all English-speaking.</div>
+        <div class="pro">DEI consultancies: Include, Diversiteit in Bedrijf, Equileap, plus Big Four DEI practices.</div>
+        <ul>
+          <li><strong>Workplace Pride</strong> — international org focused on LGBTQ+ workplace inclusion, runs Global Benchmark. Direct career target for you</li>
+          <li>COC Nederland does corporate engagement and training</li>
+          <li>Movisie — national knowledge institute for social issues, research and advisory roles</li>
+          <li>Salary: €50,000–€75,000 for corporate DEI roles</li>
+        </ul>
+        <div class="neutral">Dutch DEI conversation can lag behind Anglo-American maturity — you may educate as much as implement. But that's opportunity.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HR Career Prospects -->
+  <div class="section-title"><span class="emoji">💼</span> HR Career Prospects</div>
+  <div class="compare-grid">
+    <div class="compare-col">
+      <div class="compare-col-header iceland">🇮🇸 Iceland</div>
+      <div class="compare-col-body">
+        <p><strong>Tight labour market (~3–5% unemployment).</strong> HR professionals needed at banks, tech companies, airlines.</p>
+        <div class="con">Almost all HR roles require <strong>fluent Icelandic</strong> — employment contracts, union negotiations (~90% membership), labour law.</div>
+        <div class="pro">Without Icelandic, limited to international/tech companies — but these exist (Marel, Controlant, Icelandair, CCP Games).</div>
+        <p><strong>Salary:</strong> ISK 550,000–850,000/month (€3,600–€5,600). Senior roles to ISK 1M+ but require Icelandic + local network.</p>
+        <p><strong>Key boards:</strong> Alfred.is, Tvinna.is, Starfatorg.is, LinkedIn</p>
+      </div>
+    </div>
+    <div class="compare-col">
+      <div class="compare-col-header netherlands">🇳🇱 Netherlands</div>
+      <div class="compare-col-body">
+        <p><strong>Large, mature HR market.</strong> Amsterdam, Eindhoven (Brainport), and Utrecht are strongest.</p>
+        <div class="pro">English-only HR roles exist at international companies, scale-ups, and multinationals.</div>
+        <div class="con">Pure HR generalist roles at Dutch companies require Dutch. Works councils (ondernemingsraad) operate in Dutch.</div>
+        <p><strong>Salary:</strong> €45,000–€65,000 mid-level HR/People Analytics. Senior higher, especially in tech.</p>
+        <p><strong>Key boards:</strong> LinkedIn, iamsterdam.com/work, Indeed.nl</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI for Business -->
+  <div class="section-title"><span class="emoji">🤖</span> AI for Business / HR Tech</div>
+  <div class="card">
+    <p>Your MSc in AI for Business is a <strong>genuine differentiator</strong> in both countries — but the market size differs enormously.</p>
+    <div class="compare-grid">
+      <div class="info-box">
+        <h4>🇮🇸 Iceland</h4>
+        <p style="font-size:.88rem">Companies are actively digitising and HR tech / people analytics demand outstrips local supply. But you might find only 2–5 relevant openings at any given time <em>in the entire country</em>.</p>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Netherlands</h4>
+        <p style="font-size:.88rem">"People Analytics" roles are growing and more likely to be English-friendly. <strong>Your sweet spot:</strong> a DEI role at a multinational that values the AI/data angle — measuring inclusion, bias in hiring algorithms, diversity metrics dashboards. This intersection is niche, in demand, and pays well.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Salary & Take-Home -->
+  <div class="section-title"><span class="emoji">💶</span> Salary &amp; Take-Home Pay</div>
+  <div class="card" style="overflow-x:auto">
+    <table class="data-table">
+      <thead>
+        <tr><th>Scenario</th><th>Gross Annual</th><th>Effective Tax</th><th>Net Annual (approx.)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>🇮🇸 Iceland (€50k)</td><td>€50,000</td><td>~40–42%</td><td>~€29,000–€30,000</td></tr>
+        <tr><td>🇳🇱 NL without 30% ruling</td><td>€50,000</td><td>~38–40%</td><td>~€30,000–€31,000</td></tr>
+        <tr><td>🇳🇱 NL with 30% ruling</td><td>€50,000</td><td>~28–30%</td><td><strong>~€35,000–€36,000</strong></td></tr>
+      </tbody>
+    </table>
+    <div class="callout" style="margin-top:1rem">
+      <strong>🎯 The 30% Ruling</strong> — You have a strong case for eligibility. Your MSc in AI for Business + HR/DEI expertise is exactly the kind of "specific expertise not readily available in the Netherlands" the ruling targets. It could mean an extra <strong>€400–500/month net</strong>. Over 5 years: ~€25,000–€30,000 in tax savings. Your employer must apply within 4 months of your start date — raise it during salary negotiation.
+    </div>
+  </div>
+
+  <!-- Professional Development -->
+  <div class="section-title"><span class="emoji">📚</span> Professional Development &amp; Networking</div>
+  <div class="compare-grid">
+    <div class="compare-col">
+      <div class="compare-col-header iceland">🇮🇸 Iceland</div>
+      <div class="compare-col-body">
+        <ul>
+          <li>Small professional community — easy to meet key people once you're in, but limited scale</li>
+          <li>Jafnréttisstofa and the equal pay certification system are genuine learning opportunities</li>
+          <li>Samtökin '78 — volunteer/advisory LGBTQ+ advocacy work alongside paid HR role</li>
+          <li>Few industry events or conferences compared to NL</li>
+          <li>Irish HRM qualifications recognised but Icelandic labour law knowledge essential</li>
+        </ul>
+      </div>
+    </div>
+    <div class="compare-col">
+      <div class="compare-col-header netherlands">🇳🇱 Netherlands</div>
+      <div class="compare-col-body">
+        <ul>
+          <li><strong>Workplace Pride</strong> — LGBTQ+ workplace inclusion org, runs Global Benchmark, hosts conferences. Direct networking + potential employer</li>
+          <li>COC Nederland corporate engagement programmes</li>
+          <li>DEI consultancies (Include, Equileap) as networking and career pipeline</li>
+          <li>Regular HR Tech and People Analytics conferences and meetups</li>
+          <li>Movisie — national knowledge institute for social issues, research roles</li>
+          <li>Irish HRM qualifications well-understood by multinationals</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Job Platform Tips -->
+  <div class="section-title"><span class="emoji">🔍</span> Job Search Tips</div>
+  <div class="card">
+    <div class="info-grid">
+      <div class="info-box">
+        <h4>🇮🇸 Iceland</h4>
+        <ul>
+          <li><strong>Alfred.is</strong> — main private sector board</li>
+          <li><strong>Tvinna.is</strong> — newer, growing</li>
+          <li><strong>Starfatorg.is</strong> — public sector jobs</li>
+          <li>LinkedIn — limited but growing for Iceland</li>
+          <li>Pitch yourself as "HR + AI + inclusion" — not "DEI specialist"</li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Netherlands</h4>
+        <ul>
+          <li><strong>LinkedIn</strong> — primary platform, very active in NL</li>
+          <li><strong>Indeed.nl</strong></li>
+          <li><strong>iamsterdam.com/work</strong></li>
+          <li>Direct approaches to multinational DEI teams</li>
+          <li>DEI consultancy websites for open roles</li>
+          <li>Apply <strong>before</strong> you move — a job offer changes everything</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visa & Qualifications -->
+  <div class="section-title"><span class="emoji">📋</span> Visa &amp; Qualifications Recognition</div>
+  <div class="card">
+    <div class="pro">As an Irish citizen, you have <strong>full work rights</strong> in both countries — no visa or work permit needed. EEA Agreement covers Iceland; EU Treaty covers the Netherlands.</div>
+    <p style="margin-top:.5rem">Your Irish HRM qualifications are broadly recognised in both countries. In Iceland, understanding local labour law and union structures is essential. In the Netherlands, multinationals readily accept Irish/UK-style HR qualifications. Your MSc from an Irish university is well-regarded across Europe.</p>
+  </div>
+
+  <!-- Verdict -->
+  <div class="section-title"><span class="emoji">🏁</span> Honest Verdict for Pin1</div>
+  <div class="verdict">
+    <h3>🇳🇱 The Netherlands is the significantly stronger choice for your career</h3>
+    <p>If DEI is genuinely where you want to build your career — and especially if LGBTQ+ workplace inclusion is your passion — the Netherlands is the clear winner. It has the institutional infrastructure, the job market, and the professional community to support a DEI career in a way that Iceland simply cannot.</p>
+    <p style="margin-top:.5rem">Iceland is a wonderful place to <em>be</em> queer, but it's not a place where you can easily <em>work professionally on queer inclusion</em> — because the need, while real, isn't yet recognised as requiring dedicated professionals. Your AI for Business MSc + DEI expertise combination is genuinely in demand at Dutch multinationals. The 30% tax ruling is a substantial financial bonus. Target <strong>The Hague</strong> or <strong>Amsterdam</strong>, and aim for DEI or People Analytics roles at multinationals.</p>
+  </div>
+
 </div>
 
-<!-- FOOTER -->
+
+<!-- ═══════════════════════════════════════════ -->
+<!--              TAB 3: PIN2                   -->
+<!-- ═══════════════════════════════════════════ -->
+<div id="tab-pin2" class="tab-content content">
+
+  <div class="hero" style="background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);">
+    <div class="hero-flag">👤</div>
+    <h1>Pin2 — Career &amp; Professional Life</h1>
+    <p class="subtitle">Marketing &amp; Communications · BAH Media Production &amp; Digital Arts · Human Geography interest</p>
+  </div>
+
+  <!-- Marketing & Comms -->
+  <div class="section-title"><span class="emoji">📣</span> Marketing, Comms &amp; Digital Content Roles</div>
+  <p>Opening up beyond NGOs significantly improves your prospects in <strong>both</strong> countries — but the scale difference is dramatic.</p>
+
+  <div class="compare-grid">
+    <div class="compare-col">
+      <div class="compare-col-header iceland">🇮🇸 Iceland</div>
+      <div class="compare-col-body">
+        <div class="pro"><strong>Tourism industry</strong> — best English-friendly bet. Hotels, tour operators, travel platforms (Guide to Iceland, Bókun) regularly need content people.</div>
+        <div class="pro"><strong>Tech companies</strong> — CCP Games, Controlant, Marel, startups need digital marketing and social media managers. Some operate in English.</div>
+        <div class="neutral"><strong>Creative agencies</strong> — Brandenburg, Íslenska, Hvíta húsið. Competitive, almost always require Icelandic. Freelance/contract work more accessible.</div>
+        <div class="con"><strong>NGO sector:</strong> Tiny. Maybe 1–2 relevant roles per year across all Icelandic NGOs combined.</div>
+        <div class="pro"><strong>Freelancing:</strong> Straightforward to register as sole trader. Small, collaborative creative community — word-of-mouth carries far.</div>
+        <p><strong>Salary:</strong> ISK 500,000–800,000/month (€3,300–€5,300) private sector; ISK 450,000–650,000/month (€3,000–€4,300) NGO</p>
+        <div class="con">Entire marketing industry smaller than a mid-size Dublin agency. Country of ~385,000 people.</div>
+      </div>
+    </div>
+    <div class="compare-col">
+      <div class="compare-col-header netherlands">🇳🇱 Netherlands</div>
+      <div class="compare-col-body">
+        <div class="pro"><strong>Corporate:</strong> Multinationals, tech companies, scale-ups — all need content creators, social media managers, digital marketers. English-language roles common.</div>
+        <div class="pro"><strong>World-class agencies:</strong> 72andSunny, Wieden+Kennedy, DDB, TBWA, Dept, MediaMonks — frequently hire international talent.</div>
+        <div class="pro"><strong>Tech &amp; startups:</strong> Bird, Mollie, Bunq, Picnic — almost entirely English-speaking. Marketing/growth roles plentiful.</div>
+        <div class="pro"><strong>NGO sector:</strong> The Hague is the hub — Oxfam Novib, Hivos, Cordaid, ICC ecosystem, UN-adjacent bodies. Competitive but roles are available.</div>
+        <div class="pro"><strong>Freelancing (ZZP):</strong> Very common in Dutch creative sector, well-supported structurally.</div>
+        <p><strong>Salary:</strong> €35,000–€55,000 mid-level; €60,000–€70,000+ senior digital marketing in tech</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NGO Sector -->
+  <div class="section-title"><span class="emoji">🌍</span> NGO / Non-Profit Sector</div>
+  <div class="card">
+    <div class="compare-grid">
+      <div class="info-box">
+        <h4>🇮🇸 Iceland</h4>
+        <p style="font-size:.88rem">Icelandic Red Cross, Amnesty International Iceland, Icelandic Human Rights Centre, Samtökin '78, environmental groups. The sector is <strong>tiny</strong> — your experience is relevant but opportunities are extremely scarce.</p>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Netherlands</h4>
+        <p style="font-size:.88rem"><strong>The Hague is a global NGO hub.</strong> Your NGO marketing experience transfers directly. Check <strong>werkenbijngos.nl</strong> for job listings. International organisations often work entirely in English. Lower-paid than private sector, but more roles available than in Iceland.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Human Geography -->
+  <div class="section-title"><span class="emoji">🗺️</span> Human Geography — Study &amp; Career Paths</div>
+  <div class="compare-grid">
+    <div class="compare-col">
+      <div class="compare-col-header iceland">🇮🇸 Iceland</div>
+      <div class="compare-col-body">
+        <div class="pro"><strong>Fascinating living laboratory:</strong> settlement patterns, resource management, climate adaptation, volcanic hazard planning, rural depopulation, Arctic geopolitics.</div>
+        <div class="pro"><strong>Near-free tuition:</strong> ~ISK 75,000 (€500) registration fee per year for EEA citizens at University of Iceland.</div>
+        <ul>
+          <li>University of Iceland — Faculty of Life and Environmental Sciences, geography + tourism programmes</li>
+          <li>University of Akureyri — smaller but relevant</li>
+        </ul>
+        <div class="con">Academic/applied roles very limited and require Icelandic. Better as a study path than an immediate career.</div>
+        <div class="con">Applied work (municipal planning, environmental impact) requires Icelandic fluency.</div>
+      </div>
+    </div>
+    <div class="compare-col">
+      <div class="compare-col-header netherlands">🇳🇱 Netherlands</div>
+      <div class="compare-col-body">
+        <div class="pro"><strong>Strong Dutch academic tradition</strong> — one of the fields where Dutch universities punch above their weight.</div>
+        <div class="pro"><strong>Part-time study while working is culturally normal</strong> and well-supported. This is the pragmatic Dutch approach.</div>
+        <ul>
+          <li><strong>University of Amsterdam (UvA)</strong> — excellent human geography programme</li>
+          <li><strong>Utrecht University</strong> — well-regarded, 40 min from The Hague by train</li>
+          <li><strong>University of Groningen</strong> — strong programme</li>
+          <li>Many programmes in English. Tuition ~€2,500/year for EU citizens</li>
+        </ul>
+        <div class="pro"><strong>Applied roles:</strong> urban planning, policy research, GIS analysis, social impact assessment. PBL, KWR, WRR, municipal planning departments.</div>
+        <div class="neutral">Pure geography career roles outside academia usually require Dutch, but studying and building the skill set is very accessible.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Creative Industries -->
+  <div class="section-title"><span class="emoji">🎨</span> Creative Industries &amp; Freelancing</div>
+  <div class="card">
+    <div class="compare-grid">
+      <div class="info-box">
+        <h4>🇮🇸 Iceland</h4>
+        <p style="font-size:.88rem">Reykjavík punches above its weight culturally — legendary music scene, vibrant literary culture, strong arts community. The creative community is small and collaborative. <strong>Freelance content creation, video production, and social media management</strong> are viable, especially targeting tourism and English-language clients. Registration as sole trader is straightforward.</p>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Netherlands</h4>
+        <p style="font-size:.88rem">Amsterdam has a <strong>world-class</strong> creative scene. Rotterdam's is underrated and arguably more experimental. ZZP (self-employment) is very common in the creative sector — about 1 in 8 Dutch workers is self-employed. Your media production and digital arts skills are highly marketable. Strong design, film, photography, and digital communities.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Salary & Cost of Living -->
+  <div class="section-title"><span class="emoji">💶</span> Salary &amp; Cost of Living Impact</div>
+  <div class="card" style="overflow-x:auto">
+    <table class="data-table">
+      <thead>
+        <tr><th>Role Type</th><th>🇮🇸 Iceland (monthly)</th><th>🇳🇱 Netherlands (annual)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Private sector marketing</td><td>€3,300–€5,300</td><td>€35,000–€55,000</td></tr>
+        <tr><td>NGO comms</td><td>€3,000–€4,300</td><td>€30,000–€45,000</td></tr>
+        <tr><td>Senior digital marketing (tech)</td><td>€4,500–€5,500</td><td>€60,000–€70,000+</td></tr>
+        <tr><td>Freelance</td><td>Highly variable</td><td>Highly variable</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:.75rem;font-size:.88rem">The Netherlands generally offers higher earning potential in marketing/comms, especially in tech and agencies. Iceland's cost of living is higher, further eroding purchasing power. The 30% ruling may be harder for Pin2 to qualify for — it depends on salary level and employer, but it's always worth applying.</p>
+  </div>
+
+  <!-- Visa & Qualifications -->
+  <div class="section-title"><span class="emoji">📋</span> Visa &amp; Qualifications</div>
+  <div class="card">
+    <div class="pro">As an Irish citizen, you have <strong>full work rights</strong> in both countries — no visa or work permit needed in either.</div>
+    <p style="margin-top:.5rem">Your BAH in Media Production &amp; Digital Arts is broadly recognised in both countries. For the Netherlands, your Irish qualifications are well-understood by international employers. In Iceland, the same applies for English-speaking roles. Portfolio and experience matter more than formal qualification recognition in the creative/marketing sector.</p>
+  </div>
+
+  <!-- Networking -->
+  <div class="section-title"><span class="emoji">🤝</span> Communities &amp; Networking</div>
+  <div class="compare-grid">
+    <div class="compare-col">
+      <div class="compare-col-header iceland">🇮🇸 Iceland</div>
+      <div class="compare-col-body">
+        <ul>
+          <li>Small creative community — easy to get known via word-of-mouth</li>
+          <li>University of Iceland for geography/environmental studies network</li>
+          <li>Expat groups on Facebook for initial support</li>
+          <li>Reykjavík's music/arts scene is a social entry point</li>
+          <li>The hot pots at swimming pools — Iceland's #1 social shortcut</li>
+        </ul>
+      </div>
+    </div>
+    <div class="compare-col">
+      <div class="compare-col-header netherlands">🇳🇱 Netherlands</div>
+      <div class="compare-col-body">
+        <ul>
+          <li>Meetup groups, InterNations, expat Facebook communities — large and active</li>
+          <li>Creative industry events and agency networking nights</li>
+          <li>University communities (UvA, Utrecht) for geography</li>
+          <li>Join a sports club (sportvereniging) — how Dutch adults make friends</li>
+          <li>werkenbijngos.nl community for NGO networking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="section-title"><span class="emoji">🏁</span> Honest Verdict for Pin2</div>
+  <div class="verdict">
+    <h3>🇳🇱 The Netherlands offers dramatically more breadth and opportunity</h3>
+    <p>The tourism/tech niche in Iceland is workable but narrow — you'd be operating in a market smaller than a mid-size Dublin agency. The Netherlands gives you access to corporate, agency, NGO, tech, and startup marketing roles, many in English, with the option to freelance in a system that actively supports it.</p>
+    <p style="margin-top:.5rem">The combination of <strong>working in marketing/comms while studying Human Geography part-time</strong> is a particularly strong play in the Netherlands. Utrecht University is 40 minutes from The Hague, offers English-language programmes, and the Dutch system normalises part-time study alongside employment. This is much harder to replicate in Iceland without Icelandic fluency.</p>
+    <p style="margin-top:.5rem"><strong>If Iceland calls you for other reasons</strong> — nature, safety, the adventure of a tiny creative community — the freelance content creation path combined with near-free geography study at the University of Iceland is a genuinely compelling life, just with more constraints and a steeper adjustment curve.</p>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!--        TAB 4: JOINT CONSIDERATIONS         -->
+<!-- ═══════════════════════════════════════════ -->
+<div id="tab-joint" class="tab-content content">
+
+  <div class="hero" style="background: linear-gradient(135deg, #9333ea 0%, #ec4899 50%, #f97316 100%);">
+    <div class="hero-flag">👫 🐱🐱</div>
+    <h1>Joint Considerations</h1>
+    <p class="subtitle">Everything you decide together — cats, LGBTQ+ life, housing, finances, lifestyle &amp; food</p>
+  </div>
+
+  <!-- ── 1. CATS ── -->
+  <div class="section-title"><span class="emoji">🐱</span> 1. Your Cats</div>
+  <p>This is where the two destinations diverge <strong>most dramatically</strong>. If you want the short version: bringing cats to the Netherlands is simple; bringing them to Iceland is a major undertaking.</p>
+
+  <div class="compare-grid">
+    <div class="compare-col">
+      <div class="compare-col-header iceland">🇮🇸 Iceland — Complex &amp; Emotional</div>
+      <div class="compare-col-body">
+        <div class="con"><strong>Mandatory 4-week quarantine</strong> at Keldur quarantine facility. Restricted visits. No exceptions.</div>
+        <div class="con"><strong>Cost: ~€1,260–€2,140 per cat</strong> (total for 2 cats: €2,520–€4,280)</div>
+        <div class="con">Start process <strong>6 months</strong> before move. Apply to MAST for import permit.</div>
+        <ul>
+          <li>Rabies vaccine (60+ days before travel, max 12 months)</li>
+          <li>Feline distemper, rhinotracheitis, calicivirus, FeLV vaccinations</li>
+          <li>Blood tests for antibody levels (allow 2–4 weeks for lab results)</li>
+          <li>Internal + external parasite treatments (specific timing windows)</li>
+          <li>Vet health certificate within 10 days of travel</li>
+          <li>Only Keflavík Airport allowed as entry point</li>
+        </ul>
+        <div class="con">Emotional reality: your cats will be in an unfamiliar facility without you for a month. Visits restricted. Some cats cope; others are significantly stressed.</div>
+      </div>
+    </div>
+    <div class="compare-col">
+      <div class="compare-col-header netherlands">🇳🇱 Netherlands — Straightforward</div>
+      <div class="compare-col-body">
+        <div class="pro"><strong>EU Pet Passport</strong> — standard intra-EU process. No quarantine.</div>
+        <div class="pro"><strong>Cost: ~€180–€360 per cat</strong> (total for 2 cats: €360–€720)</div>
+        <div class="pro">Process takes just <strong>4–6 weeks</strong> from first vet visit.</div>
+        <ul>
+          <li>Confirm microchips (likely already done if registered in Ireland)</li>
+          <li>Rabies vaccination (21+ days before travel)</li>
+          <li>EU Pet Passport from Irish vet</li>
+          <li>Tapeworm treatment if required (check NVWA for latest)</li>
+        </ul>
+        <div class="pro"><strong>Ferry option:</strong> Irish Ferries Dublin→Holyhead, then drive/Eurotunnel. Pet-friendly cabins available (~€20–€40 supplement). Avoids airline stress entirely.</div>
+        <p>Once there: register with local vet (dierenarts). Cats commonly kept indoors in Dutch apartments. Pet insurance (huisdierenverzekering) available for unexpected vet bills.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="overflow-x:auto">
+    <div class="card-header">💰 Cost Comparison — Two Cats</div>
+    <table class="data-table">
+      <thead><tr><th>Item</th><th>🇮🇸 Iceland</th><th>🇳🇱 Netherlands</th></tr></thead>
+      <tbody>
+        <tr><td>Vaccinations &amp; treatments</td><td>€300–€560</td><td>€140–€220</td></tr>
+        <tr><td>Documentation &amp; permits</td><td>€150–€260</td><td>€60–€100</td></tr>
+        <tr><td>Transport/flights</td><td>€400–€800</td><td>€100–€300</td></tr>
+        <tr><td>Quarantine</td><td><strong>€1,320–€2,400</strong></td><td>€0</td></tr>
+        <tr style="font-weight:600"><td>Total</td><td>€2,520–€4,280</td><td>€360–€720</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-teal">
+    <strong>🐱 If this is a dealbreaker for you, that's a legitimate reason to choose the Netherlands.</strong> The quarantine is hard on cats and hard on owners. Contact MAST (mast@mast.is) directly for the most current requirements if leaning Iceland.
+  </div>
+
+  <!-- ── 2. LGBTQ+ ── -->
+  <div class="section-title"><span class="emoji">🏳️‍🌈</span> 2. LGBTQ+ Life</div>
+
+  <div class="card">
+    <div class="card-header">⚖️ Legal Rights</div>
+    <table class="data-table" style="margin-top:.5rem">
+      <thead><tr><th>Right</th><th>🇮🇸 Iceland</th><th>🇳🇱 Netherlands</th></tr></thead>
+      <tbody>
+        <tr><td>Marriage equality</td><td>✅ 2010 (unanimous 49-0)</td><td>✅ 2001 (first in the world)</td></tr>
+        <tr><td>Joint adoption</td><td>✅ 2006</td><td>✅ 2001</td></tr>
+        <tr><td>Anti-discrimination (employment, housing)</td><td>✅ Comprehensive</td><td>✅ Comprehensive</td></tr>
+        <tr><td>Trans self-ID</td><td>✅ 2019, no medical requirements, X gender option</td><td>✅ 2014, court declaration required, no X yet</td></tr>
+        <tr><td>Your Irish marriage recognised?</td><td>✅ Automatic</td><td>✅ Automatic</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:.75rem;font-size:.88rem">Both countries have rock-solid legal frameworks. Iceland edges ahead slightly on trans rights (self-ID without bureaucracy + non-binary recognition). Neither has any realistic prospect of regression.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-header">🌈 Social Attitudes &amp; Day-to-Day Life</div>
+    <div class="compare-grid">
+      <div class="info-box">
+        <h4>🇮🇸 Iceland</h4>
+        <div class="pro"><strong>Near-perfect acceptance.</strong> Overwhelmingly normalised in Reykjavík. Rural areas: live-and-let-live. Outright hostility essentially nonexistent.</div>
+        <p style="font-size:.88rem">PDA completely comfortable everywhere. The most common "microaggression" is people assuming you're friends/flatmates — corrects quickly once you clarify.</p>
+        <p style="font-size:.88rem">Workplaces: being openly LGBTQ+ is unremarkable. Strong union channels if any issues arise.</p>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Netherlands</h4>
+        <div class="pro"><strong>Broadly excellent</strong> in the Randstad (Amsterdam, The Hague, Rotterdam, Utrecht).</div>
+        <div class="neutral">Gap between self-image and reality. Some urban neighbourhoods and the Bible Belt less comfortable. Verbal harassment incidents documented, though rare in central areas.</div>
+        <p style="font-size:.88rem">PDA generally fine in cities, variable elsewhere. "Tolerance without enthusiasm" — some older Dutch people defend your rights while being privately uncomfortable.</p>
+        <p style="font-size:.88rem">Workplaces: good in international companies; occasional microaggressions in traditional Dutch corporate settings. Those very microaggressions create demand for DEI professionals like Pin1.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">🎉 Community &amp; Scene</div>
+    <div class="compare-grid">
+      <div class="info-box">
+        <h4>🇮🇸 Iceland — Tiny but Warm</h4>
+        <ul>
+          <li><strong>Kiki Queer Bar</strong> — main (and only) dedicated LGBTQ+ venue. Cosy community pub.</li>
+          <li><strong>Samtökin '78</strong> — community centre, events, support groups. Your primary community anchor. Welcoming to newcomers and English speakers.</li>
+          <li><strong>Reykjavík Pride</strong> (August) — up to 100,000 attendees (~1 in 4 of the country!). Intimate, joyful, community-centred.</li>
+          <li>General nightlife is queer-friendly throughout — no real need for "safe spaces" because most spaces feel safe.</li>
+        </ul>
+        <div class="con">Limited variety. One bar, one org, one Pride. You'll know everyone within a year — cosy or claustrophobic depending on temperament.</div>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Netherlands — Large &amp; Diverse</h4>
+        <ul>
+          <li><strong>Amsterdam:</strong> Reguliersdwarsstraat, Café 't Mandje (since 1927!), Club NYX, De Trut, Rapido. Rich queer history.</li>
+          <li><strong>COC Nederland</strong> — world's oldest LGBTQ+ org (1946), local chapters in every major city.</li>
+          <li><strong>Amsterdam Canal Pride</strong> (August) — one of Europe's largest. Iconic boat parade. Two-week programme of events.</li>
+          <li>Multiple bars, clubs, parties, film festivals, art events across multiple cities. Active queer women's and non-binary scenes growing.</li>
+        </ul>
+        <div class="pro">Vastly more variety, subcultural diversity, and volume of queer community. You can find your specific niche.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">🛡️ Safety</div>
+    <div class="pro">🇮🇸 <strong>Iceland is measurably safer</strong> — near-zero anti-LGBTQ+ incidents. Fewer than 5 reported LGBTQ+-targeted incidents in the entire country in 2024. Vanishingly rare.</div>
+    <div class="neutral">🇳🇱 Netherlands is <strong>very good but not incident-free</strong>. Anti-LGBTQ+ incident reports have been increasing (170+ in Amsterdam alone in 2023). Mostly verbal harassment. Society pushes back hard against incidents (2017 national hand-holding campaign). Low-level situational awareness helpful in some areas.</div>
+    <p style="margin-top:.5rem;font-size:.88rem">Both are among the safest places in the world to be queer. The Netherlands is still considerably safer than most countries — but Iceland is in a class of its own.</p>
+  </div>
+
+  <!-- ── 3. HOUSING ── -->
+  <div class="section-title"><span class="emoji">🏠</span> 3. Housing</div>
+  <p><strong>Both countries have severe housing crises.</strong> This will be your biggest practical challenge regardless of destination.</p>
+
+  <div class="card" style="overflow-x:auto">
+    <div class="card-header">💰 Realistic Monthly Rents (2-bed apartment, 2026)</div>
+    <table class="data-table">
+      <thead><tr><th>Location</th><th>Monthly Rent</th></tr></thead>
+      <tbody>
+        <tr><td>🇮🇸 Central Reykjavík (101/105)</td><td>€2,300–€3,150</td></tr>
+        <tr><td>🇳🇱 Amsterdam</td><td>€1,800–€2,500</td></tr>
+        <tr><td>🇳🇱 The Hague</td><td>€1,400–€1,900</td></tr>
+        <tr><td>🇳🇱 Utrecht</td><td>€1,500–€2,100</td></tr>
+        <tr><td>🇳🇱 Rotterdam</td><td>€1,300–€1,800</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="compare-grid">
+    <div class="compare-col">
+      <div class="compare-col-header iceland">🇮🇸 Iceland — Housing</div>
+      <div class="compare-col-body">
+        <div class="con">No regulated private rental market. Most listings on <strong>Facebook groups</strong> (Leiga á Íslandi, Leiguskjól) and Mbl.is classifieds.</div>
+        <div class="con">Landlords prefer Icelanders with local references.</div>
+        <div class="con"><strong>Pet-friendly rentals</strong> significantly harder to find. Mention cats upfront — narrows already narrow options.</div>
+        <p>Deposit: 1–3 months' rent. Listings go within hours. Having a local contact who can help is enormously valuable.</p>
+        <p><strong>Buying:</strong> EEA citizens can buy. 60–80 m² in Reykjavík: €300,000–€500,000. Need kennitala and 20–25% down.</p>
+      </div>
+    </div>
+    <div class="compare-col">
+      <div class="compare-col-header netherlands">🇳🇱 Netherlands — Housing</div>
+      <div class="compare-col-body">
+        <div class="con">Social housing: 8–15 year waiting lists. Not an option for you.</div>
+        <div class="con"><strong>Scams rampant</strong> — never pay before viewing. Use <strong>Pararius.nl</strong>, <strong>Funda.nl</strong> only.</div>
+        <div class="con">"Unfurnished" can mean <strong>no floor, no lights, sometimes no kitchen</strong>. Budget €2,000–€4,000 to fit out.</div>
+        <p>Deposit: 1–2 months. Income proof needed (3–3.5× rent as gross salary — two incomes help). Not all landlords accept pets.</p>
+        <p><strong>Tip:</strong> The Hague and Rotterdam are more affordable than Amsterdam. Start looking months before you plan to move.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>🏠 Best city for your situation:</strong> <strong>The Hague</strong> offers the best balance — more affordable than Amsterdam, strong international infrastructure, and close to Amsterdam (50 min), Rotterdam (25 min), Utrecht (40 min), and Leiden (15 min) by train. You're choosing a network of cities.
+  </div>
+
+  <!-- ── 4. FINANCES ── -->
+  <div class="section-title"><span class="emoji">💰</span> 4. Finances &amp; Cost of Living</div>
+
+  <div class="card" style="overflow-x:auto">
+    <div class="card-header">🧮 Combined Monthly Budget (couple + 2 cats, renting)</div>
+    <table class="data-table">
+      <thead><tr><th>Category</th><th>🇮🇸 Iceland (Reykjavík)</th><th>🇳🇱 Netherlands (The Hague)</th></tr></thead>
+      <tbody>
+        <tr><td>Rent (2-bed)</td><td>€2,300–€3,150</td><td>€1,400–€1,900</td></tr>
+        <tr><td>Groceries (vegetarian, 2 people)</td><td>€460–€720</td><td>€400–€600</td></tr>
+        <tr><td>Utilities</td><td>€100–€165</td><td>€150–€250</td></tr>
+        <tr><td>Internet + 2 mobiles</td><td>€80–€120</td><td>€60–€100</td></tr>
+        <tr><td>Transport</td><td>€92 (bus) – €860 (car)</td><td>€0–€100 (cycling + OV)</td></tr>
+        <tr><td>Dining out (modest)</td><td>€265–€395</td><td>€200–€350</td></tr>
+        <tr><td>Cat costs (food, litter, vet)</td><td>€100–€165</td><td>€80–€130</td></tr>
+        <tr><td>Health insurance</td><td>Included in tax (6-mo gap: ~€150/mo private)</td><td>€260–€340 (mandatory, 2 people)</td></tr>
+        <tr style="font-weight:700;background:var(--bg)"><td>Total (no car)</td><td>~€3,550–€4,850</td><td>~€2,550–€3,770</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="overflow-x:auto">
+    <div class="card-header">💵 Upfront Moving Costs &amp; Savings Needed</div>
+    <table class="data-table">
+      <thead><tr><th>Item</th><th>🇮🇸 Iceland</th><th>🇳🇱 Netherlands</th></tr></thead>
+      <tbody>
+        <tr><td>Flights (2 people)</td><td>€200–€500</td><td>€100–€300</td></tr>
+        <tr><td>Shipping belongings</td><td>€2,000–€4,000</td><td>€800–€2,000</td></tr>
+        <tr><td>Temporary accommodation (3–4 weeks)</td><td>€2,000–€3,500</td><td>€1,500–€2,500</td></tr>
+        <tr><td>Deposit + first month rent</td><td>€5,550–€9,450</td><td>€3,300–€5,700</td></tr>
+        <tr><td>Cat relocation (both)</td><td>€2,500–€4,000</td><td>€300–€600</td></tr>
+        <tr><td>Furniture/setup</td><td>€1,000–€3,000</td><td>€1,500–€4,000</td></tr>
+        <tr style="font-weight:700;background:var(--bg)"><td>Total upfront</td><td>~€12,250–€21,950</td><td>~€8,210–€16,140</td></tr>
+        <tr><td>+ Emergency fund (3 months)</td><td>€10,000–€15,000</td><td>€7,500–€10,000</td></tr>
+        <tr style="font-weight:700;color:var(--accent)"><td>Recommended total savings</td><td>€25,000–€30,000</td><td>€20,000–€22,000</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:.75rem;font-size:.88rem"><strong>Why so much?</strong> The most common reason relocations fail is running out of money before you're established. Job searches take longer than expected, deposits tie up cash, unexpected costs appear. If you don't have these savings, wait and save — a failed move is more expensive than a delayed one.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-header">🏛️ Tax Implications of Leaving Ireland</div>
+    <ul>
+      <li>File <strong>Form P85</strong> with Irish Revenue (revenue.ie) to notify of departure</li>
+      <li>You remain "ordinarily resident" for Irish tax purposes for <strong>3 full tax years</strong> after departure — double taxation treaties prevent actual double taxation</li>
+      <li>Obtain a <strong>U1 form</strong> from Department of Social Protection (social insurance record)</li>
+      <li>Keep Irish bank account open for 6–12 months for trailing payments</li>
+      <li>Both countries have <strong>double taxation treaties</strong> with Ireland</li>
+      <li><strong>Set up a Wise account</strong> before leaving — best rates for international transfers, bridges the gap before local bank setup</li>
+    </ul>
+  </div>
+
+  <!-- ── 5. LIFESTYLE & CULTURE ── -->
+  <div class="section-title"><span class="emoji">🌿</span> 5. Lifestyle &amp; Culture</div>
+
+  <div class="card">
+    <div class="card-header">🤝 Social Life &amp; Making Friends</div>
+    <div class="compare-grid">
+      <div class="info-box">
+        <h4>🇮🇸 Iceland</h4>
+        <p style="font-size:.88rem"><strong>The honest truth:</strong> Icelanders form social groups in childhood and they tend to stay closed. You'll likely socialise primarily with expats initially. It takes <strong>2–3 years</strong> to develop genuine Icelandic friendships.</p>
+        <p style="font-size:.88rem"><strong>Best social shortcut:</strong> The swimming pool hot pots (sundlaugar). Go regularly — this is where Icelanders actually socialise. Also: sports clubs, choir, volunteer work, hobby groups.</p>
+        <p style="font-size:.88rem">Reykjavík punches above its weight culturally — legendary music scene, Harpa concert hall, numerous galleries, Iceland publishes more books per capita than anywhere on earth.</p>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Netherlands</h4>
+        <p style="font-size:.88rem"><strong>Same problem, different flavour:</strong> Dutch people also have established friend groups. The infamous "agenda culture" (agendacultuur) — coffee scheduled 3 weeks in advance. Takes <strong>2–3 years</strong> here too.</p>
+        <p style="font-size:.88rem"><strong>Best strategy:</strong> Join a sportvereniging (sports club), attend borrel (drinks gatherings), volunteer. Structured social settings are how Dutch adults make new friends too.</p>
+        <p style="font-size:.88rem">Large, active expat community, especially in Amsterdam, The Hague, and Eindhoven. Meetup groups, InterNations. Risk: getting stuck in the expat bubble.</p>
+        <p style="font-size:.88rem"><strong>Dutch directness:</strong> "Not good" means not good. Coming from Irish indirectness, this can feel shocking. It's not personal — it's just Dutch.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">🗣️ Language</div>
+    <div class="compare-grid">
+      <div class="info-box">
+        <h4>🇮🇸 Icelandic</h4>
+        <div class="con"><strong>Hard.</strong> Four cases, three genders, complex verb conjugations. Among the hardest European languages for English speakers.</div>
+        <p style="font-size:.88rem">Not needed for daily survival (most Icelanders under 60 speak excellent English), but <strong>essential for career advancement and genuine social integration.</strong></p>
+        <p style="font-size:.88rem">Budget 1–2 years for functional conversational; 3–5 years for professional fluency. Free course: icelandiconline.com (University of Iceland). Also: Mímir, Tin Can Factory, Multicultural Centre.</p>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Dutch</h4>
+        <div class="pro"><strong>Easier</strong> for English speakers — same Germanic family, many cognates.</div>
+        <p style="font-size:.88rem">Almost every Dutch person speaks English — blessing (you survive) and curse (they switch to English the moment they detect your accent, making practice almost impossible).</p>
+        <p style="font-size:.88rem">Not needed for work in international companies, but essential for true integration, social life, and reading government correspondence (all in Dutch). Even A2/B1 makes a massive difference.</p>
+        <p style="font-size:.88rem">Classes: Taalhuis (free via library), Volksuniversiteit, Direct Dutch, Koentact.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">🌤️ Weather &amp; Mental Health</div>
+    <div class="compare-grid">
+      <div class="info-box">
+        <h4>🇮🇸 Iceland</h4>
+        <div class="con"><strong>Winter:</strong> 4–5 hours of usable daylight (Dec: sunrise ~11:15, sunset ~15:30, barely clears horizon). Dark when you leave for work, dark when you come home. Relentless, bone-cutting wind.</div>
+        <div class="pro"><strong>Summer:</strong> Near 24-hour daylight. 10–18°C. The landscape transforms. This is when Iceland earns its keep.</div>
+        <div class="con"><strong>SAD is real and widespread.</strong> Vitamin D supplements, light therapy lamps. <strong>The first winter breaks many newcomers.</strong> If either of you has any history of depression or anxiety, take this extremely seriously.</div>
+        <div class="pro">Extraordinary nature — glaciers, volcanoes, hot springs, waterfalls, northern lights. Pristine air quality. Geothermal swimming pools are genuine joy.</div>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Netherlands</h4>
+        <div class="neutral"><strong>Grey:</strong> 200+ overcast days/year. Constant wind. Flat grey sky meeting flat grey land at the horizon.</div>
+        <div class="pro"><strong>Winter is dark but not Icelandic dark</strong> — sunrise ~8:45, sunset ~16:30 in Dec. Significantly more daylight. SAD is common but less extreme.</div>
+        <div class="neutral">Winters 0–5°C, not extreme. Summers can be lovely (20–28°C) but heatwaves increasing (35°C+), most homes lack AC.</div>
+        <p style="font-size:.88rem">Coming from Ireland: roughly comparable weather. Slightly colder winters, slightly warmer summers, similar greyness. The winter darkness difference vs Iceland is significant for mental health.</p>
+        <div class="pro"><strong>World-class cycling infrastructure.</strong> You will cycle everywhere — to work, shops, pubs, in the rain, in a suit, carrying groceries. It becomes your default transport and one of the best things about living here. Buy a sturdy omafiets (€100–€200 second-hand). Use two locks — theft is a national sport.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VEGETARIAN LIFE -->
+  <div class="card">
+    <div class="card-header">🥦 Vegetarian Life — Full Comparison</div>
+    <p>This matters more than people think for daily quality of life. Here's the real picture for each country:</p>
+
+    <div class="compare-grid" style="margin-top:1rem">
+      <div class="info-box">
+        <h4>🇮🇸 Iceland — Manageable in Reykjavík, Planning Required Outside</h4>
+        <div class="pro"><strong>Supermarkets:</strong> Basic veg, fruits, staples available year-round. Icelandic greenhouse produce (tomatoes, cucumbers, peppers, herbs) is excellent — fresh, local, year-round thanks to geothermal energy. Look for "Íslenski garðurinn" branding.</div>
+        <div class="pro"><strong>Dairy:</strong> Excellent. Skyr is world-class and vegetarian. Good cheese, milk, butter at reasonable prices.</div>
+        <div class="con"><strong>Specialty items:</strong> Tofu, tempeh, plant-based meats available but limited selection and <strong>30–50% more expensive</strong> than Ireland. Hagkaup has best range; Bónus/Krónan cheaper but more basic.</div>
+        <div class="pro"><strong>Eating out (Reykjavík):</strong> Transformed in the past decade. Most restaurants now offer 1–2 veggie mains. Handful of dedicated spots (Kaffi Vínyl, Noodle Station). Veggie meals often cheaper than meat/fish. A casual meal: €12–20; nicer restaurant: €18–30.</div>
+        <div class="con"><strong>Outside Reykjavík:</strong> This is where it gets tough. Limited to chips, bread, or a sad salad in small towns and gas stations. <strong>Pack food for road trips. Seriously.</strong></div>
+        <div class="neutral"><strong>Social attitudes:</strong> No hostility. Awareness improving but newer than in Ireland. Occasional "but you eat fish, right?"</div>
+        <p style="font-size:.88rem"><strong>Monthly groceries (2 people):</strong> €460–€720</p>
+        <p style="font-size:.88rem"><strong>Pro tip:</strong> Stock up on favourite spices and specialty items before moving — Icelandic selection is limited. Embrace root vegetables, greenhouse produce, and Icelandic skyr.</p>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Netherlands — One of Europe's Best</h4>
+        <div class="pro"><strong>Albert Heijn:</strong> Dominant supermarket. Extensive vegetarian/vegan range. Own <em>AH Terra</em> plant-based line. The Vegetarian Butcher (Dutch company, Unilever-owned) is everywhere. Vivera, Garden Gourmet, Beyond Meat all available. Clearly labelled veggie/vegan sections.</div>
+        <div class="pro"><strong>Jumbo:</strong> Second-largest chain. Similar range, slightly cheaper. Good tofu, tempeh selection.</div>
+        <div class="pro"><strong>Lidl &amp; Aldi:</strong> Budget options. Lidl's <em>Vemondo</em> range is surprisingly good. Perfectly workable for daily cooking.</div>
+        <div class="pro"><strong>Toko's (Asian/Turkish supermarkets):</strong> <strong>Goldmines</strong> for vegetarian cooking — cheap fresh veg, tofu, every spice, bulk legumes, Indonesian and Surinamese ingredients. Tempeh is practically a staple (Indonesian colonial heritage). These will become your favourite shops.</div>
+        <div class="pro"><strong>Ekoplaza:</strong> Organic chain for specialty items — nutritional yeast, specialty plant milks, organic tempeh. More expensive but excellent quality.</div>
+        <div class="pro"><strong>Eating out:</strong> Strong across all major cities, especially Amsterdam and Rotterdam. <strong>Surinamese restaurants</strong> = hidden gem (roti, bara/lentil fritters, vegetable masala — cheap and delicious). Indonesian rijsttafel has great veggie versions. Falafel and Middle Eastern food everywhere. Most restaurants have 2–3 veggie mains standard.</div>
+        <div class="pro"><strong>Cultural normalcy:</strong> "Flexitarian" is mainstream. Nobody bats an eye. The Dutch Voedingscentrum actively promotes reduced meat consumption. Delivery apps have vegetarian filters.</div>
+        <p style="font-size:.88rem"><strong>Monthly groceries (2 people):</strong> €400–€600</p>
+      </div>
+    </div>
+
+    <div class="callout callout-teal" style="margin-top:1rem">
+      <strong>🥦 Bottom line:</strong> Being vegetarian in the Netherlands is a <strong>non-issue</strong> — you'll eat better and more diversely than in Ireland. In Iceland, it's manageable in Reykjavík but adds daily friction, costs more, and requires significant planning outside the capital. The cumulative effect of small daily frictions — finding lunch, explaining yourself, limited options — should not be underestimated when you're also adjusting to a new country, new jobs, and a new social world.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">🏥 Healthcare</div>
+    <div class="compare-grid">
+      <div class="info-box">
+        <h4>🇮🇸 Iceland</h4>
+        <ul>
+          <li>Universal public system. GP visits ~€16–26. Subsidised hospital care.</li>
+          <li><strong>6-month waiting period</strong> for EEA citizens — use EHIC + private insurance (~€150/mo) in the gap</li>
+          <li>Specialist wait times: weeks to months</li>
+          <li>Mental health: 3–6 month wait public; private ~€120–€165/session</li>
+          <li>Dental: largely private and expensive (€150–€250 check-up)</li>
+          <li>LGBTQ+ healthcare: good, small scale. Sexual health adequate but small infrastructure.</li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h4>🇳🇱 Netherlands</h4>
+        <ul>
+          <li>Insurance-based. Mandatory zorgverzekering ~€130–€170/month each. Must arrange within 4 months.</li>
+          <li>Annual deductible (eigen risico): ~€385 (GP visits exempt)</li>
+          <li>GP (huisarts) is gatekeeper — finding one accepting patients is difficult. Start immediately on arrival.</li>
+          <li>Dutch GP philosophy: minimalist. "Paracetamolletje en afwachten" — take a paracetamol and wait.</li>
+          <li>Mental health: 3–6 month wait. Private €80–€150/session</li>
+          <li>Dental: NOT in basic insurance. Need supplementary (€15–€30/mo extra)</li>
+          <li>Sexual health: excellent GGD clinics, free anonymous STI testing, PrEP covered by insurance since 2024</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">⏱️ Time to Feel Settled</div>
+    <div class="compare-grid">
+      <div class="info-box" style="text-align:center">
+        <h4>🇮🇸 Iceland</h4>
+        <p style="font-size:2rem;font-weight:800;color:var(--accent);margin:.5rem 0">18–24 months</p>
+        <p style="font-size:.85rem">Longer due to cat quarantine, language barrier, smaller job market, winter darkness adjustment, limited vegetarian convenience outside Reykjavík</p>
+      </div>
+      <div class="info-box" style="text-align:center">
+        <h4>🇳🇱 Netherlands</h4>
+        <p style="font-size:2rem;font-weight:800;color:var(--teal);margin:.5rem 0">9–15 months</p>
+        <p style="font-size:.85rem">Simpler pet import, EU systems alignment, larger English-friendly job market, easier vegetarian life, manageable winter darkness</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 6. RECOMMENDATION ── -->
+  <div class="section-title"><span class="emoji">🎯</span> 6. Our Recommendation</div>
+
+  <div class="verdict" style="background: linear-gradient(135deg, #ede9fe 0%, #fce7f3 50%, #ccfbf1 100%); border-color: #c4b5fd;">
+    <h3 style="font-size:1.2rem">🇳🇱 For your specific situation, the Netherlands is the stronger choice</h3>
+    <p>This isn't a knock on Iceland — it's a remarkable country. But weighing up everything for <strong>your specific profiles, priorities, and circumstances</strong>, the Netherlands wins on more dimensions that matter to your daily lives:</p>
+  </div>
+
+  <div class="card" style="overflow-x:auto">
+    <table class="data-table">
+      <thead><tr><th>Factor</th><th>Winner</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>🐱 Cat relocation</td><td><strong>🇳🇱 decisively</strong></td><td>No quarantine, EU Pet Passport, simpler, cheaper, less stressful for your animals</td></tr>
+        <tr><td>💼 Pin1's DEI career</td><td><strong>🇳🇱 decisively</strong></td><td>Developed DEI landscape at multinationals and consultancies; Workplace Pride; LGBTQ+ inclusion roles</td></tr>
+        <tr><td>📣 Pin2's marketing career</td><td><strong>🇳🇱</strong></td><td>Much larger market across corporate, agency, NGO, and tech sectors</td></tr>
+        <tr><td>🗺️ Human Geography study</td><td><strong>🇳🇱 slightly</strong></td><td>Stronger tradition, more English programmes, part-time study culture normalised</td></tr>
+        <tr><td>💰 Financial cost</td><td><strong>🇳🇱</strong></td><td>Lower startup costs, lower monthly expenses, 30% ruling potential</td></tr>
+        <tr><td>🥦 Vegetarian life</td><td><strong>🇳🇱 clearly</strong></td><td>One of Europe's best — supermarkets, restaurants, toko's, cultural normalcy</td></tr>
+        <tr><td>⏱️ Speed to settled</td><td><strong>🇳🇱</strong></td><td>9–15 months vs 18–24 months</td></tr>
+        <tr><td>🏳️‍🌈 LGBTQ+ life</td><td><strong>Draw</strong></td><td>Both world-class. NL has larger/more diverse scene; Iceland has deeper uniform acceptance</td></tr>
+        <tr><td>🏔️ Nature &amp; safety</td><td><strong>🇮🇸</strong></td><td>Unmatched nature, extraordinary landscapes, near-perfect personal safety</td></tr>
+        <tr><td>🌤️ Weather / mental health</td><td><strong>🇳🇱 slightly</strong></td><td>Both grey, but NL doesn't have 4-hour winter days — significant for mental health</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-header">📍 Specific Recommendation: Target The Hague</div>
+    <p>If we were advising close friends, we'd say move to <strong>The Hague</strong>. Here's why it works for both of you:</p>
+    <ul style="margin-top:.5rem">
+      <li><strong>Pin1:</strong> Multinationals with Hague/Randstad presence (Shell, Unilever, ING). DEI roles in English. 30% ruling could save €5,000+/year in tax. Workplace Pride and COC within reach.</li>
+      <li><strong>Pin2:</strong> NGO cluster (Oxfam Novib, Hivos, Cordaid, ICC ecosystem) right there. Amsterdam's agencies and tech scene 50 min by train. Utrecht University (Human Geography, part-time) 40 min away.</li>
+      <li><strong>Housing:</strong> More achievable than Amsterdam. 2-bed at €1,400–€1,900/month.</li>
+      <li><strong>Cats:</strong> EU Pet Passport, no quarantine, done in weeks not months. Consider the ferry option to avoid flight stress.</li>
+      <li><strong>Food:</strong> Surinamese roti around the corner, toko down the street, Albert Heijn stocked with plant-based everything. You'll eat better as vegetarians here than almost anywhere in Europe.</li>
+      <li><strong>LGBTQ+ life:</strong> COC Haaglanden, The Hague Pride. Amsterdam's full queer scene is 50 minutes away by train for big nights out.</li>
+      <li><strong>The whole Randstad at your doorstep:</strong> Amsterdam (50 min), Rotterdam (25 min), Utrecht (40 min), Leiden (15 min) — all by train. You're not choosing one Dutch city; you're choosing a network of cities.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-header">🇮🇸 If Iceland Still Calls You...</div>
+    <p>Iceland isn't the wrong choice — it's just the harder one. If you value nature, absolute safety, and the deepest social acceptance above career breadth and daily convenience, it can offer an extraordinary life. But go in with open eyes:</p>
+    <ul style="margin-top:.5rem">
+      <li>Visit in <strong>winter first</strong> — January or February. Experience the darkness, the wind, the prices. Eat at restaurants and try to find vegetarian options outside the city centre. <strong>This is non-negotiable.</strong></li>
+      <li>Have <strong>€25,000–€30,000</strong> saved before moving</li>
+      <li>Start cat paperwork with MAST <strong>6 months</strong> before your planned move date</li>
+      <li>Accept that DEI will be embedded in broader HR work, not a standalone career (Pin1)</li>
+      <li>Commit to learning Icelandic seriously from day one — your career ceiling depends on it</li>
+      <li>Know that specialty vegetarian products will cost more and be harder to find, and outside Reykjavík your options are very limited</li>
+      <li>Prepare for the first full winter — it's the make-or-break moment. If you survive it and still want to stay, you'll probably make it.</li>
+    </ul>
+    <p style="margin-top:.75rem"><strong>And remember: if you move to the Netherlands and miss nature, Iceland will always be there for a holiday.</strong> ✈️🇮🇸</p>
+  </div>
+
+  <div class="callout" style="margin-top:1.5rem">
+    <strong>🚀 Do These This Week (If Leaning Netherlands):</strong>
+    <ol style="margin-top:.5rem">
+      <li><strong>Start applying for jobs now</strong> — a job offer before you move changes everything. Pin1: target DEI/People Analytics at multinationals. Pin2: cast a wide net across marketing/comms in tech, agencies, NGOs.</li>
+      <li><strong>Book vet appointments</strong> for both cats — microchip check, rabies vaccine, EU Pet Passport. Takes 4–6 weeks total.</li>
+      <li><strong>Audit your finances</strong> — do you have €20,000+ accessible? If not, set your savings target and timeline.</li>
+      <li><strong>Create accounts on Pararius.nl and Funda.nl</strong> — start monitoring rental prices in The Hague. Get a feel for what's available. Filter for pet-friendly.</li>
+      <li><strong>Set up a Wise account</strong> and download Bunq — you can open a Bunq account with just your passport, giving you a EUR account before you even have a BSN.</li>
+    </ol>
+  </div>
+
+</div>
+<!-- End Tab 4 -->
+
+</div>
+<!-- End Container -->
+
+<!-- Footer -->
 <footer>
-<div class="container">
-<p>Report generated for Pin1 &amp; Pin2 | 20 March 2026 | Researched by 4 specialist AI agents</p>
-<p style="margin-top:4px;font-size:11px;opacity:0.6">Iceland Expert (Bj&ouml;rn) &bull; Netherlands Expert (Annelies) &bull; Travel &amp; Relocation Expert &bull; LGBTQ+ Expert &bull; Compiled by Manager Agent</p>
-</div>
+  <div class="rainbow-line"></div>
+  <p>Report generated for Pin1 &amp; Pin2 &nbsp;|&nbsp; 20 March 2026 &nbsp;|&nbsp; Researched by 4 specialist AI agents</p>
+  <p style="margin-top:.3rem;font-size:.75rem;color:#94a3b8">Björn (Iceland) · Annelies (Netherlands) · Relocation Consultant · LGBTQ+ Expert · Compiled by Manager Agent</p>
 </footer>
 
-<!-- SCROLL TO TOP BUTTON -->
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
+<!-- JavaScript -->
 <script>
-// Tab switching
-function switchTab(tabName) {
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + tabName).classList.add('active');
-  const btns = document.querySelectorAll('.nav-btn');
-  const map = {home:0, pin1:1, pin2:2, joint:3};
-  if (map[tabName] !== undefined) btns[map[tabName]].classList.add('active');
-  window.scrollTo({top:0, behavior:'smooth'});
-}
-
-// Scroll to top button
-window.addEventListener('scroll', function() {
-  const btn = document.getElementById('scrollTop');
-  if (window.scrollY > 400) btn.classList.add('show');
-  else btn.classList.remove('show');
-});
+  function showTab(tabId) {
+    // Hide all tabs
+    document.querySelectorAll('.tab-content').forEach(function(el) {
+      el.classList.remove('active');
+    });
+    // Deactivate all buttons
+    document.querySelectorAll('.tab-btn').forEach(function(el) {
+      el.classList.remove('active');
+    });
+    // Show selected tab
+    document.getElementById('tab-' + tabId).classList.add('active');
+    // Activate corresponding button
+    var buttons = document.querySelectorAll('.tab-btn');
+    var tabMap = { 'home': 0, 'pin1': 1, 'pin2': 2, 'joint': 3 };
+    if (tabMap[tabId] !== undefined) {
+      buttons[tabMap[tabId]].classList.add('active');
+    }
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
 
 </body>

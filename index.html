@@ -267,6 +267,88 @@
   a { color: var(--accent); }
   strong { font-weight: 600; }
   .mt { margin-top: 18px; }
+
+  /* ── TIMELINE TAB ────────────────────────────── */
+  .tl-hero {
+    background: linear-gradient(135deg, #2E9E6A 0%, #5B6ABF 100%);
+    border-radius: var(--radius); padding: 48px 40px;
+    color: #fff; text-align: center; margin-bottom: 32px; position: relative; overflow: hidden;
+  }
+  .tl-hero::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+    background: var(--rainbow);
+  }
+  .tl-hero .decision-pill {
+    display: inline-block; background: rgba(255,255,255,.2);
+    border-radius: 30px; padding: 5px 16px; font-size: 13px; font-weight: 600;
+    margin-bottom: 14px; letter-spacing: .3px;
+  }
+  .tl-hero h2 { font-size: clamp(22px,3.5vw,34px); font-weight: 800; margin-bottom: 8px; }
+  .tl-hero p { font-size: 15px; opacity: .9; max-width: 560px; margin: 0 auto; }
+
+  .tl-priorities {
+    display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+    gap: 16px; margin-bottom: 32px;
+  }
+  .tl-priority {
+    background: var(--card); border-radius: var(--radius);
+    border-left: 5px solid var(--accent); padding: 18px 20px; box-shadow: var(--shadow);
+  }
+  .tl-priority .p-num { font-size: 30px; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 4px; }
+  .tl-priority h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .tl-priority p { font-size: 13px; color: var(--text-muted); }
+
+  .tl-wrap { position: relative; padding-left: 36px; }
+  .tl-wrap::before {
+    content: ''; position: absolute; left: 13px; top: 12px; bottom: 12px;
+    width: 3px; background: linear-gradient(to bottom, #2E9E6A, #5B6ABF, #D94F4F, #D94F4F, #2E9E6A, #2E9E6A);
+    border-radius: 3px;
+  }
+  .tl-phase { position: relative; margin-bottom: 28px; }
+  .tl-phase::before {
+    content: ''; position: absolute; left: -28px; top: 18px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #fff; border: 3px solid var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+  }
+  .tl-phase.ph-urgent::before { border-color: var(--red); background: var(--red); box-shadow: 0 0 0 3px var(--red-bg); }
+  .tl-phase.ph-move::before { border-color: var(--green); background: var(--green); box-shadow: 0 0 0 3px var(--green-bg); }
+  .tl-phase.ph-after::before { border-color: var(--green); box-shadow: 0 0 0 3px var(--green-bg); }
+
+  .tl-phase-card { background: var(--card); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); overflow: hidden; }
+  .tl-phase-head { padding: 13px 22px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: var(--accent-light); border-bottom: 1px solid var(--border); }
+  .tl-phase.ph-urgent .tl-phase-head { background: var(--red-bg); }
+  .tl-phase.ph-move .tl-phase-head { background: var(--green-bg); }
+  .tl-phase.ph-after .tl-phase-head { background: var(--green-bg); }
+  .ph-timeframe {
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px;
+    color: var(--accent); background: #fff; padding: 3px 10px; border-radius: 20px; border: 1px solid var(--accent); white-space: nowrap;
+  }
+  .tl-phase.ph-urgent .ph-timeframe { color: var(--red); border-color: var(--red); }
+  .tl-phase.ph-move .ph-timeframe { color: var(--green); border-color: var(--green); }
+  .tl-phase.ph-after .ph-timeframe { color: var(--green); border-color: var(--green); }
+  .ph-title { font-size: 16px; font-weight: 700; color: var(--text); }
+  .ph-note { font-size: 13px; color: var(--text-muted); margin-left: auto; font-style: italic; }
+
+  .tl-phase-body { padding: 20px 22px; }
+  .tl-category { margin-bottom: 18px; }
+  .tl-category:last-child { margin-bottom: 0; }
+  .tl-cat-label {
+    font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+    color: var(--text-muted); margin-bottom: 8px; display: flex; align-items: center; gap: 5px;
+  }
+  .checklist { list-style: none; padding: 0; margin: 0; }
+  .checklist li {
+    display: flex; align-items: flex-start; gap: 8px;
+    padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 14px; line-height: 1.6;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li .ck-icon { flex-shrink: 0; margin-top: 2px; }
+  .ck-urgent { font-weight: 600; }
+
+  .arrival-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap: 12px; }
+  .arrival-item { background: var(--bg); border-radius: var(--radius-sm); border: 1px solid var(--border); padding: 13px 15px; font-size: 13.5px; }
+  .arrival-item .ai-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; color: var(--accent); margin-bottom: 5px; display: block; }
   .mb { margin-bottom: 18px; }
   .text-sm { font-size: 13px; color: var(--text-muted); }
   .text-center { text-align: center; }
@@ -320,6 +402,7 @@
     <button class="nav-btn" data-tab="pin1">👤 Pin1 — HR &amp; DEI</button>
     <button class="nav-btn" data-tab="pin2">👤 Pin2 — Marketing &amp; Geo</button>
     <button class="nav-btn" data-tab="joint">🤝 Joint Considerations</button>
+    <button class="nav-btn" data-tab="timeline">🗓️ Move Timeline</button>
   </div>
 </nav>
 
@@ -1480,6 +1563,439 @@
       <p class="mt" style="font-size:22px;">Good luck, Pin1 &amp; Pin2. 🏳️‍🌈🐱🐱</p>
       <p class="text-sm mt"><em>If you miss nature, Iceland will always be there for holiday.</em></p>
     </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ═══════════════════ TAB 5: TIMELINE ═══════════════════ -->
+<div class="page" id="timeline">
+<div class="container">
+
+  <!-- HERO -->
+  <div class="tl-hero">
+    <div class="decision-pill">🇳🇱 Decision made — Netherlands!</div>
+    <h2>Your Move Timeline</h2>
+    <p>Ireland → Netherlands by February 2027 &nbsp;·&nbsp; ~11 months to go &nbsp;·&nbsp; Everything you need to do, and when</p>
+  </div>
+
+  <!-- 3 PRIORITIES -->
+  <div class="section">
+    <h2 class="section-title"><span class="emoji">🎯</span> Three Things That Drive Everything Else</h2>
+    <div class="tl-priorities">
+      <div class="tl-priority">
+        <div class="p-num">1</div>
+        <h4>Jobs first</h4>
+        <p>Start applying now. A job offer before you move unlocks housing, the 30% tax ruling, and financial stability. This is the single most important thing on this list.</p>
+      </div>
+      <div class="tl-priority">
+        <div class="p-num">2</div>
+        <h4>Housing</h4>
+        <p>The hardest part. Start monitoring Pararius.nl now, be ready to move fast when something appears, and have temporary accommodation (Holland2Stay, HousingAnywhere) as a fallback.</p>
+      </div>
+      <div class="tl-priority">
+        <div class="p-num">3</div>
+        <h4>Savings: €20,000–22,000</h4>
+        <p>Upfront costs + 3-month emergency buffer. The most common reason relocations fail is running out of money before you're established. Save aggressively from now.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION NAV -->
+  <div class="section-nav">
+    <span class="snav-label">Jump to</span>
+    <a href="#tl-now" class="snav-btn">📅 Now — Mar/Apr</a>
+    <a href="#tl-mayjun" class="snav-btn">📅 May–Jun</a>
+    <a href="#tl-julysep" class="snav-btn">📅 Jul–Sep</a>
+    <a href="#tl-octnov" class="snav-btn">🔴 Oct–Nov</a>
+    <a href="#tl-dec" class="snav-btn">🔴 December</a>
+    <a href="#tl-jan" class="snav-btn">🔴 January</a>
+    <a href="#tl-move" class="snav-btn">✈️ Feb — Move!</a>
+    <a href="#tl-after" class="snav-btn">🏠 First 3 Months</a>
+  </div>
+
+  <div class="tl-wrap">
+
+    <!-- PHASE 1: NOW -->
+    <div id="tl-now" class="tl-phase">
+      <div class="tl-phase-card">
+        <div class="tl-phase-head">
+          <span class="ph-timeframe">March – April 2026</span>
+          <span class="ph-title">Start Now — 11 months out</span>
+          <span class="ph-note">The earlier, the better</span>
+        </div>
+        <div class="tl-phase-body">
+
+          <div class="tl-category">
+            <div class="tl-cat-label">💼 Jobs — start immediately</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">💼</span><span><strong>Pin1:</strong> Apply on LinkedIn for DEI, People Analytics, and HR + AI roles at Dutch multinationals — Booking.com, ING, Unilever, Philips, ASML, ABN AMRO, Adyen. Also check DEI consultancies: Include, Diversiteit in Bedrijf, Equileap</span></li>
+              <li><span class="ck-icon">💼</span><span><strong>Pin2:</strong> Apply on LinkedIn, Indeed.nl, and werkenbijngos.nl for marketing, comms, and digital content roles across tech, agencies, NGOs, and corporates. The Hague for NGOs; Amsterdam for agencies and tech</span></li>
+              <li><span class="ck-icon">💡</span><span><strong>Pin1 — 30% ruling:</strong> Research eligibility criteria now so you can raise it confidently in interviews. MSc + specific AI/DEI expertise = strong case</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">💰 Financial planning</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">💰</span><span>Check current savings against the €20,000–22,000 target and set a monthly saving goal to reach it by January 2027</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🐱 Cats</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🐱</span><span>Confirm both cats have ISO 11784/11785 microchips — check with your Irish vet now so there are no surprises later</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🌍 Language &amp; research</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🗣️</span><span>Start Dutch on Duolingo or Babbel now — even A1 level makes a real difference day-to-day</span></li>
+              <li><span class="ck-icon">🏙️</span><span>Research city options: <strong>The Hague</strong> (best balance — NGOs, multinationals, more affordable), <strong>Amsterdam</strong> (biggest job market, best LGBTQ+ scene, painful housing), <strong>Utrecht</strong> (university city, great for Pin2's Human Geography interest)</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 2: MAY–JUNE -->
+    <div id="tl-mayjun" class="tl-phase">
+      <div class="tl-phase-card">
+        <div class="tl-phase-head">
+          <span class="ph-timeframe">May – June 2026</span>
+          <span class="ph-title">Reconnaissance &amp; Research — 8–9 months out</span>
+        </div>
+        <div class="tl-phase-body">
+
+          <div class="tl-category">
+            <div class="tl-cat-label">✈️ Reconnaissance trip</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">✈️</span><span>Visit your shortlisted city or cities if you haven't already — walk the neighbourhoods, get a feel for scale and cycling, see what housing you can actually afford in person</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">💼 Jobs</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">💼</span><span>Intensify applications and follow up on any leads from March/April — aim to have at least first-round interviews happening by June</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🏠 Housing research</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🏠</span><span>Start monitoring <strong>Pararius.nl</strong> and <strong>Funda.nl</strong> daily to understand realistic rental prices in your target city</span></li>
+              <li><span class="ck-icon">🐱</span><span>Note: with 2 cats, your options narrow — filter for pet-friendly properties from the start and budget for a possible extra deposit</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">📚 Pin2 — university research</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">📚</span><span>If considering studying Human Geography part-time: research MSc programmes at UvA (Amsterdam), Utrecht University, and University of Groningen. Many are in English; EU tuition ~€2,500/year. Applications typically open Jan–April for a September intake</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 3: JULY–SEPTEMBER -->
+    <div id="tl-julysep" class="tl-phase">
+      <div class="tl-phase-card">
+        <div class="tl-phase-head">
+          <span class="ph-timeframe">July – September 2026</span>
+          <span class="ph-title">Secure a Job Offer — 5–7 months out</span>
+          <span class="ph-note">Aim to have an offer by September</span>
+        </div>
+        <div class="tl-phase-body">
+
+          <div class="tl-category">
+            <div class="tl-cat-label">💼 Jobs — key milestone</div>
+            <ul class="checklist">
+              <li><span class="ck-icon ck-urgent">🎯</span><span class="ck-urgent">Aim to have at least one job offer confirmed by September</span> — this unlocks housing applications, the 30% ruling, and peace of mind</li>
+              <li><span class="ck-icon">💼</span><span>If no offers yet, broaden search scope and consider remote-first roles based in the Netherlands that could bridge the move</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🏠 Housing — active search begins</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🏠</span><span>Dutch rental listings go within hours — set up alerts on Pararius.nl and be ready to move quickly when something good appears</span></li>
+              <li><span class="ck-icon">💡</span><span>Consider using a relocation agent or expat housing service if the search is proving difficult from abroad</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">📄 Documents — gather now</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">📄</span><span>Collect certified copies of: birth certificates, degree transcripts, employment references, driving licences, medical records, and your Irish marriage certificate (in English — no translation needed)</span></li>
+              <li><span class="ck-icon">💡</span><span>These take time to source and you'll need them on arrival at the gemeente — don't leave this until the last minute</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">💰 Savings check</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">💰</span><span>Mid-point check: are you on track for the €20,000+ buffer? Adjust monthly savings if not</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 4: OCT–NOV -->
+    <div id="tl-octnov" class="tl-phase ph-urgent">
+      <div class="tl-phase-card">
+        <div class="tl-phase-head">
+          <span class="ph-timeframe">October – November 2026</span>
+          <span class="ph-title">Lock In the Key Moving Parts — 3–4 months out</span>
+          <span class="ph-note">Time-sensitive actions</span>
+        </div>
+        <div class="tl-phase-body">
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🐱 Cats — EU Pet Passports</div>
+            <ul class="checklist">
+              <li><span class="ck-icon ck-urgent">🐱</span><span class="ck-urgent">Book vet appointment to get EU Pet Passports for both cats.</span> Confirm microchips are recorded; arrange rabies vaccination if not current. Rabies vaccine must be given <strong>at least 21 days before travel</strong></span></li>
+              <li><span class="ck-icon">🐱</span><span>Check <strong>NVWA (nvwa.nl)</strong> for the latest tapeworm treatment rules for cats arriving from Ireland</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🏠 Housing — secure accommodation</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🏠</span><span>Aim to have a rental contract signed <em>or</em> <strong>temporary accommodation booked</strong> for your first 2–4 weeks (Holland2Stay, HousingAnywhere, or Airbnb)</span></li>
+              <li><span class="ck-icon">💡</span><span>You need a registered address to get your BSN — temporary accommodation counts, but you'll need a proper lease to formally register at the gemeente</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">📋 Book gemeente registration appointment</div>
+            <ul class="checklist">
+              <li><span class="ck-icon ck-urgent">📋</span><span class="ck-urgent">Book your gemeente registration appointment now</span> — waiting times are 2–4 weeks in Amsterdam, 1–2 weeks in The Hague/Utrecht. Do this before you arrive so you're in the system fast</li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🇮🇪 Irish admin — begin notifications</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">📝</span><span>Notify your Irish employer of your intended end date / give notice per your contract</span></li>
+              <li><span class="ck-icon">📝</span><span>Notify Irish Revenue via myAccount on revenue.ie (Form P85 — change of tax residency)</span></li>
+              <li><span class="ck-icon">📬</span><span>Set up An Post mail redirection — €55/year</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">✈️ Book cat transport</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🐱</span><span><strong>Option A — Fly:</strong> KLM allows small cats in-cabin (~€50–100/cat, max 8kg including carrier). Book with your flight</span></li>
+              <li><span class="ck-icon">🐱</span><span><strong>Option B — Ferry + drive:</strong> Irish Ferries Dublin → Holyhead, then drive to Hoek van Holland. Pet-friendly cabins available. Less stressful for the cats and worth serious consideration</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">💸 Money transfer</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">💸</span><span>Set up a <strong>Wise</strong> or <strong>Revolut</strong> account for transferring funds to the Netherlands — much cheaper than bank transfers</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 5: DECEMBER -->
+    <div id="tl-dec" class="tl-phase ph-urgent">
+      <div class="tl-phase-card">
+        <div class="tl-phase-head">
+          <span class="ph-timeframe">December 2026</span>
+          <span class="ph-title">Packing &amp; Cancellations — 2 months out</span>
+        </div>
+        <div class="tl-phase-body">
+
+          <div class="tl-category">
+            <div class="tl-cat-label">📦 Packing &amp; shipping</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">📦</span><span>Decide what you're shipping vs. selling or donating. Book a removals company — EU move means no customs duties. Budget <strong>€800–2,000</strong> for a small apartment's worth of belongings</span></li>
+              <li><span class="ck-icon">💡</span><span>Dutch "unfurnished" apartments often have no flooring, no light fittings, sometimes no kitchen. If moving into an unfurnished place, budget an extra <strong>€1,500–4,000</strong> for setup</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🇮🇪 Cancel Irish services</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">✅</span><span>Cancel utilities, broadband, and subscriptions; set end dates for your departure month</span></li>
+              <li><span class="ck-icon">✅</span><span>Notify your Irish bank, GP, and relevant government departments of your new address (once you have it)</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🐱 Cats — final prep</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🐱</span><span>Book a vet visit for early January to confirm all cat documentation is in order before travel</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 6: JANUARY -->
+    <div id="tl-jan" class="tl-phase ph-urgent">
+      <div class="tl-phase-card">
+        <div class="tl-phase-head">
+          <span class="ph-timeframe">January 2027</span>
+          <span class="ph-title">Final Preparations — 1 month out</span>
+        </div>
+        <div class="tl-phase-body">
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🐱 Cats — travel ready</div>
+            <ul class="checklist">
+              <li><span class="ck-icon ck-urgent">🐱</span><span class="ck-urgent">Final tapeworm treatment: 24–120 hours before travel</span> — confirm exact timing with your vet and current NVWA rules</li>
+              <li><span class="ck-icon">🐱</span><span>Check EU Pet Passports are fully complete and up to date; bring them in your hand luggage</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">💰 Final financial prep</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">💰</span><span>Transfer a chunk of funds via Wise to cover deposit + first month's rent + setup costs. Keep an emergency buffer — don't arrive with savings at zero</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🏥 EHIC</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🏥</span><span>If you don't have a current <strong>European Health Insurance Card</strong>, get one now via myehic.ie — covers emergency care during the transition period before Dutch health insurance kicks in</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🎒 Final packing</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🎒</span><span>Final packing, farewells, and confirm all shipping/transport bookings</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 7: MOVE! -->
+    <div id="tl-move" class="tl-phase ph-move">
+      <div class="tl-phase-card">
+        <div class="tl-phase-head">
+          <span class="ph-timeframe">February 2027</span>
+          <span class="ph-title">✈️ MOVE! — Arrival week</span>
+        </div>
+        <div class="tl-phase-body">
+          <p style="font-size:14px;color:var(--text-muted);margin-bottom:18px;">Do these in roughly this order — each one unlocks the next.</p>
+          <div class="arrival-grid">
+            <div class="arrival-item">
+              <span class="ai-title">1 · Gemeente registration</span>
+              Attend your pre-booked appointment. Bring: passport, rental contract or proof of address, birth certificate, marriage certificate. You'll receive your <strong>BSN</strong>.
+            </div>
+            <div class="arrival-item">
+              <span class="ai-title">2 · Bank account</span>
+              Open with ING, ABN AMRO, Rabobank, or <strong>Bunq</strong> (fastest — app-based, often same day with passport + BSN). Dutch payments run on iDEAL; credit cards rarely used.
+            </div>
+            <div class="arrival-item">
+              <span class="ai-title">3 · Health insurance</span>
+              Compare and sign up at <strong>independer.nl</strong> or <strong>zorgwijzer.nl</strong>. ~€130–170/month each for the basic package (basispakket). Add dental supplement (+€15–30). Mandatory within 4 months — do it immediately.
+            </div>
+            <div class="arrival-item">
+              <span class="ai-title">4 · DigiD</span>
+              Apply at digid.nl — activation letter arrives by post in 1–2 weeks. You'll need this for taxes, insurance, and all government services.
+            </div>
+            <div class="arrival-item">
+              <span class="ai-title">5 · Register the cats</span>
+              Find a local <strong>dierenarts</strong> (vet) and register both cats. Also look into huisdierenverzekering (pet insurance) for unexpected vet bills.
+            </div>
+            <div class="arrival-item">
+              <span class="ai-title">6 · Find your supermarkets</span>
+              Locate your nearest <strong>Albert Heijn</strong> (best plant-based range — look for the AH Terra line), <strong>Jumbo</strong>, and a local <strong>toko</strong> (Asian/Turkish supermarket — goldmines for tofu, tempeh, spices, and cheap fresh veg).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 8: AFTER ARRIVAL -->
+    <div id="tl-after" class="tl-phase ph-after">
+      <div class="tl-phase-card">
+        <div class="tl-phase-head">
+          <span class="ph-timeframe">Feb – May 2027</span>
+          <span class="ph-title">First 3 Months — settling in</span>
+        </div>
+        <div class="tl-phase-body">
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🏥 Healthcare</div>
+            <ul class="checklist">
+              <li><span class="ck-icon ck-urgent">🏥</span><span class="ck-urgent">Register with a huisarts (GP) immediately</span> — many practices are full. Search at <strong>zorgkaartnederland.nl</strong>. This is your gatekeeper to all specialist care</li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">💰 30% Tax Ruling — time-sensitive!</div>
+            <ul class="checklist">
+              <li><span class="ck-icon ck-urgent">💰</span><span class="ck-urgent">Ask your employer to apply for the 30% ruling at the Belastingdienst within 4 months of your employment start date.</span> This is time-sensitive and worth significant money — 30% of gross salary tax-free. Pin1 is very likely eligible; Pin2 may also qualify</li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🚲 Transport</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🚲</span><span>Buy a second-hand bicycle for €100–200. <strong>Always use two locks — bike theft is a national sport.</strong></span></li>
+              <li><span class="ck-icon">🚌</span><span>Get an OV-chipkaart at any train station for buses, trams, and trains</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🗣️ Dutch classes</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🗣️</span><span>Enrol in Dutch classes: <strong>Taalhuis</strong> (free via library in many cities), Volksuniversiteit, <strong>Direct Dutch</strong> or <strong>Koentact</strong> in Amsterdam. Even A2/B1 level makes a massive social difference</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">🏳️‍🌈 LGBTQ+ community</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">🏳️‍🌈</span><span>Connect with <strong>COC Nederland (coc.nl)</strong> — local chapters in every major city. Amsterdam Canal Pride is the first weekend of August</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">💼 Pin2 — ZZP freelancing</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">💼</span><span>If freelancing alongside employment, research <strong>ZZP</strong> (self-employment) registration — very common and well-supported in the Dutch creative/marketing sector</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-category">
+            <div class="tl-cat-label">📚 Pin2 — university applications</div>
+            <ul class="checklist">
+              <li><span class="ck-icon">📚</span><span>If applying for a September 2027 MSc intake in Human Geography, university application deadlines are typically <strong>January–April 2027</strong> — research and apply in your first weeks</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end tl-wrap -->
+
+  <!-- CLOSING CARD -->
+  <div class="card text-center" style="background:linear-gradient(135deg,#2E9E6A11,#5B6ABF11);border:2px solid var(--accent);margin-top:8px;">
+    <p style="font-size:16px;"><strong>You've made the decision. Now it's just execution.</strong></p>
+    <p class="mt">The Netherlands is genuinely well-suited to both of your profiles. The housing hunt will be the hardest part — everything else is manageable. Start the job search today, monitor Pararius from May, save aggressively, and you'll arrive in February 2027 with everything in place.</p>
+    <p class="mt" style="font-size:22px;">Veel succes, Pin1 &amp; Pin2! 🇳🇱🏳️‍🌈🐱🐱</p>
   </div>
 
 </div>
